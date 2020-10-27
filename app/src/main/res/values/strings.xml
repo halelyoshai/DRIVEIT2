@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">DRIVE IT</string>
     <string name="drive_it">DRIVE IT</string>
-    <string name="sign_in">היכנס</string>
+    <string name="sign_in" translatable="true" formatted="true">היכנס</string>
 </resources>
