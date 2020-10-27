@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="היכנס">sign_in_s</string>
+    <string name="sign_up_S">הירשם כתלמיד</string>
+    <string name="sign_up_T">הירשם כמורה</string>
+    <string name="sign_in">sign_in</string>
+</resources>
