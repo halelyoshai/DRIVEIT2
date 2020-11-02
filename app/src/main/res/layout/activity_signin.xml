@@ -15,22 +15,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/drive_it"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="80sp"
+        android:layout_marginVertical="80dp"
         android:visibility="visible" />
 
     <Button
         android:id="@+id/btnsignin"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
         android:backgroundTint="#00CDDC39"
-        android:text="היכנס"
+        android:hint="שם משתמש"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp"
         app:iconTint="#0B0A0A"
@@ -38,26 +38,29 @@
 
     <Button
         style="@android:style/Widget.Holo.Light.Button.Inset"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00101010"
-        android:text="@string/sign_up_S"
+        android:hint="סיסמה"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btnsignup"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#000C0C0C"
-        android:text="@string/sign_up_T"
+        android:backgroundTint="#00CDDC39"
+        android:text="היכנס"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+
+
 
 
 </LinearLayout>
