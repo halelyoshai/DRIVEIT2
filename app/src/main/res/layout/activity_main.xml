@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/txtdisplay"
+        android:id="@+id/drivrit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -37,6 +37,7 @@
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnsignups"
         style="@android:style/Widget.Holo.Light.Button.Inset"
         android:layout_width="250dp"
         android:layout_height="wrap_content"

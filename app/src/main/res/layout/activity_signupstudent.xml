@@ -5,167 +5,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/halell"
+    android:background="@drawable/driveit_one"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/txtdisplay"
-        android:layout_width="wrap_content"
+
+    <Button
+
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="פרופיל אישי"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="50sp"
-        android:visibility="visible"
-
-        />
-
-    <TableLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="180dp" />
-
-    <Button
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="left"
-        android:layout_marginTop="-180dp"
+        android:layout_marginTop="120dp"
         android:backgroundTint="#00CDDC39"
-        android:text="שם:"
+        android:hint="שם מלא"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-
+        android:id="@+id/btnsignin"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="left"
-        android:backgroundTint="#00CDDC39"
-        android:text="מורה:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-    <Button
-
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="left"
-        android:layout_marginTop="3dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="בית ספר:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-
-    <ImageView
-        android:layout_width="175dp"
-        android:layout_height="160dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="-150dp"
-        android:background="@drawable/driveit_one" />
-
-    <TableRow>
-        <ImageView
-            android:layout_width="180dp"
-            android:layout_height="160dp"
-            android:background="@drawable/halell"
-/>
-    </TableRow>
-
-
-    <Button
-
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="מספר טלפון"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="כתובת מייל"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="איזור לימוד"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="יישוב"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="ידני או אוטומט"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="שם משתמש"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
+
+
+    <Button
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="סיסמה"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+
+    <Button
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="אימות סיסמה"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+    <Button
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#00CDDC39"
+        android:layout_marginTop="20"
+        android:text="סיימתי:)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
 </LinearLayout>
+
+
+
+
+

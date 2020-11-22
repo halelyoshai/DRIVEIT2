@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/halell"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/studentsrating"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="40sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/studentsname"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="146dp"/>
+
+
+    <Button
+android:id="@+id/back"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="89dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="-290dp"
+        android:backgroundTint="#00CDDC39"
+        android:text="@string/home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313"/>
+
+
+
+    <Button
+
+android:id="@id/button"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="168dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="@string/hitkadmut"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+    <Button
+        android:id="@+id/buttonsh"
+
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="168dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="@string/shlita"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+    <Button
+        android:id="@+id/buttonh"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="168dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="@string/parking"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+    <Button
+        android:id="@+id/buttonz"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="168dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="@string/zehirut"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+
+    <Button
+android:id="@+id/save"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="168dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#00CDDC39"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+</LinearLayout>
