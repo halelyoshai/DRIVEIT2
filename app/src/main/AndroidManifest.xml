@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DRIVEIT">
-        <activity android:name=".studentprofile"></activity>
+        <activity android:name=".tudentsrating1"></activity>
+        <activity android:name=".teacherprofile" />
+        <activity android:name=".StudentsratingActivity" />
+        <activity android:name=".signupteacher" />
+        <activity android:name=".signupstudent" />
+        <activity android:name=".studentprofile" />
         <activity android:name=".signin" />
         <activity android:name=".MainActivity">
             <intent-filter>

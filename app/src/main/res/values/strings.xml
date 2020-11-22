@@ -2,4 +2,34 @@
     <string name="app_name">DRIVE IT</string>
     <string name="drive_it">DRIVE IT</string>
     <string name="sign_in" formatted="true" translatable="true">היכנס</string>
+    <string name="username">שם משתמש</string>
+    <string name="password">סיסמה</string>
+    <string name="name">שולי לוי</string>
+    <string name="city">טבריה</string>
+    <string name="teacher">לומדת אצל: אבי כהן</string>
+    <string name="time">טיימרים</string>
+    <string name="calendar">לוח חודשי</string>
+    <string name="lessons">קביעת שיעורים</string>
+    <string name="ketzev">קצב התקדמות</string>
+    <string name="signin">היכנס</string>
+    <string name="personal_profile">פרופיל אישי</string>
+    <string name="teacher_profile">פרופיל מורה</string>
+    <string name="keepmoving">אל תפסיק להשתפר</string>
+    <string name="keep_moving">אל תפסיק להשתפר!</string>
+    <string name="zehirut">זהירות בכביש</string>
+    <string name="parking">חניות</string>
+    <string name="hiluchim">שליטה בהילוכים</string>
+    <string name="hitkadmut">התקדמות כללית</string>
+    <string name="masachhabait">בית</string>
+    <string name="always_keep_moving">always keep moving</string>
+    <string name="ketzev_">קצב ההתקדמות</string>
+    <string name="durag">דורג על ידי אבי כהן</string>
+    <string name="studentsrating">דירוג תלמידים</string>
+    <string name="studentsname">שם התלמיד: אבי שמעוני</string>
+    <string name="home">בית</string>
+    <string name="hitkadmut">התקדמות כללית</string>
+    <string name="shlita">שליטה בהילוכים</string>
+    <string name="parking">חניות</string>
+    <string name="zehirut">זהירות בכביש</string>
+    <string name="save">שמור</string>
 </resources>
