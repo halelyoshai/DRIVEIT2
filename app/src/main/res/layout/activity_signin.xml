@@ -24,7 +24,7 @@
         android:visibility="visible" />
 
     <Button
-        android:id="@+id/btnsignin"
+        android:id="@+id/btnusername"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -37,6 +37,7 @@
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnpassword"
         style="@android:style/Widget.Holo.Light.Button.Inset"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -48,6 +49,7 @@
         android:textSize="30sp" />
 
     <Button
+        android:id="@+id/btnsignin1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"

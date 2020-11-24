@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/txtstudentsrating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -41,7 +41,7 @@
 
 
     <Button
-android:id="@+id/back"
+android:id="@+id/btnhome"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="89dp"
         android:layout_height="89dp"
@@ -56,37 +56,35 @@ android:id="@+id/back"
 
 
     <Button
-
-android:id="@id/button"
+        android:id="@+id/btnprogress"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/hitkadmut"
+        android:hint="@string/progress"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-        android:id="@+id/buttonsh"
-
+        android:id="@+id/btncontrol"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/shlita"
+        android:hint="@string/Control"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-        android:id="@+id/buttonh"
+        android:id="@+id/btnparking"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
@@ -100,14 +98,14 @@ android:id="@id/button"
         app:strokeColor="#131313" />
 
     <Button
-        android:id="@+id/buttonz"
+        android:id="@+id/btncaution"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/zehirut"
+        android:hint="@string/caution"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"

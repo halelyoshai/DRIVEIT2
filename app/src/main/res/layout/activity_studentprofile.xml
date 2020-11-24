@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,72 +9,73 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+<TableRow>
     <TextView
-        android:id="@+id/txtdisplay"
+        android:id="@+id/txtpersonalprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_column="0"
+        android:paddingLeft="90dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/alfa_slab_one"
-        android:text="פרופיל אישי"
+        android:text="@string/personalprofile"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="50sp"
         android:visibility="visible"
 
         />
 
-    <TableLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="180dp" />
+</TableRow>
+    <TableRow>
 
     <Button
+        android:id="@+id/btnname"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:layout_gravity="left"
         android:layout_marginTop="-180dp"
         android:backgroundTint="#00CDDC39"
-        android:text="שם:"
+        android:text="@string/name1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
-
+    </TableRow>
+        <TableRow>
     <Button
-
+        android:id="@+id/btnteacher"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:layout_gravity="left"
         android:backgroundTint="#00CDDC39"
-        android:text="מורה:"
+        android:text="@string/teacher1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
+        </TableRow>
+    <TableRow>
     <Button
-
+        android:id="@+id/btnschool"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:layout_gravity="left"
         android:layout_marginTop="3dp"
         android:backgroundTint="#00CDDC39"
-        android:text="בית ספר:"
+        android:text="@string/school1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
-
-
+</TableRow>
+    <TableRow>
     <ImageView
         android:layout_width="175dp"
         android:layout_height="160dp"
         android:layout_gravity="right"
         android:layout_marginTop="-150dp"
         android:background="@drawable/driveit_one" />
+    </TableRow>
 
     <TableRow>
         <ImageView
@@ -84,9 +85,8 @@
 />
     </TableRow>
 
-
     <Button
-
+        android:id="@+id/btnsignin1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
         app:strokeColor="#131313" />
 
     <Button
-
+        android:id="@+id/btnsignin1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
         app:strokeColor="#131313" />
 
     <Button
-
+        android:id="@+id/btnsignin1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
         app:strokeColor="#131313" />
 
     <Button
-
+        android:id="@+id/btnsignin1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
         app:strokeColor="#131313" />
 
     <Button
-
+        android:id="@+id/btnsignin1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
         app:strokeColor="#131313" />
 
     <Button
-
+        android:id="@+id/btnsignin1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
@@ -168,4 +168,5 @@
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
-</LinearLayout>
+
+</TableLayout>

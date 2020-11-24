@@ -12,111 +12,118 @@
 
 
     <Button
-
+        android:id="@+id/btnfullname"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="שם מלא"
+        android:hint="@string/fullname"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
-        android:id="@+id/btnsignin"
+        android:id="@+id/btnphonenumber"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="מספר טלפון"
+        android:hint="@string/phonenumber"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnmailadress"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="כתובת מייל"
+        android:hint="@string/mailadress"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnschool"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="בית ספר"
+        android:hint="@string/school"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnstudyarea"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="איזור שיעור"
+        android:hint="@string/studyarea1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnmanualorautomatic"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="ידני\/אוטומט\/שניהם"
+        android:hint="@string/manualorautomatic1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnlessonlength"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="אורך שיעור"
+        android:hint="@string/lessonlenght"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnpriceperlesson"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="מחיר לשיעור"
+        android:hint="@string/priceperlesson"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnbio"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="קצת על עצמי"
+        android:hint="@string/bio"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
@@ -125,40 +132,43 @@
 
 
     <Button
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="שם משתמש"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-
-    <Button
+        android:id="@+id/btnusername"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="סיסמא"
+        android:hint="@string/username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+
+    <Button
+        android:id="@+id/btnpassword"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="@string/password1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <Button
+        android:id="@+id/btnfinish"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:layout_marginTop="20dp"
-        android:text="סיימתי:)"
+        android:text="@string/finish"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"

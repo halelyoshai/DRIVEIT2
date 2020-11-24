@@ -12,10 +12,10 @@ public class StudentsratingActivity extends AppCompatActivity implements View.On
     private View v;
     private TextView rating;
     private Button home;
-    private Button hitkadmut;
-    private Button shlita;
+    private Button progress;
+    private Button control;
     private Button parking;
-    private Button zehirut;
+    private Button caution;
     private Button save;
 
     @Override
@@ -23,17 +23,17 @@ public class StudentsratingActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentsrating);
 
-        TextView rating = findViewById(R.id.text1);
-         home = findViewById(R.id.back);
+         rating = findViewById(R.id.txtstudentsrating);
+         home = findViewById(R.id.btnhome);
          home.setOnClickListener(this);
-         hitkadmut = findViewById(R.id.button);
-         hitkadmut.setOnClickListener(this);
-         shlita = findViewById(R.id.buttonsh);
-         shlita.setOnClickListener(this);
-         parking = findViewById(R.id.buttonh);
+         progress = findViewById(R.id.btnprogress);
+         progress.setOnClickListener(this);
+         control = findViewById(R.id.btncontrol);
+         control.setOnClickListener(this);
+         parking = findViewById(R.id.btnparking);
          parking.setOnClickListener(this);
-         zehirut = findViewById(R.id.buttonz);
-         zehirut.setOnClickListener (this);
+         caution = findViewById(R.id.btncaution);
+         caution.setOnClickListener (this);
          save = findViewById(R.id.save);
          save.setOnClickListener (this);
 
