@@ -1,4 +1,4 @@
 package com.example.driveit;
 
-public class signin {
+public class SigninActivity {
 }
