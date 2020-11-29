@@ -76,85 +76,87 @@
         android:background="@drawable/driveit_one" />
 
 
-    <Button
-        android:id="@+id/btnsignin1"
+    <TextView
+        android:id="@+id/availble"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="279dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="שיעורים פנויים היום:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
-        android:id="@+id/btnsignin1"
+    <TextView
+        android:id="@+id/waitingtest"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="279dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="מחכים לטסט:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
-        android:id="@+id/btnsignin1"
+    <TextView
+
+        android:id="@+id/numstudent"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
+        android:layout_width="276dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="מספר תלמידים כרגע:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
-        android:id="@+id/btnsignin1"
+    <TextView
+
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:id="@+id/nowinclass"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00CDDC39"
+        android:hint="כרגע בשיעור:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
+
+    <TextView
+        android:id="@+id/endlocation"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="נקודת הורדה:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
-        android:id="@+id/btnsignin1"
+    <TextView
+        android:id="@+id/endtime"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <Button
-        android:id="@+id/btnsignin1"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="פרופיל"
+        android:hint="שעת סיום:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
