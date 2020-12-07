@@ -1,199 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/halell"
-    android:orientation="vertical"
+    android:background="@drawable/green"
     tools:context=".MainActivity">
 
+    <TableRow android:layout_width="358dp">
 
-    <TextView
-        android:id="@+id/txtteacherprofile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/teacher_profile"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="50sp"
-        android:visibility="visible"
-
-        />
-
-    <TableLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="180dp" />
-
-    <Button
-        android:id="@+id/btnname"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="-180dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/name1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <Button
-        android:id="@+id/btnschool"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/school1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <Button
-        android:id="@+id/btncity"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="3dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/city2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-
-    <ImageView
-        android:layout_width="175dp"
-        android:layout_height="160dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="-150dp"
-        android:background="@drawable/driveit_one" />
-
-
-    <TextView
-        android:id="@+id/availble"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="279dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="שיעורים פנויים היום:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <TextView
-        android:id="@+id/waitingtest"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="279dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="מחכים לטסט:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <TextView
-
-        android:id="@+id/numstudent"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="276dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="מספר תלמידים כרגע:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <TextView
-
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:id="@+id/nowinclass"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="כרגע בשיעור:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <TextView
-        android:id="@+id/endlocation"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="נקודת הורדה:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-    <TextView
-        android:id="@+id/endtime"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="שעת סיום:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-
-
-    <TableLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-
-    />
-
-    <Button
-        android:id="@+id/btnhome"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="-88dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/masachhabait"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
+        <TextView
+            android:id="@+id/txtteacherprofile"
+            android:layout_width="239dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="@string/teacher_profile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="45sp"
+            android:visibility="visible" />
+    </TableRow>
 
     <TableRow>
-        <ImageView
-            android:layout_width="180dp"
-            android:layout_height="160dp"
-            android:background="@drawable/halell"/>
+
+        <Button
+            android:id="@+id/btnname"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#00CDDC39"
+            android:text="@string/name1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:iconTint="#0B0A0A"
+            app:strokeColor="#131313" />
 
 
     </TableRow>
 
-</LinearLayout>
+    <TableRow>
+
+        <Button
+            android:id="@+id/btnschool"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#00CDDC39"
+            android:text="@string/school1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:iconTint="#0B0A0A"
+            app:strokeColor="#131313" />
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="192dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-200dp"
+            android:background="@drawable/driveit_one" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btncity"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="#00CDDC39"
+            android:text="@string/city2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:iconTint="#0B0A0A"
+            app:strokeColor="#131313" />
+    </TableRow>
+
+    <TableRow android:layout_height="65dp">
+
+        <TextView
+            android:id="@+id/availble"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="143dp"
+            android:layout_height="129dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="#00CDDC39"
+            android:text="@string/availablelessonstoday"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/waitingtest"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="100dp"
+            android:layout_height="129dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="-110dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="#5BF1E4E4"
+            android:text="@string/waitingfortest"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="10sp"
+            app:iconTint="#5BF1E4E4"
+            app:strokeColor="#131313" />
+
+        <TextView
+
+            android:id="@+id/numstudent"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="120dp"
+            android:layout_height="131dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="#00CDDC39"
+            android:text="@string/studentsnumber"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="10sp" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/nowinclass"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="184dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="-175dp"
+            android:backgroundTint="#00CDDC39"
+            android:hint="כרגע בשיעור:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:iconTint="#0B0A0A"
+            app:strokeColor="#131313" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/endlocation"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="-175dp"
+            android:backgroundTint="#00CDDC39"
+            android:hint="נקודת הורדה:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:iconTint="#0B0A0A"
+            app:strokeColor="#131313" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/endtime"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="-175dp"
+            android:backgroundTint="#00CDDC39"
+            android:hint="שעת סיום:"
+            android:paddingLeft="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:iconTint="#0B0A0A"
+            app:strokeColor="#131313" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/btnrating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:layout_marginRight="-175dp"/>
+    </TableRow>
+
+    <TableRow android:layout_height="137dp">
+
+        <Button
+            android:id="@+id/btnpersonalprofile"
+            android:layout_width="27dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="73dp"
+            android:background="@drawable/driveit_one" />
+
+        <Button
+            android:id="@+id/btnschedule"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="73dp"
+            />
+
+        <Button
+            android:id="@+id/btnpayments"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="73dp"
+           />
+
+        <Button
+            android:id="@+id/btnstudentsprogress"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="73dp"
+             />
+    </TableRow>
+
+
+</TableLayout>

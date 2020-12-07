@@ -70,4 +70,17 @@
     <string name="progress2">התקדמות כללית</string>
     <string name="control">שליטה בהילוכים</string>
     <string name="caution1">זהירות בכביש</string>
+    <string name="availablelessonstoday">שיעורים פנויים היום</string>
+    <string name="waitingfortest">מחכים לטסט:</string>
+    <string name="studentsnumber">מספר תלמידים כרגע:</string>
+    <string name="rating">דרג</string>
+    <string name="teachersname">שם המורה</string>
+    <string name="דביםםך">בית ספר:</string>
+    <string name="eacher">לומדים אצל:</string>
+    <string name="city3">עיר</string>
+    <string name="teachername">לומדת אצל</string>
+    <string name="essontcounting">שיעור מספר</string>
+    <string name="lessonscounting">שיעור מספר</string>
+    <string name="smalltest">טסט פנימי</string>
+    <string name="studentprofile">פרופיל תלמיד</string>
 </resources>
