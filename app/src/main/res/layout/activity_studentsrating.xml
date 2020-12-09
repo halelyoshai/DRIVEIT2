@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/halell"
+    android:background="@drawable/redyellow"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -41,17 +41,18 @@
 
 
     <Button
-android:id="@+id/btnhome"
+        android:id="@+id/btnhome"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="89dp"
         android:layout_height="89dp"
         android:layout_marginTop="-290dp"
+        android:background="@drawable/roadforest"
         android:backgroundTint="#00CDDC39"
         android:text="@string/home"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313"/>
+        app:strokeColor="#131313"
+        app:iconTint="#0B0A0A"/>
 
 
 
@@ -63,11 +64,11 @@ android:id="@+id/btnhome"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/progress"
+        android:text="@string/progress"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
+        app:strokeColor="#131313"
+        app:iconTint="#0B0A0A"/>
 
     <Button
         android:id="@+id/btncontrol"
@@ -77,7 +78,7 @@ android:id="@+id/btnhome"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/Control"
+        android:text="@string/Control"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
@@ -91,7 +92,7 @@ android:id="@+id/btnhome"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/parking"
+        android:text="@string/parking"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
@@ -105,7 +106,7 @@ android:id="@+id/btnhome"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/caution"
+        android:text="@string/caution"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:iconTint="#0B0A0A"

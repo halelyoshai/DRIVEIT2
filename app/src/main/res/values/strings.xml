@@ -83,4 +83,6 @@
     <string name="lessonscounting">שיעור מספר</string>
     <string name="smalltest">טסט פנימי</string>
     <string name="studentprofile">פרופיל תלמיד</string>
+    <string name="city3">עיר</string>
+    <string name="teacher3">לומדת אצל:</string>
 </resources>

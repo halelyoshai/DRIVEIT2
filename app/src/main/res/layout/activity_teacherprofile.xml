@@ -23,7 +23,7 @@
     </TableRow>
 
     <TableRow>
-
+<LinearLayout android:orientation="vertical">
         <Button
             android:id="@+id/btnname"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -36,8 +36,27 @@
             android:textSize="20sp"
             app:iconTint="#0B0A0A"
             app:strokeColor="#131313" />
+    <Button
+        android:id="@+id/btnname"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#00CDDC39"
+        android:text="@string/name1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
 
+</LinearLayout>
 
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="192dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-200dp"
+            android:background="@drawable/driveit_one" />
     </TableRow>
 
     <TableRow>
@@ -54,12 +73,6 @@
             app:iconTint="#0B0A0A"
             app:strokeColor="#131313" />
 
-        <ImageView
-            android:layout_width="140dp"
-            android:layout_height="192dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="-200dp"
-            android:background="@drawable/driveit_one" />
     </TableRow>
 
     <TableRow
@@ -92,7 +105,11 @@
             android:background="@drawable/circle_button"
             android:backgroundTint="#00CDDC39"
             android:text="@string/availablelessonstoday"
-            android:textSize="10sp" />
+            android:textColorHighlight="#601E1E"
+            android:textColorLink="#E91E63"
+            android:textCursorDrawable="@color/black"
+            android:textSize="10sp"
+            app:iconTint="#0B0A0A" />
 
         <TextView
             android:id="@+id/waitingtest"

@@ -116,8 +116,8 @@
         android:backgroundTint="#00CDDC39"
         android:text="@string/always_keep_moving"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:iconTint="@color/teal_700"
-        app:strokeColor="#131313"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#00CDDC39"
         android:textSize="30sp"/>
 
 
