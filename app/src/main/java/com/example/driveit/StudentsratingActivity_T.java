@@ -34,16 +34,15 @@ public class StudentsratingActivity_T extends AppCompatActivity implements View.
          parking.setOnClickListener(this);
          caution = findViewById(R.id.btncaution);
          caution.setOnClickListener (this);
-         save = findViewById(R.id.save);
-         save.setOnClickListener (this);
-
+        save = findViewById(R.id.save);
+        save.setOnClickListener (this);
 
 }
 
     @Override
     public void onClick(View v) {
         if (v == home) {
-            Intent intent = new Intent( this, StudentprofileActivity.class);
+            Intent intent = new Intent( this, TeacherprofileActivity.class);
             startActivity(intent);
         }
 

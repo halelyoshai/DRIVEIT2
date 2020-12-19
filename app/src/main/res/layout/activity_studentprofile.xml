@@ -187,45 +187,50 @@
     <TableRow>
 
         <TextView
-            android:id="@+id/startlocation"
+            android:id="@+id/connectteacher"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginRight="-175dp"
             android:backgroundTint="#00CDDC39"
-            android:hint="נקודת איסוף:"
+            android:hint="יצירת קשר עם המורה:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20sp"
             app:iconTint="#0B0A0A"
             app:strokeColor="#131313" />
     </TableRow>
 
-    <TableRow>
+       <TableRow android:layout_height="137dp">
 
-        <TextView
-            android:id="@+id/finallocation"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="168dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="-175dp"
-            android:backgroundTint="#00CDDC39"
-            android:hint="נקודת סיום:"
-            android:paddingLeft="50dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20sp"
-            app:iconTint="#0B0A0A"
-            app:strokeColor="#131313" />
-    </TableRow>
+           <Button
+               android:id="@+id/btnpersonalprofile"
+               android:layout_width="27dp"
+               android:layout_height="89dp"
+               android:layout_marginTop="73dp"
+               android:background="@drawable/driveit_one" />
 
-    <TableRow>
-        <Button
-            android:id="@+id/btnrating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rating"
-            android:layout_marginRight="-175dp"/>
-    </TableRow>
+           <Button
+               android:id="@+id/btninfo"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_marginTop="73dp"
+               />
+
+           <Button
+               android:id="@+id/btnteacherinfo"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_marginTop="73dp"
+               />
+
+           <Button
+               android:id="@+id/btnschedulingS"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_marginTop="73dp"
+               />
+       </TableRow>
+
 
 
    </TableLayout>

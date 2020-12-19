@@ -36,18 +36,7 @@
             android:textSize="20sp"
             app:iconTint="#0B0A0A"
             app:strokeColor="#131313" />
-    <Button
-        android:id="@+id/btnname"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/name1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
+
 
 </LinearLayout>
 
@@ -159,13 +148,13 @@
     <TableRow>
 
         <TextView
-            android:id="@+id/endlocation"
+            android:id="@+id/nextlesson"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginRight="-175dp"
             android:backgroundTint="#00CDDC39"
-            android:hint="נקודת הורדה:"
+            android:hint="שיעור הבא:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20sp"
             app:iconTint="#0B0A0A"
@@ -175,14 +164,14 @@
     <TableRow>
 
         <TextView
-            android:id="@+id/endtime"
+            android:id="@+id/nextlessontime"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="168dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginRight="-175dp"
             android:backgroundTint="#00CDDC39"
-            android:hint="שעת סיום:"
+            android:hint="שעת שיעור הבא:"
             android:paddingLeft="50dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20sp"
@@ -190,14 +179,6 @@
             app:strokeColor="#131313" />
     </TableRow>
 
-    <TableRow>
-        <Button
-            android:id="@+id/btnrating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rating"
-            android:layout_marginRight="-175dp"/>
-    </TableRow>
 
     <TableRow android:layout_height="137dp">
 

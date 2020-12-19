@@ -11,19 +11,21 @@ import android.widget.TextView;
 public class StudentsratingActivity_S extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private TextView rating;
+    private TextView studentname;
     private Button home;
     private Button progress;
     private Button control;
     private Button parking;
     private Button caution;
-    private Button save;
+    private TextView qoute;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentsrating);
-
         rating = findViewById(R.id.txtstudentsrating);
+        studentname = findViewById(R.id.text2);
         home = findViewById(R.id.btnhome);
         home.setOnClickListener(this);
         progress = findViewById(R.id.btnprogress);
@@ -34,8 +36,9 @@ public class StudentsratingActivity_S extends AppCompatActivity implements View.
         parking.setOnClickListener(this);
         caution = findViewById(R.id.btncaution);
         caution.setOnClickListener (this);
-        save = findViewById(R.id.save);
-        save.setOnClickListener (this);
+        qoute = findViewById(R.id.txtquote);
+
+
 
 
     }
