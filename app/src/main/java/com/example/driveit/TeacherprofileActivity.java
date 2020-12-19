@@ -65,7 +65,7 @@ public class TeacherprofileActivity extends AppCompatActivity {
     @Override
     public void onClick(View v) {
         if (v == editpersonalprofile ) {
-            Intent intent = new Intent( this, חסר אקטיביטי.class);
+            Intent intent = new Intent( this, = SignupteachersActivity.class);
             startActivity(intent);
 
             if (v == schedule ) {

@@ -64,7 +64,7 @@ public class StudentprofileActivity extends AppCompatActivity {
     @Override
     public void onClick(View v) {
         if (v == editpersonalprofile ) {
-            Intent intent = new Intent( this, חסר אקטיביטי.class);
+            Intent intent = new Intent( this, SignupstudentsActivity.class);
             startActivity(intent);
 
             if (v == info ) {
