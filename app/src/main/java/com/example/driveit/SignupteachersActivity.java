@@ -11,16 +11,19 @@ import android.widget.TextView;
 public class SignupteachersActivity extends AppCompatActivity {
 
     private View v1;
-    private TextView fullname;
+    private Button fullname;
     private Button phonenumber;
     private Button mailadress;
+    private Button school;
     private Button studyarea;
-    private TextView city;
     private Button manualorautomatic;
+    private Button lessonslength;
+    private Button priceperlesson;
     private Button username;
     private Button password;
     private Button passwordagain;
     private Button finish;
+
 
 
 
@@ -36,10 +39,14 @@ public class SignupteachersActivity extends AppCompatActivity {
         mailadress.setOnClickListener(this);
         studyarea = findViewById(R.id.btnstudyarea);
         studyarea.setOnClickListener(this);
-        city = findViewById(R.id.btncity);
-        city.setOnClickListener(this);
+        school = findViewById(R.id.btnschool);
+        school.setOnClickListener(this);
         manualorautomatic = findViewById(R.id.btnmanualorautomatic);
         manualorautomatic.setOnClickListener(this);
+        lessonslength = findViewById(R.id.btnlessonlength);
+        lessonslength.setOnClickListener(this);
+        priceperlesson = findViewById(R.id.btnpriceperlesson);
+        priceperlesson.setOnClickListener(this);
         username = findViewById(R.id.btnusername);
         username.setOnClickListener(this);
         password = findViewById(R.id.btnpassword);
