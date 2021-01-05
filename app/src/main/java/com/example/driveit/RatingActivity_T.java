@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class StudentsratingActivity_T extends AppCompatActivity implements View.OnClickListener {
+public class RatingActivity_T extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private TextView rating;
     private Button home;
@@ -42,7 +42,7 @@ public class StudentsratingActivity_T extends AppCompatActivity implements View.
     @Override
     public void onClick(View v) {
         if (v == home) {
-            Intent intent = new Intent( this, TeacherprofileActivity.class);
+            Intent intent = new Intent( this, ProfileActivity_T.class);
             startActivity(intent);
         }
 

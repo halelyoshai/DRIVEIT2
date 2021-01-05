@@ -6,9 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class SignupteachersActivity extends AppCompatActivity implements View.OnClickListener{
+public class SignupActivity_T extends AppCompatActivity {
 
     private View v1;
     private Button fullname;
@@ -53,7 +52,7 @@ public class SignupteachersActivity extends AppCompatActivity implements View.On
         password.setOnClickListener(this);
         passwordagain = findViewById(R.id.btnpasswordagain);
         passwordagain.setOnClickListener(this);
-        finish = findViewById(R.id.btnfinish);
+        finish = findViewById(R.id.btnfinish;
         finish.setOnClickListener(this);
 
 
@@ -63,7 +62,7 @@ public class SignupteachersActivity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v1) {
         if (v1 == finish) {
-            Intent intent = new Intent( this, TeacherprofileActivity.class);
+            Intent intent = new Intent( this, ProfileActivity_T.class);
             startActivity(intent);
         }
 

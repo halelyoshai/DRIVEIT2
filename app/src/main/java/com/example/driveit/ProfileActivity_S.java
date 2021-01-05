@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class StudentprofileActivity extends AppCompatActivity implements View.OnClickListener {
+public class ProfileActivity_S extends AppCompatActivity {
     private View v;
     private TextView studentprofile;
     private Button name;
@@ -64,7 +64,7 @@ public class StudentprofileActivity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == editpersonalprofile ) {
-            Intent intent = new Intent( this, SignupstudentsActivity.class);
+            Intent intent = new Intent( this, SignupsActivity_S.class);
             startActivity(intent);
 
             if (v == info ) {
