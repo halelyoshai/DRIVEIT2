@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LessinsscheduleActivity_T extends AppCompatActivity {
+public class InfoActivity_S extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lessinsschedule);
+        setContentView(R.layout.activity_info);
     }
 }
