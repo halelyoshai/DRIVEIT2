@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class TeacherprofileActivity extends AppCompatActivity {
+public class TeacherprofileActivity extends AppCompatActivity implements View.OnClickListener {
         private View v;
         private TextView profileteacher;
         private Button name;

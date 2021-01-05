@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class StudentprofileActivity extends AppCompatActivity {
+public class StudentprofileActivity extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private TextView studentprofile;
     private Button name;

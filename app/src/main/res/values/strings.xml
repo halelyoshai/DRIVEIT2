@@ -27,10 +27,7 @@
     <string name="studentsrating">דירוג תלמידים</string>
     <string name="studentsname">שם התלמיד: אבי שמעוני</string>
     <string name="home">בית</string>
-    <string name="hitkadmut">התקדמות כללית</string>
     <string name="shlita">שליטה בהילוכים</string>
-    <string name="parking">חניות</string>
-    <string name="zehirut">זהירות בכביש</string>
     <string name="save">שמור</string>
     <string name="fullname">שם מלא</string>
     <string name="phonenumber">מספר טלפון</string>
@@ -38,26 +35,17 @@
     <string name="studyarea">איזור לימוד</string>
     <string name="city1">יישוב</string>
     <string name="manualorautomatic">ידני או אוטומט</string>
-    <string name="username">שם משתמש</string>
-    <string name="password">סיסמה</string>
     <string name="passwordagain">אימות סיסמה</string>
     <string name="finish">סיימתי:)</string>
-    <string name="fullname">שם מלא</string>
-    <string name="phonenumber">מספר טלפון</string>
-    <string name="mailadress">כתובת מייל</string>
     <string name="school">בית ספר</string>
     <string name="studyarea1">איזור שיעור</string>
     <string name="manualorautomatic1">ידני/אוטומט/שניהם</string>
     <string name="lessonlenght">אורך שיעור</string>
     <string name="priceperlesson">מחיר לשיעור</string>
     <string name="bio">קצת על עצמי</string>
-    <string name="username">שם משתמש</string>
     <string name="password1">סיסמא</string>
-    <string name="finish">סיימתי:)</string>
     <string name="personalprofile">פרופיל אישי</string>
-    <string name="name1">שם:</string>
     <string name="teacher1">מורה:</string>
-    <string name="school1">בית ספר:</string>
     <string name="Control">שליטה בהילוכים</string>
     <string name="progress">התקדמות כללית</string>
     <string name="caution">זהירות</string>
@@ -83,6 +71,5 @@
     <string name="lessonscounting">שיעור מספר</string>
     <string name="smalltest">טסט פנימי</string>
     <string name="studentprofile">פרופיל תלמיד</string>
-    <string name="city3">עיר</string>
     <string name="teacher3">לומדת אצל:</string>
 </resources>
