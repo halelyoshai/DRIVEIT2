@@ -35,7 +35,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         if (v == signin) {
             Intent intent = new Intent( this,
-                    StudentprofileActivity.class);
+                    ProfileActivity_S.class);
             startActivity(intent);
         }
 
