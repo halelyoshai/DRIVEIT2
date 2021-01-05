@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class ProfileActivity_T extends AppCompatActivity {
+public class TeacherprofileActivity extends AppCompatActivity implements View.OnClickListener {
         private View v;
         private TextView profileteacher;
         private Button name;
@@ -65,7 +65,7 @@ public class ProfileActivity_T extends AppCompatActivity {
     @Override
     public void onClick(View v) {
         if (v == editpersonalprofile ) {
-            Intent intent = new Intent( this, = SignupActivity_T.class);
+            Intent intent = new Intent( this, = SignupteachersActivity.class);
             startActivity(intent);
 
             if (v == schedule ) {

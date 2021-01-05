@@ -1,8 +1,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-    <stroke android:color="#FAF6F6"
+    <stroke android:color="#000000"
         android:width="2dp"></stroke>
-    <soild android:color="#FAF6F6"></soild>
-    <size android:width="120dp"
-     android:hight="120dp"></size>
+    <soild android:color="#000000"></soild>
+    <size android:width="75dp"
+     android:height="75dp"></size>
 </shape>

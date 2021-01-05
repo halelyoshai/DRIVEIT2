@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SignupsActivity_S extends AppCompatActivity {
+public class SignupstudentsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private View v2;
     private TextView fullname;
@@ -55,7 +55,7 @@ public class SignupsActivity_S extends AppCompatActivity {
     @Override
     public void onClick(View v2) {
         if (v2 == finish) {
-            Intent intent = new Intent( this, ProfileActivity_S.class);
+            Intent intent = new Intent( this, StudentprofileActivity.class);
             startActivity(intent);
         }
 
