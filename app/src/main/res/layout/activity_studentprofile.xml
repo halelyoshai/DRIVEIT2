@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -50,6 +50,7 @@
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="250dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
             android:backgroundTint="#00CDDC39"
             android:text="@string/city3"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -57,12 +58,13 @@
             app:iconTint="#0B0A0A"
             app:strokeColor="#131313" />
 
-        <ImageView
-            android:layout_width="140dp"
-            android:layout_height="192dp"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:layout_marginTop="-200dp"
-            android:background="@drawable/driveit_one" />
+            android:layout_weight="1"
+            android:background="@drawable/driveit_three"
+            android:text="a" />
     </TableRow>
 
     <TableRow
@@ -101,17 +103,14 @@
             app:strokeColor="#131313" />
     </TableRow>
 
-    <TableRow android:layout_height="75dp"><![CDATA[
-
-        />
-
-        ]]>
+    <TableRow
+        android:gravity="center"
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/btnlessonscounting3"
-            android:layout_width="148dp"
-            android:layout_height="129dp"
-            android:layout_marginLeft="100dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
             android:layout_marginTop="20dp"
             android:background="@drawable/circle_button"
             android:text="טסט פנימי"
@@ -121,7 +120,8 @@
 
         <TextView
             android:id="@+id/btnlessonscounting2"
-            android:layout_width="1dp"
+            android:layout_width="129dp"
+            android:layout_weight="1"
             android:layout_height="129dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
@@ -132,7 +132,8 @@
 
         <TextView
             android:id="@+id/btnlessonscounting1"
-            android:layout_width="1dp"
+            android:layout_width="129dp"
+            android:layout_weight="1"
             android:layout_height="129dp"
             android:layout_gravity="left"
             android:layout_marginTop="20dp"
@@ -140,97 +141,37 @@
             android:text="שיעור מספר"
             android:textSize="15sp"
             app:strokeColor="#131313" />
-
-        <TableRow>
+    </TableRow>
+        <TableRow android:layout_height="75dp">
 
             <Button
                 android:id="@+id/btntimers"
+                android:layout_weight="1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp" />
 
             <Button
                 android:id="@+id/btncalendar"
+                android:layout_weight="1"
                 android:layout_width="30dp"
                 android:layout_height="30dp" />
 
             <Button
                 android:id="@+id/btnscheduling"
+                android:layout_weight="1"
                 android:layout_width="30dp"
                 android:layout_height="30dp" />
 
             <Button
                 android:id="@+id/btnprogress"
+                android:layout_weight="1"
                 android:layout_width="30dp"
                 android:layout_height="30dp" />
         </TableRow>
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:id="@+id/btnnextlesson"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="184dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="-175dp"
-            android:backgroundTint="#00CDDC39"
-            android:hint="שיעור הבא:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20sp"
-            app:iconTint="#0B0A0A"
-            app:strokeColor="#131313" />
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:id="@+id/connectteacher"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="-175dp"
-            android:backgroundTint="#00CDDC39"
-            android:hint="יצירת קשר עם המורה:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20sp"
-            app:iconTint="#0B0A0A"
-            app:strokeColor="#131313" />
-    </TableRow>
-
-       <TableRow android:layout_height="137dp">
-
-           <Button
-               android:id="@+id/btnpersonalprofile"
-               android:layout_width="27dp"
-               android:layout_height="89dp"
-               android:layout_marginTop="73dp"
-               android:background="@drawable/driveit_one" />
-
-           <Button
-               android:id="@+id/btninfo"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginTop="73dp"
-               />
-
-           <Button
-               android:id="@+id/btnteacherinfo"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginTop="73dp"
-               />
-
-           <Button
-               android:id="@+id/btnschedulingS"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginTop="73dp"
-               />
-       </TableRow>
 
 
 
    </TableLayout>
-</ScrollView>
+</LinearLayout>
 
