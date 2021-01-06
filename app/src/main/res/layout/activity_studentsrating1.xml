@@ -5,17 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/road"
+    android:background="@drawable/carsbackground"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RatingActivity_S">
 
+    <Button
+        android:id="@+id/btnhome"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right"
+        android:drawableBottom="@drawable/house" />
 
     <TextView
         android:id="@+id/txtprogress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="-20dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="@string/progress1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -34,39 +40,18 @@
         android:textSize="20sp"
         android:visibility="visible" />
 
-    <TableLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="146dp" />
-
-    <Button
-        android:id="@+id/btnhome"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="-290dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/masachhabait"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-
-
-
     <Button
         android:id="@+id/btnprogress"
-        android:background="@drawable/circle_button"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="135dp"
-        android:backgroundTint="#00CDDC39"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00CDDC3hg"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="@string/progress2"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
+        android:visibility="visible"
         />
 
     <Button
@@ -75,11 +60,10 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
+        android:backgroundTint="#00CDDC3hg"
         android:text="@string/control"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        android:background="@drawable/circle_button"/>
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/btnparking"
@@ -87,11 +71,11 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
+        android:backgroundTint="#00CDDC3hg"
         android:text="@string/parking"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
-        android:background="@drawable/circle_button"/>
+       />
 
     <Button
         android:id="@+id/btnacution"
@@ -99,26 +83,23 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC39"
+        android:backgroundTint="#00CDDC3hg"
         android:text="@string/caution1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        android:background="@drawable/circle_button" />
+        android:textSize="20sp" />
 
 
     <TextView
         android:id="@+id/txtquote"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/always_keep_moving"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFDFBFB"
+        android:text="@string/always_keep_movong"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#00CDDC39"
-        android:textSize="30sp"/>
+        app:iconTint="#FDFBFB"
+        android:textSize="40sp"/>
 
 
 </LinearLayout>

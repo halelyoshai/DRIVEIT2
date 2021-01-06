@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         android:visibility="visible" />
 
     <Button
-        android:id="@+id/studentname"
+        android:id="@+id/studentname2"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
 
 
     <Button
-        android:id="@+id/studentname"
+        android:id="@+id/studentname1"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -64,3 +64,4 @@
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
+</LinearLayout>

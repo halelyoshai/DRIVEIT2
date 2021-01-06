@@ -5,17 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/redyellow"
+    android:background="@drawable/carsbackground"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RatingActivity_T">
 
+    <Button
+        android:id="@+id/btnhome"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="89dp"
+        android:layout_height="89dp"
+        android:background="@drawable/roadforest"
+        android:backgroundTint="#00CDDC39"
+        android:text="@string/home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:strokeColor="#131313"
+        app:iconTint="#0B0A0A"/>
 
     <TextView
         android:id="@+id/txtstudentsrating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="-20dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="@string/studentsrating"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -34,35 +46,12 @@
         android:textSize="20sp"
         android:visibility="visible" />
 
-    <TableLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="146dp"/>
-
-
-    <Button
-        android:id="@+id/btnhome"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="89dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="-290dp"
-        android:background="@drawable/roadforest"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/home"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:strokeColor="#131313"
-        app:iconTint="#0B0A0A"/>
-
-
-
     <Button
         android:id="@+id/btnprogress"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
         android:backgroundTint="#00CDDC39"
         android:text="@string/progress"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -119,7 +108,7 @@ android:id="@+id/save"
         android:layout_width="168dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#00CDDC39"
         android:text="@string/save"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
