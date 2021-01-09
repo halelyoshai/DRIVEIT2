@@ -26,7 +26,8 @@
 
 </TableRow>
 
-    <TableRow android:layout_height="wrap_content"
+    <TableRow
+        android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
         <Button

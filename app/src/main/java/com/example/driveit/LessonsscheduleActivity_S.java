@@ -9,6 +9,6 @@ public class LessonsscheduleActivity_S extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lessinsschedule);
+        setContentView(R.layout.activity_lessonsschedule);
     }
 }
