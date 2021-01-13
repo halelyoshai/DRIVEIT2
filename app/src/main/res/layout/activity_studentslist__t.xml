@@ -9,12 +9,26 @@
         tools:context=".StudentslistActivity_T">
 
 
-    -<TableLayout
+    <TableLayout
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    -<TableRow
-    android:layout_width="358dp">
+        <TableRow>
+        <Button
+            android:id="@+id/btnrating"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#00CDDC39"
+            android:text="בית"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:strokeColor="#131313" />
+        </TableRow>
+
+    <TableRow
+        android:layout_width="358dp">
 
     <TextView
         android:id="@+id/txtstudentslist"
@@ -26,9 +40,11 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="38sp"
         android:visibility="visible" />
+
+
 </TableRow>
 
-    -<TableRow
+    <TableRow
     android:layout_width="match_parent"
     android:layout_marginTop="20dp">
 

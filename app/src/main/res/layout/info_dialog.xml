@@ -12,13 +12,5 @@
         android:layout_marginTop="20dp"
         android:text=".....אפליקציית DRIVE IT"
         android:textSize="20sp" />
-    <Button
-        android:id="@+id/btnout"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="חזור לשאלות"
-        android:textSize="20sp"/>
-
 
 </LinearLayout>
