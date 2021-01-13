@@ -15,15 +15,13 @@ public class ProfileActivity_S extends AppCompatActivity {
     private Button city;
     private Button teacher;
     private Button school;
-    private Button lessonsnum;
-    private Button smalltest;
-    private Button bigtest;
     private Button nextlesson;
     private Button connectteacher;
-    private Button editpersonalprofile;
+    private Button definitions;
     private Button info;
-    private Button teacherinfo;
     private Button scheduling;
+    private Button progress;
+    private TextView lessonsnum, smalltest, bigtest;
 
 
 
@@ -31,8 +29,8 @@ public class ProfileActivity_S extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studentprofile);
-        studentprofile = findViewById(R.id.txtstudentsprodfile);
+        setContentView(R.layout.activity_studentprofile__s);
+        studentprofile = findViewById(R.id.txtstudentprofile);
         name = findViewById(R.id.btnname);
         name.setOnClickListener(this);
         city = findViewById(R.id.btncity);
@@ -41,24 +39,19 @@ public class ProfileActivity_S extends AppCompatActivity {
         teacher.setOnClickListener(this);
         school = findViewById(R.id.btnschool);
         school.setOnClickListener(this);
-        lessonsnum = findViewById(R.id.btnlessonscounting);
-        lessonsnum.setOnClickListener (this);
-        smalltest = findViewById(R.id.btnsmalltest);
-        smalltest.setOnClickListener (this);
-        bigtest = findViewById(R.id.btnbigtest);
-        bigtest.setOnClickListener(this);
         nextlesson = findViewById(R.id.btnnextlesson);
         nextlesson.setOnClickListener (this);
         connectteacher = findViewById(R.id.connectteacher);
         connectteacher.setOnClickListener (this);
-        editpersonalprofile = findViewById(R.id.btnpersonalprofile);
-        editpersonalprofile.setOnClickListener (this);
+        definitions = findViewById(R.id.btndefinitions);
+        definitions.setOnClickListener (this);
         info = findViewById(R.id.btninfo);
         info.setOnClickListener (this);
-        teacherinfo = findViewById(R.id.btnteacherinfo);
-        teacherinfo.setOnClickListener(this);
-        scheduling = findViewById(R.id.btnschedulingS);
-        scheduling.setOnClickListener (this);
+        scheduling = findViewById(R.id.btnscheduling);
+        scheduling.setOnClickListener(this);
+        progress = findViewById(R.id.btnprogress);
+        progress.setOnClickListener (this);
+
 
     }
     @Override

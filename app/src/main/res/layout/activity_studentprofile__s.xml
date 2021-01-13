@@ -16,7 +16,7 @@
     android:layout_width="358dp">
 
     <TextView
-        android:id="@+id/t1"
+        android:id="@+id/txtstudentprofile"
         android:layout_height="wrap_content"
         android:layout_width="415dp"
         android:textSize="50sp"
@@ -62,7 +62,7 @@
         />
 
     <Button
-        android:id="@+id/btnnameprofile"
+        android:id="@+id/btnname"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
        />
 
     <Button
-        android:id="@+id/btnlearning"
+        android:id="@+id/btnteacher"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="-290dp"
@@ -141,7 +141,7 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/t4"
+        android:id="@+id/lessonscounting"
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -181,7 +181,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/Quationmark" />
+            android:drawableBottom="@drawable/quationsmarksbackgrounds" />
 
         <Button
             android:id="@+id/btndefinitions"
