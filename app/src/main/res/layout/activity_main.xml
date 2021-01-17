@@ -30,7 +30,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:backgroundTint="#00CDDC39"
-        android:text="היכנס"
+        android:text="@string/signin"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp"
         app:iconTint="#0B0A0A"

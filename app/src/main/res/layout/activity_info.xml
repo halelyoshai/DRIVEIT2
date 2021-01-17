@@ -16,7 +16,7 @@
         android:layout_height="70dp"
         android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="המידע הנחוץ עבורך"
+        android:text="@string/necessaryinfo"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="50sp"
         android:visibility="visible" />
@@ -28,10 +28,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
         android:layout_marginTop="3dp"
+        android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="מי אנחנו?"
+        android:text="@string/whoweare"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="23sp"
         app:iconTint="#0B0A0A"
@@ -42,10 +42,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
         android:layout_marginTop="3dp"
+        android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="מה צריך בשביל להתחיל ללמוד נהיגה?"
+        android:text="@string/whatinneeded"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16sp"
         app:iconTint="#FFFAF6F6"
@@ -56,10 +56,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="left"
         android:layout_marginTop="3dp"
+        android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="איך מוציאים טופס ירוק?"
+        android:text="@string/greenform"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="22sp" />
 
@@ -68,10 +68,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="right"
         android:layout_marginTop="5dp"
+        android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="תוך כמה זמן אפשר לגשת לטסט?"
+        android:text="@string/whentotakeatest"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp" />
 
@@ -80,10 +80,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="right"
+        android:layout_gravity="center"
         android:layout_marginTop="3dp"
         android:backgroundTint="#B9FAF3F0"
-        android:text="איך ניגשים לטסט?"
+        android:text="@string/how_test"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="23sp" />
     <Button
@@ -91,10 +91,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="right"
+        android:layout_gravity="center"
         android:layout_marginTop="3dp"
         android:backgroundTint="#B9FAF3F0"
-        android:text="מה ממוצע השיעורים להגשה לטסט?"
+        android:text="@string/averagelessons"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16sp" />
 
@@ -103,10 +103,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="right"
-       android:layout_marginTop="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
         android:backgroundTint="#B9FAF3F0"
-        android:text="כמה עולה תהליך הוצאת הרישיון?"
+        android:text="@string/howcost"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp" />
 
@@ -115,10 +115,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="left"
         android:layout_marginTop="5dp"
+        android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="איך להתמודד עם לחץ לפני טסט?"
+        android:text="@string/howtodealwithstress"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp" />
 
@@ -127,10 +127,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="left"
         android:layout_marginTop="3dp"
+        android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="דברים שחשוב לדעת לפני שמתחילים:"
+        android:text="@string/importantthingstoknow"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16sp" />
 
@@ -139,10 +139,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_gravity="left"
         android:layout_marginTop="3dp"
+        android:layout_gravity="center"
         android:backgroundTint="#B9FAF3F0"
-        android:text="דברים שחשוב לדעת לפני שניגשים לטסט:"
+        android:text="@string/imfortantthingsbeforeyoourtest"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="15sp" />
 

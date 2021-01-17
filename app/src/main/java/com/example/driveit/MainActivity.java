@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
             if (v1 == signups) {
-                Intent intent = new Intent( this, SignupstudentsActivity.class);
+                Intent intent = new Intent( this, SigninActivity.class);
                 startActivity(intent);
             }
 

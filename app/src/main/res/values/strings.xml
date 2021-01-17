@@ -73,4 +73,17 @@
     <string name="studentprofile">פרופיל תלמיד</string>
     <string name="teacher3">לומדת אצל:</string>
     <string name="always_keep_movong">always keep movong!!</string>
+    <string name="necessaryinfo">המידע הנחוץ עבורך</string>
+    <string name="whoweare">מי אנחנו?</string>
+    <string name="whatinneeded">מה צריך בשביל להתחיל ללמוד נהיגה?</string>
+    <string name="greenform">איך מוציאים טופס ירוק?</string>
+    <string name="whentotakeatest">תוך כמה זמן אפשר לגשת לטסט?</string>
+    <string name="how_test">איך ניגשים לטסט?</string>
+    <string name="averagelessons">מה ממוצע השיעורים להגשה לטסט?</string>
+    <string name="howcost">כמה עולה תהליך הוצאת הרישיון?</string>
+    <string name="howtodealwithstress">איך להתמודד עם לחץ לפני טסט?</string>
+    <string name="importantthingstoknow">דברים שחשוב לדעת לפני שמתחילים:</string>
+    <string name="imfortantthingsbeforeyoourtest">דברים שחשוב לדעת לפני שניגשים לטסט:</string>
+    <string name="signin">היכנס</string>
+    <string name="scheduling">קביעת שיעורים</string>
 </resources>

@@ -4,22 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/yellow"
     tools:context=".SchedulingActivity_T">
 
-        -<TableLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-
-    -<TableRow
-    android:layout_width="358dp">
-
+    <TableRow>
     <Button
         android:id="@+id/btnhome"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="89dp"
         android:layout_height="89dp"
-        android:layout_gravity="center"
         android:background="@drawable/roadforest"
         android:backgroundTint="#00CDDC39"
         android:text="@string/home"
@@ -27,12 +20,11 @@
         android:textSize="20sp"
         app:strokeColor="#131313"
         app:iconTint="#0B0A0A"/>
-
-</TableRow>
-
+    </TableRow>
 
 
-    -<TableRow
+
+    <TableRow
         android:layout_width="358dp">
 
         <TextView
@@ -41,15 +33,14 @@
             android:layout_width="415dp"
             android:textSize="50sp"
             android:layout_gravity="center"
-            android:text="קביעת שיעורים"
+            android:text="@string/scheduling"
             />
-
 
     </TableRow>
 
 
 
-        -<TableRow
+        <TableRow
         android:layout_marginTop="10dp">
         <Button
             android:id="@+id/btncity"
@@ -111,12 +102,12 @@
                 />
         </TableRow>
 
-    </TableLayout>
-        -<TableLayout
+
+        <TableLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-        -<TableRow
+        <TableRow
         android:layout_height="115dp"
         android:layout_marginTop="20dp">
 
@@ -196,8 +187,7 @@
                 android:drawableBottom="@drawable/Gear" />
         </TableRow>
 
+        </TableLayout>
 
-    </TableLayout>
 
-    </LinearLayout>
 </TableLayout>
