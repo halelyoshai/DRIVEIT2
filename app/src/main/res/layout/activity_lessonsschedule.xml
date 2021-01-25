@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/yellow"
     android:orientation="vertical"
-    tools:context=".LessonsscheduleActivity_S">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:padding="160dp">
 
 
 
-</LinearLayout>
+
+        <TextView
+            android:id="@+id/txtsheduling1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_width="415dp"
+            android:textSize="50sp"
+            android:layout_gravity="center"
+            android:text="@string/scheduling" />
+
+
+    <TextView
+        android:id="@+id/txtsheduling2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_width="415dp"
+        android:textSize="50sp"
+        android:layout_gravity="center"
+        android:text="@string/scheduling" />
+    <TextView
+        android:id="@+id/txtsheduling3"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_width="415dp"
+        android:textSize="50sp"
+        android:layout_gravity="center"
+        android:text="@string/scheduling" />
+    <TextView
+        android:id="@+id/txtsheduling4"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_width="415dp"
+        android:textSize="50sp"
+        android:layout_gravity="center"
+        android:text="@string/scheduling" />
+
+</ScrollView>

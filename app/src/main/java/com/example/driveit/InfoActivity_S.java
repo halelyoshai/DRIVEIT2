@@ -90,29 +90,29 @@ public class InfoActivity_S extends AppCompatActivity implements View.OnClickLis
         if (v == quation2) {
             creatAnswerDialog();
         }
-        if (v == quation2) {
+        if (v == quation3) {
             creatAnswerDialog();
         }
-        if (v == quation2) {
+        if (v == quation4) {
             creatAnswerDialog();
 
-            if (v == quation2) {
-                creatInfoDialog();
+            if (v == quation5) {
+                creatAnswerDialog();
 
-                if (v == quation2) {
-                    creatInfoDialog();
+                if (v == quation6) {
+                    creatAnswerDialog();
                 }
-                if (v == quation2) {
-                    creatInfoDialog();
+                if (v == quation7) {
+                    creatAnswerDialog();
                 }
-                if (v == quation2) {
-                    creatInfoDialog();
+                if (v == quation8) {
+                    creatAnswerDialog();
                 }
-                if (v == quation2) {
-                    creatInfoDialog();
+                if (v == quation9) {
+                    creatAnswerDialog();
                 }
-                if (v == quation2) {
-                    creatInfoDialog();
+                if (v == quation10) {
+                    creatAnswerDialog();
                 }
 
             }

@@ -14,22 +14,19 @@ public class StudentslistActivity_T extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentslist__t);
-    }
 
-    public static class TeacherprofileActivity extends AppCompatActivity implements View.OnClickListener {
-            private View v;
-            private TextView studentslist;
-            private Button btnstudentname1, btnstudentname2, btnrating1, btnrating2;
-
-
-
+    public static class TeacherprofileActivity extends AppCompatActivity implements View.OnClickListener
+    {
+        private View v;
+        private TextView studentslist;
+        private Button btnstudentname1, btnstudentname2, btnrating1, btnrating2;
 
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_teacherprofile);
-          studentslist = findViewById(R.id.txtstudentslist);
+            studentslist = findViewById(R.id.txtstudentslist);
             btnstudentname1 = findViewById(R.id.btnstudentname1);
             btnstudentname1.setOnClickListener(this);
             btnstudentname2 = findViewById(R.id.btnstudentname2);
@@ -40,12 +37,7 @@ public class StudentslistActivity_T extends AppCompatActivity {
 
 
         }
-        @Override
-        public void onClick(View v) {
-            if (v == editpersonalprofile ) {
-                Intent intent = new Intent( this, = SignupteachersActivity.class);
-                startActivity(intent);
-
 
     }
-                    }
+}
+}

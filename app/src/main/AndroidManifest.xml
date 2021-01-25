@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DRIVEIT">
-        <activity android:name=".studentprofile_S"></activity>
+        <activity android:name=".Setting_Activity"></activity>
+        <activity android:name=".SignupStudent_Activity" />
+        <activity android:name=".studentprofile_S" />
         <activity android:name=".SchedulingActivity_T" />
         <activity android:name=".LessonsscheduleActivity_S" />
         <activity android:name=".StudentslistActivity_T" />
