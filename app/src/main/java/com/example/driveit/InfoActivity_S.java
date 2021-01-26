@@ -32,42 +32,37 @@ public class InfoActivity_S extends AppCompatActivity implements View.OnClickLis
         quation2.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answerthree_dialog);
+
         quation3 = (Button) findViewById(R.id.btninfo3);
         quation3.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answerfour_dialog);
+
         quation4 = (Button) findViewById(R.id.btninfo4);
         quation4.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answerfive_dialog);
         quation5 = (Button) findViewById(R.id.btninfo5);
         quation5.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answersix_dialog);
         quation6 = (Button) findViewById(R.id.btninfo6);
         quation6.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answerseven_dialog);
         quation7 = (Button) findViewById(R.id.btninfo7);
         quation7.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answereight_dialog);
         quation8 = (Button) findViewById(R.id.btninfo8);
         quation8.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answernine_dialog);
         quation9 = (Button) findViewById(R.id.btninfo9);
         quation9.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answerten_dialog);
+
         quation10 = (Button) findViewById(R.id.btninfo10);
         quation10.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
@@ -84,37 +79,39 @@ public class InfoActivity_S extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if (v == quation1) {
-            creatAnswerDialog();
+            d.setContentView(R.layout.answerone_dialog);
         }
 
         if (v == quation2) {
-            creatAnswerDialog();
+            d.setContentView(R.layout.answertwo_dialog);
         }
         if (v == quation3) {
-            creatAnswerDialog();
+            d.setContentView(R.layout.answerthree_dialog);
         }
         if (v == quation4) {
+            d.setContentView(R.layout.answerfour_dialog);
+        }
+
+        if (v == quation5) {
+            d.setContentView(R.layout.answerfive_dialog);
+        }
+
+       if (v == quation6) {
             creatAnswerDialog();
-
-            if (v == quation5) {
-                creatAnswerDialog();
-
-                if (v == quation6) {
-                    creatAnswerDialog();
-                }
-                if (v == quation7) {
-                    creatAnswerDialog();
-                }
-                if (v == quation8) {
-                    creatAnswerDialog();
-                }
-                if (v == quation9) {
-                    creatAnswerDialog();
-                }
-                if (v == quation10) {
-                    creatAnswerDialog();
-                }
-
+        }
+        if (v == quation7) {
+            creatAnswerDialog();
+        }
+        if (v == quation8) {
+            creatAnswerDialog();
+        }
+        if (v == quation9) {
+            creatAnswerDialog();
+        }
+        if (v == quation10) {
+            creatAnswerDialog();
+        }
+         creatAnswerDialog();
             }
         }
     }
