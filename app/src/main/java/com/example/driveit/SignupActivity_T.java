@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 public class SignupActivity_T extends AppCompatActivity {
 
     private View v1;
@@ -22,14 +28,27 @@ public class SignupActivity_T extends AppCompatActivity {
     private Button password;
     private Button passwordagain;
     private Button finish;
-
-
+    private DatabaseReference databaseReference;
+    private FirebaseDatabase firebaseDatabase;
+    private FirebaseAuth firebaseAuth;
+    private StorageReference storageReference;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signupteacher);
+
+        firebaseAuth = firebaseAuth.getInstance();
+
+        if (firebaseAuth.getCurrentUser()!=null){
+            Intent Intent = new Intent(this,studentprofile_S.class)
+            startactivity(intent);
+        }
+
+       firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = DatabaseReference.getReference(path: "users");
+
         fullname = findViewById(R.id.btnfullname);
         fullname.setOnClickListener(this);
         phonenumber = findViewById(R.id.btnphonenumber);
