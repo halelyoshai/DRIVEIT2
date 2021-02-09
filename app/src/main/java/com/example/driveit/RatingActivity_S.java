@@ -46,7 +46,7 @@ public class RatingActivity_S extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         if (v == home) {
-            Intent intent = new Intent( this, ProfileActivity_S.class);
+            Intent intent = new Intent( this, StudentsProfile_Activity.class);
             startActivity(intent);
         }
 

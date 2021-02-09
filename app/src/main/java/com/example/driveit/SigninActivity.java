@@ -1,5 +1,6 @@
 package com.example.driveit;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,13 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SigninActivity extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private TextView driveit;
     private Button username;
     private Button password;
     private Button signin;
-
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +34,26 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         password.setOnClickListener(this);
         signin = findViewById(R.id.btncontrol);
         signin.setOnClickListener(this);
+        firebaseAuth = FirebaseAuth.getInstance();
+
 
     }
 
     @Override
     public void onClick(View v) {
         if (v == signin) {
-            Intent intent = new Intent( this,
-                    ProfileActivity_S.class);
-            startActivity(intent);
+            firebaseAuth.signInWithEmailAndPassword(username.getText().toString(),password.getText().toString())
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()){
+                        Intent intent = new Intent( SigninActivity.this,
+                                StudentsProfile_Activity.class);
+                        startActivity(intent);
+                    }
+                }
+            });
+
         }
 
     }

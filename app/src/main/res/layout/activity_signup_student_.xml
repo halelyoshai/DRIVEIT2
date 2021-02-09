@@ -134,7 +134,7 @@
         app:strokeColor="#131313" />
 
     <Button
-        android:id="@+id/btnfinish"
+        android:id="@+id/btnfinish2"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"

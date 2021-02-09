@@ -6,8 +6,8 @@ public class Teacher extends Person
 {
     private ArrayList<Student> students;
     private String lessonlength;
-    private String Swaitingtest;
-    private String freelessons;
+    private int Swaitingtest;
+    private int freelessons;
     private String status;
 
 

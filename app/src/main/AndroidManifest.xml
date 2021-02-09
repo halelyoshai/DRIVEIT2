@@ -9,19 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DRIVEIT">
-        <activity android:name=".Setting_Activity"></activity>
+        <activity android:name=".TeacherProfile_Activity"></activity>
+        <activity android:name=".Setting_Activity" />
         <activity android:name=".SignupStudent_Activity" />
         <activity android:name=".studentprofile_S" />
         <activity android:name=".SchedulingActivity_T" />
         <activity android:name=".LessonsscheduleActivity_S" />
         <activity android:name=".StudentslistActivity_T" />
-        <activity android:name=".InfoActivity_S" />
+        <activity android:name=".StudentsInfo_Activity" />
         <activity android:name=".RatingActivity_S" />
         <activity android:name=".ProfileActivity_T" />
         <activity android:name=".RatingActivity_T" />
-        <activity android:name=".SignupActivity_T" />
+        <activity android:name=".SignupTeacher_Activity" />
         <activity android:name=".SignupsActivity_S" />
-        <activity android:name=".ProfileActivity_S" />
+        <activity android:name=".StudentsProfile_Activity" />
         <activity android:name=".SigninActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

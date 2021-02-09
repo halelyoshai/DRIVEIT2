@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/yellow"
     android:orientation="vertical"
-    tools:context=".studentprofile_S">
+    tools:context=".StudentsProfile_Activity">
 
 
-    -<TableLayout
+    <TableLayout
     android:layout_height="wrap_content"
     android:layout_width="match_parent">
 
-    -<TableRow
+    <TableRow
     android:layout_width="358dp">
 
     <TextView
@@ -184,7 +184,7 @@
             android:drawableBottom="@drawable/quationsmarksbackgrounds" />
 
         <Button
-            android:id="@+id/btndefinitions"
+            android:id="@+id/btneditprofile"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

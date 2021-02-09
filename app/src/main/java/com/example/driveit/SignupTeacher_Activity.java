@@ -1,5 +1,7 @@
 package com.example.driveit;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,15 +9,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-public class SignupActivity_T extends AppCompatActivity {
-
-    private View v1;
+public class SignupTeacher_Activity extends AppCompatActivity implements View.OnClickListener {
+    private View v;
     private Button fullname;
     private Button phonenumber;
     private Button mailadress;
@@ -28,63 +32,43 @@ public class SignupActivity_T extends AppCompatActivity {
     private Button password;
     private Button passwordagain;
     private Button finish;
-    private DatabaseReference databaseReference;
-    private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
-    private StorageReference storageReference;
-
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signupteacher);
-
-        firebaseAuth = firebaseAuth.getInstance();
-
-        if (firebaseAuth.getCurrentUser()!=null){
-            Intent Intent = new Intent(this,studentprofile_S.class)
-            startactivity(intent);
-        }
-
-       firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = DatabaseReference.getReference(path: "users");
-
         fullname = findViewById(R.id.btnfullname);
-        fullname.setOnClickListener(this);
         phonenumber = findViewById(R.id.btnphonenumber);
-        phonenumber.setOnClickListener(this);
         mailadress = findViewById(R.id.btnmailadress);
-        mailadress.setOnClickListener(this);
         studyarea = findViewById(R.id.btnstudyarea);
-        studyarea.setOnClickListener(this);
         school = findViewById(R.id.btnschool);
-        school.setOnClickListener(this);
         manualorautomatic = findViewById(R.id.btnmanualorautomatic);
-        manualorautomatic.setOnClickListener(this);
         lessonslength = findViewById(R.id.btnlessonlength);
-        lessonslength.setOnClickListener(this);
         priceperlesson = findViewById(R.id.btnpriceperlesson);
-        priceperlesson.setOnClickListener(this);
         username = findViewById(R.id.btnusername);
-        username.setOnClickListener(this);
         password = findViewById(R.id.btnpassword);
-        password.setOnClickListener(this);
         passwordagain = findViewById(R.id.btnpasswordagain);
-        passwordagain.setOnClickListener(this);
-        finish = findViewById(R.id.btnfinish;
+        finish = findViewById(R.id.btnfinish3);
+        firebaseAuth = FirebaseAuth.getInstance();
         finish.setOnClickListener(this);
-
-
     }
 
 
     @Override
-    public void onClick(View v1) {
-        if (v1 == finish) {
-            Intent intent = new Intent( this, ProfileActivity_T.class);
-            startActivity(intent);
+    public void onClick(View v) {
+        if (v == finish) {
+            Teacher t = new Teacher();
+            firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
+                    addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Intent intent = new Intent(SignupTeacher_Activity.this, TeacherProfile_Activity.class);
+                                startActivity(intent);
+                            }
+                        }
+
+                    });
         }
-
-
     }
 }
