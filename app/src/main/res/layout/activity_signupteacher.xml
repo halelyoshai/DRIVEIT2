@@ -10,8 +10,7 @@
     tools:context=".SignupTeacher_Activity">
 
 
-
-    <Button
+    <EditText
         android:id="@+id/btnfullname"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
@@ -21,11 +20,14 @@
         android:backgroundTint="#00CDDC39"
         android:hint="@string/fullname"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F8F3F3"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#F6F4E4"
         android:textSize="20sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
+        app:iconTint="#F8E4E4"
+        app:strokeColor="@color/white" />
 
-    <Button
+    <EditText
         android:id="@+id/btnphonenumber"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
@@ -38,7 +40,7 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
+    <EditText
         android:id="@+id/btnmailadress"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
@@ -51,7 +53,7 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
+    <EditText
         android:id="@+id/btnschool"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"

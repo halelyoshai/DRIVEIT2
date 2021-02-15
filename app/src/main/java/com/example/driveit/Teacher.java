@@ -11,11 +11,11 @@ public class Teacher extends Person
     private String status;
 
 
-    public Teacher(String name, String id, String phonenum, String mail, String studyarea, String school, String city, String lisensetype, String username, String password, ArrayList<Student> students, String lessonlength, String swaitingtest, String freelessons, String status) {
+    public Teacher() {
         super(name, id, phonenum, mail, studyarea, school, city, lisensetype, username, password);
         students=new ArrayList<Student>();
         this.lessonlength = lessonlength;
-        this.Swaitingtest = swaitingtest;
+        this.Swaitingtest = Swaitingtest;
         this.freelessons = freelessons;
         this.status = status;
     }
@@ -36,19 +36,19 @@ public class Teacher extends Person
         this.lessonlength = lessonlength;
     }
 
-    public String getSwaitingtest() {
+    public int getSwaitingtest() {
         return Swaitingtest;
     }
 
-    public void setSwaitingtest(String swaitingtest) {
+    public void setSwaitingtest(int swaitingtest) {
         Swaitingtest = swaitingtest;
     }
 
-    public String getFreelessons() {
+    public int getFreelessons() {
         return freelessons;
     }
 
-    public void setFreelessons(String freelessons) {
+    public void setFreelessons(int freelessons) {
         this.freelessons = freelessons;
     }
 

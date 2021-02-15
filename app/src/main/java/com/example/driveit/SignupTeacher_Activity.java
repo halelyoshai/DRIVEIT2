@@ -57,7 +57,8 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            Teacher t = new Teacher();
+            if (password==passwordagain)
+            Teacher t = new Teacher( );
             firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
