@@ -12,153 +12,155 @@
 
     <EditText
         android:id="@+id/btnfullname"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#00CDDC39"
+        android:backgroundTint="#00EEEFE5"
         android:hint="@string/fullname"
+        android:textAlignment="center"
+        android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#F8F3F3"
-        android:textColorHint="#FFFFFF"
-        android:textColorLink="#F6F4E4"
-        android:textSize="20sp"
+        android:textColorHighlight="#121111"
+        android:textColorHint="#989191"
+        android:textColorLink="#191919"
+        android:textSize="18sp"
         app:iconTint="#F8E4E4"
         app:strokeColor="@color/white" />
 
     <EditText
         android:id="@+id/btnphonenumber"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/phonenumber"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:iconTint="#0B0A0A"
+        android:textSize="18sp"
+        app:iconTint="#0000"
         app:strokeColor="#131313" />
 
     <EditText
         android:id="@+id/btnmailadress"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/mailadress"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
     <EditText
         android:id="@+id/btnschool"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/school"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
+    <EditText
         android:id="@+id/btnstudyarea"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/studyarea1"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
+    <EditText
         android:id="@+id/btnmanualorautomatic"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/manualorautomatic1"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
+    <EditText
         android:id="@+id/btnlessonlength"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/lessonlenght"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
+    <EditText
         android:id="@+id/btnpriceperlesson"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/priceperlesson"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <Button
+    <EditText
         android:id="@+id/btnbio"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/bio"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
 
-
-    <Button
+    <EditText
         android:id="@+id/btnusername"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/username"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
 
-    <Button
+    <EditText
         android:id="@+id/btnpassword"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
         android:backgroundTint="#00CDDC39"
         android:hint="@string/password1"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
@@ -168,7 +170,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="2dp"
         android:backgroundTint="#00CDDC39"
         android:text="@string/finish"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
