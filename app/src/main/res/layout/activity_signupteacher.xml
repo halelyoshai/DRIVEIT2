@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#00EEEFE5"
         android:hint="@string/fullname"
         android:textAlignment="center"
         android:textAllCaps="false"

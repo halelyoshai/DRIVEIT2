@@ -40,54 +40,65 @@
         android:textSize="20sp"
         android:visibility="visible" />
 
-    <Button
+
+    <TextView
         android:id="@+id/btnprogress"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC3hg"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/progress2"
+        android:background="#318E24AA"
+        android:backgroundTint="#00CDDC39"
+        android:text="@string/progress"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
-        android:visibility="visible"
-        />
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
 
-    <Button
+    <TextView
         android:id="@+id/btncontrol"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC3hg"
-        android:text="@string/control"
+        android:background="#318E24AA"
+        android:backgroundTint="#00CDDC39"
+        android:text="@string/Control"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
 
-    <Button
+    <TextView
         android:id="@+id/btnparking"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC3hg"
+        android:background="#318E24AA"
+        android:backgroundTint="#00CDDC39"
         android:text="@string/parking"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
-       />
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
 
-    <Button
-        android:id="@+id/btnacution"
+    <TextView
+        android:id="@+id/btncaution"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#00CDDC3hg"
-        android:text="@string/caution1"
+        android:background="#318E24AA"
+        android:backgroundTint="#00CDDC39"
+        android:text="@string/caution"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp" />
-
+        android:textSize="20sp"
+        app:iconTint="#0B0A0A"
+        app:strokeColor="#131313" />
 
     <TextView
         android:id="@+id/txtquote"

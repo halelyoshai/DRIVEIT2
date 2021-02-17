@@ -86,4 +86,5 @@
     <string name="imfortantthingsbeforeyoourtest">דברים שחשוב לדעת לפני שניגשים לטסט:</string>
     <string name="signin">היכנס</string>
     <string name="scheduling">קביעת שיעורים</string>
+    <string name="phonenum">מספר פלאפון</string>
 </resources>

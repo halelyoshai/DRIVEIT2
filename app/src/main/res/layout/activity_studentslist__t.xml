@@ -17,9 +17,9 @@
         <Button
             android:id="@+id/btnrating"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_width="20dp"
+            android:layout_height="70dp"
+            android:layout_gravity="left"
             android:backgroundTint="#00CDDC39"
             android:text="בית"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"

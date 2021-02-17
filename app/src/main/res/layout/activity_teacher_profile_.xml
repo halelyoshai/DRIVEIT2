@@ -42,50 +42,54 @@
                     android:backgroundTint="#FFFFFF" />
             </TableRow>
 
-            -<TableRow>
-            <Button
+            <TableRow>
+
+            <TextView
                 android:id="@+id/btnteachername"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="#00FFFFFF"
                 android:backgroundTint="#00CDDC39"
                 android:text="שם המורה:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="20sp"
-                app:strokeColor="#131313" />
+                app:strokeColor="#131313"
+                app:iconTint="#FFFFFF" />/>
         </TableRow>
 
             <TableRow
                 android:layout_height="match_parent"
                 android:layout_width="match_parent">
-                <Button
+
+                <TextView
                     android:id="@+id/btnschool"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginLeft="80dp"
-                    android:text="בית ספר:"
-                    android:textSize="20sp"
-                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:background="#00FFFFFF"
                     android:backgroundTint="#00CDDC39"
-                    app:strokeColor="#131313"
+                    android:text="בית ספר:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    />
+                    android:textSize="20sp"
+                    app:strokeColor="#131313" />
 
-                <Button
+                <TextView
                     android:id="@+id/btnstudyarea"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="-290dp"
                     android:layout_gravity="left"
-                    android:text="מלמד באיזור:"
-                    android:textSize="20sp"
-                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_marginLeft="-290dp"
+                    android:background="#00FFFFFF"
                     android:backgroundTint="#00CDDC39"
-                    app:strokeColor="#131313"
+                    android:text="מלמד באיזור:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    />
+                    android:textSize="20sp"
+                    app:strokeColor="#131313" />
             </TableRow>
 
         </TableLayout>
@@ -146,10 +150,12 @@
             <ImageButton
                 android:id="@+id/btnstudentsrating"
                 android:layout_width="30dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/Goblet" />
+                android:background="@drawable/Goblet"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"/>
 
             <ImageButton
                 android:id="@+id/btnschedule"
@@ -157,7 +163,10 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/Calendar" />
+                android:background="@drawable/Calendar"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                />
 
             <ImageButton
                 android:id="@+id/btninfo"
@@ -166,8 +175,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/yellow"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
                 />
 
             <ImageButton
@@ -176,7 +185,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/Gear" />
+                android:background="@drawable/Gear"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"/>
         </TableRow>
 
 
