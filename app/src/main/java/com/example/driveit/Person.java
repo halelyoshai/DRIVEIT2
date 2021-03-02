@@ -14,7 +14,7 @@ public class Person
         private String password;
 
 
-
+        public Person(){ }
         public Person(String name, String id, String phonenum, String mail, String studyarea, String school, String city, String lisensetype, String username, String password) {
                 this.name = name;
                 this.id = id;
