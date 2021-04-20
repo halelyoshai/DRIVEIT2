@@ -33,13 +33,13 @@
 
                 <Button
                     android:id="@+id/btnrofilepic"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@drawable/driveit_one"
-                    android:backgroundTint="#FFFFFF" />
+                    android:backgroundTint="#FFFFFF"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow>

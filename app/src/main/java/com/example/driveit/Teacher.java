@@ -1,15 +1,25 @@
 package com.example.driveit;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Teacher extends Person
 {
     private ArrayList<Student> students;
-    private String lessonlength;
+    private int lessonlength;
     private int Swaitingtest;
     private int freelessons;
     private String status;
-
+    private Map<Date, String> schedule;
 
     public Teacher(String name, String id, String phonenum, String mail, String studyarea, String school, String city, String lisensetype, String username, String password) {
         super(name, id, phonenum, mail, studyarea, school, city, lisensetype, username, password);
@@ -18,8 +28,14 @@ public class Teacher extends Person
         this.Swaitingtest = Swaitingtest;
         this.freelessons = freelessons;
         this.status = status;
+        schedule= new HashMap<Date, String>();
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void initSchedule(){
+        Calendar calendar= Calendar.getInstance();
+        SimpleDateFormat sdf= SimpleDateFormat("HH:mm");
+        for ()
+    }
     public ArrayList<Student> getStudents() {
         return students;
     }
