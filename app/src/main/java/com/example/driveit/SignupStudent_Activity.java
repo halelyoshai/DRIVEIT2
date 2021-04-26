@@ -10,6 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class SignupStudent_Activity extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private EditText fullname;
@@ -23,6 +30,9 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     private EditText passwordagain;
     private Button finish;
     private FirebaseAuth firebaseAuth;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private Student student;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +48,8 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
         passwordagain = findViewById(R.id.btnpasswordagain);
         finish = findViewById(R.id.btnfinish3);
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase= FirebaseDatabase.getInstance();
+        databaseReference= firebaseDatabase.getReference("Students");
         finish.setOnClickListener(this);
     }
 
@@ -46,12 +58,13 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     public void onClick(View v) {
         if (v == finish) {
             if (password==passwordagain)
-                Student S= new Student();
+                student= new Student();
             firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(student);
                                 Intent intent = new Intent(SignupStudent_Activity.this, TeacherProfile_Activity.class);
                                 startActivity(intent);
                             }
@@ -62,9 +75,4 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     }
 }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup_student_);
-    }
-}
+

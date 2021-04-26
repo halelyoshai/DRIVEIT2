@@ -169,7 +169,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/Goblet"
+            android:drawableBottom="@drawable/goblet"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"/>
 
@@ -179,7 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/Clock"
+            android:drawableBottom="@drawable/clock"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"/>
 
@@ -199,7 +199,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/Gear"
+            android:drawableBottom="@drawable/gear"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"/>
     </TableRow>
