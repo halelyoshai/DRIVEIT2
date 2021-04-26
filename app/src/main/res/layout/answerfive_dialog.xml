@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text=".....אפליקציית DRIVE IT"
+        android:text="כאשר ביצעת את כל אלה ואתה מרגיש מספיק מוכן פנה למורה הנהיגה, שאל את דעתו ובמקרה והוא מסכים עימך כנס לאתר משרד הרישוי, שלם אגרת הגשה לטסט ובתוך שבוע- שבועיים תשלח אליך הודעה עם מועד הבחינה המעשית. בהצלחה!:)"
         android:textSize="20sp" />
 
 </LinearLayout>

@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text=".....אפליקציית DRIVE IT"
+        android:text="על מנת להתחיל ללמוד נהיגה כל מה שצריך זה להוציא טופס ירוק וברוב המקרים המורה גם ידרוש לעבור את המבחן התיאורטי לפני שמתחילים ללמוד- ניתן גם לעשות זאת תוך כדי השיעורים- המלצה שלנו: לא כדאי לחכות:)"
         android:textSize="20sp" />
 
 </LinearLayout>

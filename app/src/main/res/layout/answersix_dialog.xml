@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text=".....אפליקציית DRIVE IT"
+        android:text="ממוצע השיעורים הגשה לטסט הוא כ-40 שיעורים, הכמות המינימלית היא 28 והיא מאוד תלויה ומשתנה בין אדם לאדם"
         android:textSize="20sp" />
 
 </LinearLayout>
