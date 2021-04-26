@@ -11,4 +11,5 @@ public class SchedulingActivity_T extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scheduling__s);
     }
+
 }

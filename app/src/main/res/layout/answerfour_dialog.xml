@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text=".....אפליקציית DRIVE IT"
+        android:text="ניתן לגשת לטסט רק לאחר שביצעת את מספר השיעורים המינימלי- כ28 שיעורים, יש בידך טופס ירוק עם תוצאת עבר במבחן התיאורטי וביצעת את הטסט הפנימי בבית הספר לנהיגה בו למדת. תהליך הוצאת הרישיון יכול לקחת בין חודשיים וחצי עד 10 חודשים וכמובן יותר הכל תלוי במורה ובתלמיד. "
         android:textSize="20sp" />
 
 </LinearLayout>
