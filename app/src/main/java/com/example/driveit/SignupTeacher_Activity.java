@@ -31,9 +31,11 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     private EditText priceperlesson;
     private EditText username;
     private EditText password;
-    private EditText passwordagain;
     private Button finish;
     private FirebaseAuth firebaseAuth;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private Teacher teacher;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,6 +52,8 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         password = findViewById(R.id.btnpassword);
         finish = findViewById(R.id.btnfinish3);
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase= FirebaseDatabase.getInstance();
+        databaseReference= firebaseDatabase.getReference("Teacher");
         finish.setOnClickListener(this);
     }
 
@@ -57,12 +61,13 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            Teacher t = new Teacher(fullname, phonenumber, mailadress, school, studyarea, manualorautomatic,lessonslength, priceperlesson, username,password, passwordagain,);
+            teacher= new Teacher(fullname, phonenumber, mailadress, school, studyarea, manualorautomatic, lessonslength, priceperlesson, username, );
             firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(teacher);
                                 Intent intent = new Intent(SignupTeacher_Activity.this, TeacherProfile_Activity.class);
                                 startActivity(intent);
                             }

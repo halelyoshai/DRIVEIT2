@@ -17,7 +17,7 @@
         android:drawableBottom="@drawable/house" />
 
     <TextView
-        android:id="@+id/txtprogress"
+        android:id="@+id/txtprogress1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -42,7 +42,7 @@
 
 
     <TextView
-        android:id="@+id/btnprogress"
+        android:id="@+id/txtprogress"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
@@ -56,7 +56,7 @@
         app:strokeColor="#131313" />
 
     <TextView
-        android:id="@+id/btncontrol"
+        android:id="@+id/txtcontrol"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
@@ -71,7 +71,7 @@
         app:strokeColor="#131313" />
 
     <TextView
-        android:id="@+id/btnparking"
+        android:id="@+id/txtparking"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"
@@ -86,7 +86,7 @@
         app:strokeColor="#131313" />
 
     <TextView
-        android:id="@+id/btncaution"
+        android:id="@+id/txtcaution"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"

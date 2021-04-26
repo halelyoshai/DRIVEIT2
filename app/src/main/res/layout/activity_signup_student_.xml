@@ -10,16 +10,16 @@
 
 
     <EditText
-        android:id="@+id/btnfullname"
-        style="@style/Widget.AppCompat.EditText"
+        android:id="@+id/btnname"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
+        android:layout_marginTop="60dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="52dp"
         android:background="#08FFFFFF"
         android:backgroundTint="#000B0A0B"
         android:drawableTint="#32013A"
-        android:hint="@string/fullname"
+        android:hint="שם מלא"
         android:rotationX="1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"

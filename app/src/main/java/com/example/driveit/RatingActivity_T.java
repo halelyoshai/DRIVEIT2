@@ -21,11 +21,9 @@ public class RatingActivity_T extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studentsrating);
+        setContentView(R.layout.activity_studentsrating_t);
 
          rating = findViewById(R.id.txtstudentsrating);
-         home = findViewById(R.id.btnhome);
-         home.setOnClickListener(this);
          progress = findViewById(R.id.btnprogress);
          progress.setOnClickListener(this);
          control = findViewById(R.id.btncontrol);
@@ -36,13 +34,15 @@ public class RatingActivity_T extends AppCompatActivity implements View.OnClickL
          caution.setOnClickListener (this);
         save = findViewById(R.id.save);
         save.setOnClickListener (this);
+        home = findViewById(R.id.btnhome);
+        home.setOnClickListener(this);
 
 }
 
     @Override
     public void onClick(View v) {
         if (v == home) {
-            Intent intent = new Intent( this, ProfileActivity_T.class);
+            Intent intent = new Intent( this, TeacherProfile_Activity.class);
             startActivity(intent);
         }
 

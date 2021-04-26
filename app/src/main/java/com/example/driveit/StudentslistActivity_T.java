@@ -15,7 +15,7 @@ public class StudentslistActivity_T extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentslist__t);
 
-    public static class TeacherprofileActivity extends AppCompatActivity implements View.OnClickListener
+    class TeacherprofileActivity extends AppCompatActivity implements View.OnClickListener
     {
         private View v;
         private TextView studentslist;
@@ -25,7 +25,7 @@ public class StudentslistActivity_T extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_teacherprofile);
+            setContentView(R.layout.activity_teacher_profile_);
             studentslist = findViewById(R.id.txtstudentslist);
             btnstudentname1 = findViewById(R.id.btnstudentname1);
             btnstudentname1.setOnClickListener(this);

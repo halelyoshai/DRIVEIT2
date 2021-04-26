@@ -57,8 +57,9 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            if (password==passwordagain)
-                student= new Student();
+            if (password==passwordagain) {
+                student= new Student (fullname, phonenumber, mailadress, studyarea, city, manualorautomatic, username, );
+            }
             firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override

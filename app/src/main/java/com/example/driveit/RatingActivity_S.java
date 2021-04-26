@@ -12,31 +12,28 @@ public class RatingActivity_S extends AppCompatActivity implements View.OnClickL
     private View v;
     private TextView rating;
     private TextView studentname;
-    private Button home;
-    private Button progress;
-    private Button control;
-    private Button parking;
-    private Button caution;
+    private TextView progress;
+    private TextView control;
+    private TextView parking;
+    private TextView caution;
     private TextView qoute;
+    private Button home;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studentsrating);
+        setContentView(R.layout.activity_studentsrating_s);
+
         rating = findViewById(R.id.txtstudentsrating);
         studentname = findViewById(R.id.text2);
+        progress = findViewById(R.id.btnprogress);
+        control = findViewById(R.id.btncontrol);
+        parking = findViewById(R.id.btnparking);
+        caution = findViewById(R.id.txtcaution);
+        qoute = findViewById(R.id.txtquote);
         home = findViewById(R.id.btnhome);
         home.setOnClickListener(this);
-        progress = findViewById(R.id.btnprogress);
-        progress.setOnClickListener(this);
-        control = findViewById(R.id.btncontrol);
-        control.setOnClickListener(this);
-        parking = findViewById(R.id.btnparking);
-        parking.setOnClickListener(this);
-        caution = findViewById(R.id.btncaution);
-        caution.setOnClickListener (this);
-        qoute = findViewById(R.id.txtquote);
 
 
 

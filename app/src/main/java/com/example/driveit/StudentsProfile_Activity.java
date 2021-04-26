@@ -27,7 +27,7 @@ public class StudentsProfile_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentprofile__s);
         studentprofile = findViewById(R.id.txtstudentprofile);
-        name = findViewById(R.id.btnname);
+         = findViewById(R.id.btnname);
         city = findViewById(R.id.btncity);
         teacher = findViewById(R.id.btnteacher);
         school = findViewById(R.id.btnschool);

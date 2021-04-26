@@ -46,7 +46,7 @@
         android:textSize="20sp"
         android:visibility="visible" />
 
-    <TextView
+    <Button
         android:id="@+id/btnprogress"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
@@ -60,7 +60,7 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <TextView
+    <Button
         android:id="@+id/btncontrol"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
@@ -75,7 +75,7 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <TextView
+    <Button
         android:id="@+id/btnparking"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
@@ -90,7 +90,7 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <TextView
+    <Button
         android:id="@+id/btncaution"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"

@@ -31,8 +31,8 @@
             <TableRow android:layout_height="wrap_content"
                 android:layout_width="match_parent">
 
-                <Button
-                    android:id="@+id/btnrofilepic"
+                <ImageButton
+                    android:id="@+id/btnprofilepic"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_gravity="center"
@@ -45,7 +45,7 @@
             <TableRow>
 
             <TextView
-                android:id="@+id/btnteachername"
+                android:id="@+id/txtteachername"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent">
 
                 <TextView
-                    android:id="@+id/btnschool"
+                    android:id="@+id/txtschool"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                     app:strokeColor="#131313" />
 
                 <TextView
-                    android:id="@+id/btnstudyarea"
+                    android:id="@+id/txtstudyarea"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
                 />
 
             <ImageButton
-                android:id="@+id/btndefinitions"
+                android:id="@+id/btnsetting"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

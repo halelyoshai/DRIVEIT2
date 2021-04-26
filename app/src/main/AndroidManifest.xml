@@ -10,10 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DRIVEIT">
         <activity android:name=".TeacherProfile_Activity"></activity>
-        <activity android:name=".Setting_Activity" />
         <activity android:name=".SignupStudent_Activity" />
         <activity android:name=".studentprofile_S" />
-        <activity android:name=".SchedulingActivity_T" />
+        <activity android:name=".SchedulingActivity" />
         <activity android:name=".LessonsscheduleActivity_S" />
         <activity android:name=".StudentslistActivity_T" />
         <activity android:name=".StudentsInfo_Activity" />

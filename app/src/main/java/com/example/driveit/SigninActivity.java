@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,9 +18,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SigninActivity extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private TextView driveit;
-    private Button username;
-    private Button password;
-    private Button signin;
+    private EditText username;
+    private EditText password;
+    private Button signin1;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -28,12 +29,12 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_signin);
 
         driveit = findViewById(R.id.txtdriveit);
-        username = findViewById(R.id.btnhome);
+        username = findViewById(R.id.btnusername);
         username.setOnClickListener(this);
-        password = findViewById(R.id.btnprogress);
+        password = findViewById(R.id.btnpassword);
         password.setOnClickListener(this);
-        signin = findViewById(R.id.btncontrol);
-        signin.setOnClickListener(this);
+        signin1 = findViewById(R.id.btncontrol);
+        signin1.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
 
@@ -41,7 +42,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        if (v == signin) {
+        if (v == signin1) {
             firebaseAuth.signInWithEmailAndPassword(username.getText().toString(),password.getText().toString())
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
