@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text=".....אפליקציית DRIVE IT"
+        android:text="קישורים שיוכלו לעזור לכם: אתר משרד הרישוי, תשלום אגרה, הוצאת טופס ירוק, טיפים ממורי הנהיגה:"
         android:textSize="20sp" />
 
 </LinearLayout>
