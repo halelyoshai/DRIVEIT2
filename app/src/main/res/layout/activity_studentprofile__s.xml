@@ -31,7 +31,7 @@
         android:layout_width="match_parent">
 
         <Button
-        android:id="@+id/btn4"
+        android:id="@+id/btnstudentprufile"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:textStyle="bold"
@@ -49,7 +49,7 @@
     android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/btncity"
+            android:id="@+id/txtcity"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             app:strokeColor="#00131313" />
 
         <TextView
-            android:id="@+id/btnname"
+            android:id="@+id/txtname"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
     android:layout_width="match_parent">
 
         <TextView
-            android:id="@+id/btnschool"
+            android:id="@+id/txtschool"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
             app:strokeColor="#131313" />
 
         <TextView
-            android:id="@+id/btnteacher"
+            android:id="@+id/txtteacher"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
     android:layout_marginTop="20dp">
 
     <TextView
-        android:id="@+id/t2"
+        android:id="@+id/txtbigtest"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -133,7 +133,7 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/t3"
+        android:id="@+id/txtsmalltest"
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -145,7 +145,7 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/lessonscounting"
+        android:id="@+id/txtlessonscounting"
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -194,7 +194,7 @@
             android:layout_marginRight="2dp"/>
 
         <Button
-            android:id="@+id/btneditprofile"
+            android:id="@+id/btnsetting"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
