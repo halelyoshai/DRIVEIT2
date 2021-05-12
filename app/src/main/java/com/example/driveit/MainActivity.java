@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firebaseDatabase = FirebaseDatabase.getInstance();
         if (firebaseAuth.getCurrentUser()!=null){
 
-            Intent Intent = new Intent(packageContext this,StudentsProfile_Activity)
+            Intent Intent = new Intent(packageContext.this ,StudentsProfile_Activity);
            startActivity(intent);
         }
 
