@@ -86,4 +86,16 @@
     <string name="signin">היכנס</string>
     <string name="scheduling">קביעת שיעורים</string>
     <string name="phonenum">מספר פלאפון</string>
+    <string name="fullname">שם מלא</string>
+    <string name="mailadress">כתובת מייל</string>
+    <string name="studyarea">איזור לימוד</string>
+    <string name="yourcity">עיר</string>
+    <string name="manualoraoutomatic">ידני/ אוטומט</string>
+    <string name="username">שם משתמש</string>
+    <string name="password">סיסמה</string>
+    <string name="passwordagain">אימות סיסמה</string>
+    <string name="studentsrightnow">60 תלמידים כעת</string>
+    <string name="rating">דרג</string>
+    <string name="studentname">שם התלמיד</string>
+    <string name="availablelessons">שיעור פנויים היום:</string>
 </resources>

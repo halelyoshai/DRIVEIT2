@@ -37,7 +37,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/alfa_slab_one"
-        android:text="60 תלמידים כעת"
+        android:text="@string/studentsrightnow"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="38sp"
         android:visibility="visible" />
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:backgroundTint="#00CDDC39"
-        android:text="דרג"
+        android:text="@string/rating"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:strokeColor="#131313" />
@@ -68,7 +68,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="right"
         android:backgroundTint="#00CDDC39"
-        android:text="שם התלמיד"
+        android:text="@string/studentname"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="15sp"
         app:strokeColor="#131313" />

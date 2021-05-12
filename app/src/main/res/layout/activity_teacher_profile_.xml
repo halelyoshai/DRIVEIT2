@@ -132,7 +132,7 @@
             android:background="@drawable/circle"
             android:paddingLeft="30dp"
             android:paddingTop="20dp"
-            android:text="שיעור פנויים היום:"
+            android:text="@string/availablelessons"
             android:textAlignment="textEnd"
             android:textColorHighlight="#090909"
             android:textColorHint="@color/black"
@@ -153,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/goblet"
+                android:background="@drawable/Goblet"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"/>
 
@@ -163,7 +163,7 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/calendar"
+                android:background="@drawable/Calendar"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 />
@@ -185,7 +185,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/gear"
+                android:background="@drawable/Gear"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"/>
         </TableRow>
