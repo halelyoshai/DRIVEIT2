@@ -3,7 +3,6 @@ package com.example.driveit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +43,8 @@ public class TeacherProfile_Activity extends AppCompatActivity {
 
     }
     @Override
-    public void onClick(View v) {
+    public void onClick(View v)
+    {
         if (v == profilepic ) {
             Intent intent = new Intent(this, גלריה.class);
             startActivity(intent);
@@ -59,14 +59,19 @@ public class TeacherProfile_Activity extends AppCompatActivity {
     }
 
         if (v == schedule) {
-    Intent intent = new Intent( this, SchedulingActivity.class);{
+            Intent intent = new Intent( this, SchedulingActivity.class);{
         startActivity(intent);
     }
 
 
         if (v == info) {
-            Intent intent = new Intent( this, StudentsInfo_Activity.class);
+            intent = new Intent(this, Info_Activity.class);
             startActivity(intent);
         }
+
+            if (v == setting){
+                intent = new Intent(this, SignupTeacher_Activity.class);
+                startActivity(intent);
+            }
     }
 }

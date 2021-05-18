@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-        <Button
+        <ImageView
         android:id="@+id/btnstudentprufile"
         android:layout_width="60dp"
         android:layout_height="85dp"
@@ -164,7 +164,7 @@
         android:layout_marginTop="30dp">
 
         <Button
-            android:id="@+id/btnprogress"
+            android:id="@+id/btnrating"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"

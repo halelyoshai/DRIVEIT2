@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/InfoBackground"
     android:orientation="vertical"
-    tools:context=".StudentsInfo_Activity">
+    tools:context=".Info_Activity">
 
 
     <TextView

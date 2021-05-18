@@ -23,7 +23,7 @@ public class RatingActivity_S extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studentsrating_s);
+        setContentView(R.layout.activity_rating_s);
 
         rating = findViewById(R.id.txtstudentsrating);
         studentname = findViewById(R.id.text2);

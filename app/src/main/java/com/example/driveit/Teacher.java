@@ -1,8 +1,5 @@
 package com.example.driveit;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
 
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
@@ -30,11 +27,9 @@ public class Teacher extends Person
         this.status = status;
         schedule= new HashMap<Date, String>();
     }
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public void initSchedule(){
         Calendar calendar= Calendar.getInstance();
-        SimpleDateFormat sdf= SimpleDateFormat("HH:mm");
-        for ()
+
     }
     public ArrayList<Student> getStudents() {
         return students;
@@ -44,11 +39,11 @@ public class Teacher extends Person
         this.students = students;
     }
 
-    public String getLessonlength() {
+    public int getLessonlength() {
         return lessonlength;
     }
 
-    public void setLessonlength(String lessonlength) {
+    public void setLessonlength(int lessonlength) {
         this.lessonlength = lessonlength;
     }
 

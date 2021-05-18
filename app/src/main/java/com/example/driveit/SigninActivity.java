@@ -48,8 +48,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        Intent intent = new Intent( SigninActivity.this,
-                                StudentsProfile_Activity.class);
+                        Intent intent = new Intent( SigninActivity.this, StudentsProfile_Activity.class);
                         startActivity(intent);
                     }
                 }

@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class StudentsInfo_Activity extends AppCompatActivity implements View.OnClickListener {
+public class Info_Activity extends AppCompatActivity implements View.OnClickListener {
     SharedPreferences sp;
     private Dialog d;
     private Button quation1, quation2, quation3, quation4, quation5, quation6, quation7, quation8, quation9, quation10;

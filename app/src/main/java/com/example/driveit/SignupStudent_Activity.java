@@ -59,7 +59,7 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
         if (v == finish) {
             if (password==passwordagain)
             {
-                student= new Student (fullname, phonenumber, mailadress, studyarea, city, manualorautomatic, username,)
+                student= new Student (fullname, phonenumber, mailadress, studyarea, city, manualorautomatic, username,password,passwordagain,);
 
             firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -67,7 +67,7 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(student);
-                                Intent intent = new Intent(SignupStudent_Activity.this, TeacherProfile_Activity.class);
+                                Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
                                 startActivity(intent);
                             }
                         }
