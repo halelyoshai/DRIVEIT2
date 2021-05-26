@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         public void onClick (View v) {
             if (v == signin) {
+                if()
+            }
                 Intent intent = new Intent(this, SigninActivity.class);
                 startActivity(intent);
             }
