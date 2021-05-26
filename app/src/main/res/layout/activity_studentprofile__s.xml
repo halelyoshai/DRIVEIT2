@@ -171,7 +171,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/Goblet" />
+            android:drawableBottom="@drawable/goblet" />
 
         <Button
             android:id="@+id/btnscheduling"
@@ -179,7 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/Clock"
+            android:drawableBottom="@drawable/clock"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"/>
 
@@ -201,7 +201,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/Gear" />
+            android:drawableBottom="@drawable/gear" />
     </TableRow>
 
 
