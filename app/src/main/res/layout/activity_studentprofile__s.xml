@@ -30,8 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-        <ImageView
-        android:id="@+id/btnstudentprufile"
+        <ImageButton
+        android:id="@+id/btnpicture"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:textStyle="bold"
@@ -48,27 +48,13 @@
     -<TableRow
     android:layout_marginTop="10dp">
 
-        <TextView
-            android:id="@+id/txtcity"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="80dp"
-            android:background="#00FFFFFF"
-            android:backgroundTint="#00CDDC39"
-            android:text="עיר:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20sp"
-            app:strokeColor="#00131313" />
 
         <TextView
             android:id="@+id/txtname"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="-290dp"
+            android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:backgroundTint="#32FFFFFF"
             android:text="שם:"
@@ -82,27 +68,13 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-        <TextView
-            android:id="@+id/txtschool"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="80dp"
-            android:background="#00FFFFFF"
-            android:backgroundTint="#00CDDC39"
-            android:text="בית ספר:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20sp"
-            app:strokeColor="#131313" />
 
         <TextView
             android:id="@+id/txtteacher"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="-290dp"
+            android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:backgroundTint="#00CDDC39"
             android:text="לומד אצל:"
@@ -164,7 +136,7 @@
         android:layout_marginTop="30dp">
 
         <Button
-            android:id="@+id/btnrating"
+            android:id="@+id/btntests"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
@@ -174,7 +146,7 @@
             android:drawableBottom="@drawable/goblet" />
 
         <Button
-            android:id="@+id/btnscheduling"
+            android:id="@+id/btnlessons"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -194,7 +166,7 @@
             android:layout_marginRight="2dp"/>
 
         <Button
-            android:id="@+id/btnsetting"
+            android:id="@+id/btnteachers"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"

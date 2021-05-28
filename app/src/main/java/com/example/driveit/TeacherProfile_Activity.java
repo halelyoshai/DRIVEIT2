@@ -52,7 +52,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
 
 
         if (v == studentsrating) {
-            Intent intent = new Intent(this, StudentslistActivity_T.class);
+            Intent intent = new Intent(this, Studentslist_Activity.class);
 
                 startActivity(intent);
 

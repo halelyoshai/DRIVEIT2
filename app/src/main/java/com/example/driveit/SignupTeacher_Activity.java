@@ -29,8 +29,8 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     private EditText manualorautomatic;
     private EditText lessonslength;
     private EditText priceperlesson;
-    private EditText username;
     private EditText password;
+    private EditText passwordagain
     private Button finish;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -48,8 +48,8 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         manualorautomatic = findViewById(R.id.btnmanualorautomatic);
         lessonslength = findViewById(R.id.btnlessonlength);
         priceperlesson = findViewById(R.id.btnpriceperlesson);
-        username = findViewById(R.id.btnusername);
         password = findViewById(R.id.btnpassword);
+        password = findViewById(R.id.btnpasswordagain);
         finish = findViewById(R.id.btnfinish3);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase= FirebaseDatabase.getInstance();
@@ -61,7 +61,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            teacher= new Teacher(fullname, phonenumber, mailadress, school, studyarea, manualorautomatic, lessonslength, priceperlesson, username, );
+            teacher= new Teacher(fullname, phonenumber, mailadress, school, studyarea, manualorautomatic, lessonslength, priceperlesson, );
             firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override

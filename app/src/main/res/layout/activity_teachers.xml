@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluebackground"
+    tools:context=".TeacherProfile_Activity">
+
+
+
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TableRow
+            android:layout_width="358dp">
+
+            <TextView
+                android:id="@+id/txtteacherprofile"
+                android:layout_height="wrap_content"
+                android:layout_width="415dp"
+                android:textSize="45sp"
+                android:layout_gravity="center"
+                android:text="choos your teacher"
+                />
+
+        </TableRow>
+
+
+        <TableRow>
+
+
+            <TextView
+                android:id="@+id/txtteachername"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מלמד באיזור:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudentsnumber"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="שם:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/txtschool"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מחיר:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudyarea"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="ידני/אוטומט:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/txtteachername"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מלמד באיזור:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudentsnumber"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="שם:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/txtschool"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מחיר:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudyarea"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="ידני/אוטומט:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/txtteachername"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מלמד באיזור:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudentsnumber"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="שם:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/txtschool"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מחיר:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudyarea"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="ידני/אוטומט:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/txtteachername"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מלמד באיזור:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudentsnumber"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="שם:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/txtschool"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="מחיר:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+
+            <TextView
+                android:id="@+id/txtstudyarea"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-290dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00CDDC39"
+                android:text="ידני/אוטומט:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
+        </TableRow>
+
+    </TableLayout>
+    -<TableLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TableRow android:layout_height="50dp">
+    </TableRow>
+</TableLayout>
+</LinearLayout>

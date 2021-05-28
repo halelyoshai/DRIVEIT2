@@ -91,4 +91,5 @@
     <string name="rating">דרג</string>
     <string name="studentname">שם התלמיד</string>
     <string name="availablelessons">שיעור פנויים היום:</string>
+    <string name="alwayskeepmoving">always keep moving!</string>
 </resources>

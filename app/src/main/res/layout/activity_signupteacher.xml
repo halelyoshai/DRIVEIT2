@@ -15,7 +15,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:hint="@string/fullname"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -120,33 +120,6 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
-    <EditText
-        android:id="@+id/btnbio"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="#00CDDC39"
-        android:hint="@string/bio"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
-
-
-    <EditText
-        android:id="@+id/btnusername"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="#00CDDC39"
-        android:hint="@string/username"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:iconTint="#0B0A0A"
-        app:strokeColor="#131313" />
 
 
     <EditText
@@ -162,6 +135,22 @@
         android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
+
+    <EditText
+        android:id="@+id/btnpasswordagain"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#08FFFFFF"
+        android:backgroundTint="#000B0A0B"
+        android:drawableTint="#32013A"
+        android:hint="@string/passwordagain"
+        android:rotationX="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:iconTint="#000B0A0A"
+        app:strokeColor="#08131313" />
 
     <Button
         android:id="@+id/btnfinish3"

@@ -8,23 +8,24 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class StudentsProfile_Activity extends AppCompatActivity implements View.OnClickListener {
     private View v;
-    private ImageView studentprofile;
+    private TextView studentprofile;
+    private ImageButton picture;
     private TextView name;
-    private TextView city;
     private TextView teacher;
     private TextView school;
     private TextView bigtest;
     private TextView smalltest;
     private TextView lessonsnum;
     private Button info;
-    private Button scheduling;
-    private Button rating;
-    private Button setting;
+    private Button lessons;
+    private Button tests;
+    private Button teachers;
 
 
     @Override
@@ -32,32 +33,32 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentprofile__s);
 
-        studentprofile = findViewById(R.id.btnstudentprufile);
+        studentprofile = findViewById(R.id.txtstudentprofile);
+        picture = findViewById(R.id.btnpicture);
         name = findViewById(R.id.txtname);
-        city = findViewById(R.id.txtcity);
         teacher = findViewById(R.id.txtteacher);
         school = findViewById(R.id.txtschool);
         bigtest = findViewById(R.id.txtbigtest);
         smalltest = findViewById(R.id.txtsmalltest);
         lessonsnum = findViewById(R.id.txtlessonscounting);
-        rating = findViewById(R.id.btnrating);
-        scheduling = findViewById(R.id.btnscheduling);
         info = findViewById(R.id.btninfo);
-        setting = findViewById(R.id.btnsetting);
+        lessons = findViewById(R.id.btnlessons);
+        tests = findViewById(R.id.btntests);
+        teachers = findViewById(R.id.btnteachers);
 
 
         studentprofile.setOnClickListener (this);
+        picture.setOnClickListener (this);
         name.setOnClickListener(this);
-        city.setOnClickListener(this);
         teacher.setOnClickListener(this);
         school.setOnClickListener(this);
         bigtest.setOnClickListener(this);
         smalltest.setOnClickListener(this);
         lessonsnum.setOnClickListener(this);
-        rating.setOnClickListener (this);
-        scheduling.setOnClickListener(this);
         info.setOnClickListener (this);
-        setting.setOnClickListener(this);
+        lessons.setOnClickListener(this);
+        tests.setOnClickListener (this);
+        teachers.setOnClickListener(this);
 
 
 
@@ -65,21 +66,20 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     }
     @Override
     public void onClick(View v) {
-        if (v == rating){
-        Intent intent = new Intent ( this, RatingActivity_S.class);
+        if (v == picture){
+                Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent,0);
+        }
+
+
+        if (v == lessons ) {
+            Intent intent = new Intent( this, Lessonslist_Activity.class);
             startActivity(intent);
         }
 
 
-
-        if (v == scheduling ) {
-            Intent intent = new Intent( this, SchedulingActivity.class);
-            startActivity(intent);
-        }
-
-
-        if (v == setting){
-            Intent intent = new Intent ( this, SignupStudent_Activity.class);
+        if (v == tests){
+           Intent intent = new Intent ( this, Testslist_activity.class);
             startActivity(intent);
         }
 
@@ -87,8 +87,8 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
             Intent intent = new Intent ( this, Info_Activity.class);
             startActivity(intent);
         }
-        if (v == studentprofile){
-            Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
+        if (v == teachers){
+            Intent intent = new Intent (this, TeachersActivity.class);
             startActivityForResult(intent,0);
         }
 

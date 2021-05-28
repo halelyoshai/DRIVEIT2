@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/infobackgroundd">
+    android:layout_height="wrap_content">
+
 
     <EditText
-        android:id="@+id/Answer"
+        android:id="@+id/lessonnumber"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="ממוצע השיעורים הגשה לטסט הוא כ-40 שיעורים, הכמות המינימלית היא 28 והיא מאוד תלויה ומשתנה בין אדם לאדם"
+        android:hint="מספר טסט"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/Date"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:hint="כתוב תאריך"
         android:textSize="20sp" />
 
 </LinearLayout>
