@@ -2,8 +2,6 @@
     <string name="app_name">DRIVE IT</string>
     <string name="drive_it">DRIVE IT</string>
     <string name="sign_in" formatted="true" translatable="true">היכנס</string>
-    <string name="username">שם משתמש</string>
-    <string name="password">סיסמה</string>
     <string name="name">שולי לוי</string>
     <string name="city">טבריה</string>
     <string name="teacher">לומדת אצל: אבי כהן</string>
@@ -28,13 +26,9 @@
     <string name="home">בית</string>
     <string name="shlita">שליטה בהילוכים</string>
     <string name="save">שמור</string>
-    <string name="fullname">שם מלא</string>
     <string name="phonenumber">מספר טלפון</string>
-    <string name="mailadress">כתובת מייל</string>
-    <string name="studyarea">איזור לימוד</string>
     <string name="city1">יישוב</string>
     <string name="manualorautomatic">ידני או אוטומט</string>
-    <string name="passwordagain">אימות סיסמה</string>
     <string name="finish">סיימתי:)</string>
     <string name="school">בית ספר</string>
     <string name="studyarea1">איזור שיעור</string>
@@ -60,7 +54,6 @@
     <string name="availablelessonstoday">שיעורים פנויים היום</string>
     <string name="waitingfortest">מחכים לטסט:</string>
     <string name="studentsnumber">מספר תלמידים כרגע:</string>
-    <string name="rating">דרג</string>
     <string name="teachersname">שם המורה</string>
     <string name="דביםםך">בית ספר:</string>
     <string name="eacher">לומדים אצל:</string>

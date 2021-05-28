@@ -48,8 +48,8 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
         passwordagain = findViewById(R.id.btnpasswordagain);
         finish = findViewById(R.id.btnfinish3);
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseDatabase= FirebaseDatabase.getInstance();
-        databaseReference= firebaseDatabase.getReference("Students");
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Students");
         finish.setOnClickListener(this);
     }
 
@@ -57,22 +57,22 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            if (password==passwordagain)
-            {
-                student= new Student (fullname, phonenumber, mailadress, studyarea, city, manualorautomatic, username,password,passwordagain,);
+            if (password == passwordagain) {
+                student = new Student(fullname, phonenumber, mailadress, studyarea, city, manualorautomatic, username, password, passwordagain, );
 
-            firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
-                    addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(student);
-                                Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
-                                startActivity(intent);
+                firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
+                        addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(student);
+                                    Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
+                                    startActivity(intent);
+                                }
                             }
-                        }
 
-                    });
+                        });
+            }
         }
     }
 }

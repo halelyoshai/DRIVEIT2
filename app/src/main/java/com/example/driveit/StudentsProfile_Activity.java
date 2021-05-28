@@ -94,7 +94,6 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
 
     }
-}
 
      @Override
      protected void onActivityResult(int requrstCode, int resultCode, Intent data){
@@ -105,10 +104,11 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
              if(requrstCode==RESULT_OK)
              {
                  Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                 iv.setimageap(bitmap);
+                 studentprofile.setImageBitmap(bitmap);
              }
          }
      }
+}
                        
                         
                     
