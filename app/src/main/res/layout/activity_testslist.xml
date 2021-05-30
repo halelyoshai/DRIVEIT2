@@ -7,27 +7,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/carsbackground"
     android:orientation="vertical"
-    tools:context=".RatingActivity_T">
+    tools:context=".Test">
 
-    <Button
-        android:id="@+id/btnhome"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="89dp"
-        android:layout_height="89dp"
-        android:background="@drawable/roadforest"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/home"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:strokeColor="#131313"
-        app:iconTint="#0B0A0A"/>
 
     <TextView
         android:id="@+id/txtstudentsrating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="רשימת טסטים"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"

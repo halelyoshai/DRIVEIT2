@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DRIVEIT">
-        <activity android:name=".newtetst"></activity>
+        <activity android:name=".newtetst"/>
         <activity android:name=".newstudent" />
         <activity android:name=".TeachersActivity" />
         <activity android:name=".TeacherProfile_Activity" />
@@ -17,7 +17,7 @@
         <activity android:name=".Studentslist_Activity" />
         <activity android:name=".Info_Activity" />
         <activity android:name=".Lessonslist_Activity" />
-        <activity android:name="." />
+        <activity android:name="Tes" />
         <activity android:name=".SignupTeacher_Activity" />
         <activity android:name=".StudentsProfile_Activity" />
         <activity android:name=".SigninActivity" />

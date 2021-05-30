@@ -5,11 +5,21 @@
     android:background="@drawable/infobackgroundd">
 
     <EditText
+        android:id="@+id/lessonnumber"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="איך ניגשים לטסט?"
+        android:textSize="30sp" />
+
+
+    <EditText
         android:id="@+id/Answer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="כאשר ביצעת את כל אלה ואתה מרגיש מספיק מוכן פנה למורה הנהיגה, שאל את דעתו ובמקרה והוא מסכים עימך כנס לאתר משרד הרישוי, שלם אגרת הגשה לטסט ובתוך שבוע- שבועיים תשלח אליך הודעה עם מועד הבחינה המעשית. בהצלחה!:)"
         android:textSize="20sp" />
 

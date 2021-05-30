@@ -10,15 +10,15 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:text="מי אנחנו?"
-        android:textSize="30sp" />
+        android:text="ממה צריך בשביל להתחיל ללמוד נהיגה?"
+        android:textSize="23sp" />
 
     <EditText
         android:id="@+id/Answer2"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="על מנת להתחיל ללמוד נהיגה כל מה שצריך זה להוציא טופס ירוק וברוב המקרים המורה גם ידרוש לעבור את המבחן התיאורטי לפני שמתחילים ללמוד- ניתן גם לעשות זאת תוך כדי השיעורים- המלצה שלנו: לא כדאי לחכות:)"
         android:textSize="20sp" />
 
