@@ -5,11 +5,20 @@
     android:background="@drawable/infobackgroundd">
 
     <EditText
+        android:id="@+id/lessonnumber"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="מי אנחנו?"
+        android:textSize="30sp" />
+
+    <EditText
         android:id="@+id/Answer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="15dp"
         android:text="אפליקצייה DRIVE IT היא אפליקציה שנועדה לעשות סדר בכל הנוגע לתהליך הוצאת הרישיון שיכול להוך לעיתים לקשה ומסורבל. האפליקצייה מעניקה את המידע הנחוץ ומאפשרת ליצור קשר ישיר עם המורה ולנהל את לוח הזמנים באופן הנוח ביותר"
         android:textSize="20sp"
         />

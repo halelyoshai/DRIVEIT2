@@ -2,26 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/infobackgroundd">
+    android:background="@drawable/driveittrafficlights">
+
 
     <EditText
         android:id="@+id/lessonnumber"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:text="מי אנחנו?"
-        android:textSize="30sp" />
+        android:layout_marginTop="20dp"
+        android:hint="מספר טסט"
+        android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/Answer2"
+        android:id="@+id/Date"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="על מנת להתחיל ללמוד נהיגה כל מה שצריך זה להוציא טופס ירוק וברוב המקרים המורה גם ידרוש לעבור את המבחן התיאורטי לפני שמתחילים ללמוד- ניתן גם לעשות זאת תוך כדי השיעורים- המלצה שלנו: לא כדאי לחכות:)"
+        android:hint="כתוב תאריך"
         android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/btnDialogLogin"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="הוסף"
+        android:textSize="20sp"/>
+
 </LinearLayout>
-
-
