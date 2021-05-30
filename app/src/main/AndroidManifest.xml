@@ -15,7 +15,7 @@
         <activity android:name=".Studentslist_Activity" />
         <activity android:name=".Info_Activity" />
         <activity android:name=".Lessonslist_Activity" />
-        <activity android:name="Tes" />
+        <activity android:name=".Testslist_Activity" />
         <activity android:name=".SignupTeacher_Activity" />
         <activity android:name=".StudentsProfile_Activity" />
         <activity android:name=".SigninActivity" />
