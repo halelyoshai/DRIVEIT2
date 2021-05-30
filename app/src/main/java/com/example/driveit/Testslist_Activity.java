@@ -2,55 +2,54 @@ package com.example.driveit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Studentlist_Activity extends AppCompatActivity implements View.OnClickListener {
+public class Testslist_Activity extends AppCompatActivity implements View.OnClickListener {
     private View v;
-
+    SharedPreferences sp;
+    private Dialog d;
+    private TextView testslist;
+    private TextView studentname;
+    private Button plus;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_testslist);
+        setContentView(R.layout.activity_lessonslist);
+
+        d = new Dialog(this);
+        testslist= findViewById(R.id.txtlessons);
+        studentname=findViewById(R.id.txtstudentname);
+
+        d.setContentView(R.layout.answerone_dialog);
+        plus = (Button) findViewById(R.id.btnplus);
+        plus.setOnClickListener(this);
+        sp = getSharedPreferences("details1", 0);
+
+        testslist.setOnClickListener(this);
+        studentname.setOnClickListener(this);
+        plus.setOnClickListener(this);
+
+
 
     }
 
     @Override
     public void onClick(View v) {
-        if (v == profilepic) {
-            // Intent intent = new Intent(this, .class);
-            //  startActivity(intent);
+        if (v == plus) {
+            d.setContentView(R.layout.newlesson_dialog);
         }
 
 
-        if (v == studentsrating) {
-            Intent intent = new Intent(this, Studentslist_Activity.class);
-
-            startActivity(intent);
-
-
-        }
-
-        if (v == schedule) {
-            Intent intent = new Intent(this, SchedulingActivity.class);
-
-            startActivity(intent);
-
-        }
-
-        if (v == info) {
-            Intent intent = new Intent(this, Info_Activity.class);
-            startActivity(intent);
-        }
-
-        if (v == setting) {
-            Intent intent = new Intent(this, SignupTeacher_Activity.class);
-            startActivity(intent);
-        }
     }
-}
+
+    }
+
+

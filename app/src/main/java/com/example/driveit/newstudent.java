@@ -9,6 +9,6 @@ public class newstudent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newstudent);
+        setContentView(R.layout.newstudent_dialog);
     }
 }

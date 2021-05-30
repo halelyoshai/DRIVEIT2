@@ -9,6 +9,6 @@ public class newtetst extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newtetst);
+        setContentView(R.layout.newtest_dialog);
     }
 }

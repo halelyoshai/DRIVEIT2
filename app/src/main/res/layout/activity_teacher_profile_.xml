@@ -60,7 +60,7 @@
                     app:strokeColor="#131313" />
 
                 <TextView
-                    android:id="@+id/txtstudentsnumber"
+                    android:id="@+id/txtstudentsnum"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

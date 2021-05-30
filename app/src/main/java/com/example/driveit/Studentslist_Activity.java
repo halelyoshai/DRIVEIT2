@@ -20,7 +20,6 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
     private TextView studentnum;
     private Button plus;
     private TextView namestudent;
-    private Button home;
 
 
     @Override
@@ -35,13 +34,11 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
 
         studentnum = findViewById(R.id.txtstudentsnumber);
         namestudent = findViewById(R.id.txtstudentname);
-        home = findViewById(R.id.btnhome);
-        home.setOnClickListener(this);
 
         studentnum.setOnClickListener (this);
         plus.setOnClickListener (this);
         namestudent.setOnClickListener (this);
-        home.setOnClickListener (this);
+
 
 
 
@@ -51,10 +48,6 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         if (v== plus){
             d.setContentView(R.layout.newstudent_dialog);
-        }
-        if (v == home) {
-            Intent intent = new Intent( this, StudentsProfile_Activity.class);
-            startActivity(intent);
         }
 
             }

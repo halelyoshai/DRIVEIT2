@@ -17,8 +17,6 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
     private TextView studyarea;
     private TextView school;
     private TextView studentsnum;
-    private TextView waitingfortest;
-    private TextView availablelessons;
     private ImageButton students;
     private ImageButton info;
     private ImageButton setting;
@@ -29,42 +27,52 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_profile_);
 
-        teacherprofile = findViewById(R.id.txtstudentprofile);
+        teacherprofile = findViewById(R.id.txtteacherprofile);
         findViewById(R.id.btnprofilepic);
         teachername = findViewById(R.id.txtteachername);
         studyarea = findViewById(R.id.txtstudyarea);
         school = findViewById(R.id.txtschool);
         studentsnum = findViewById(R.id.txtstudentsnum);
+        students= findViewById(R.id.btnstudents);
+        students.setOnClickListener(this);
+        info= findViewById(R.id.btninfo);
+        info.setOnClickListener(this);
+        setting= findViewById(R.id.btnsetting);
+        setting.setOnClickListener(this);
+
+
+        teacherprofile.setOnClickListener(this);
+        profilepic.setOnClickListener(this);
+        teachername.setOnClickListener(this);
+        studyarea.setOnClickListener(this);
+        school.setOnClickListener(this);
+        studyarea.setOnClickListener(this);
+        studentsnum.setOnClickListener(this);
+        students.setOnClickListener(this);
+        info.setOnClickListener(this);
+        setting.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
         if (v == profilepic) {
-            // Intent intent = new Intent(this, .class);
+            // Intent intent = new Intent(this, galary.class);
             //  startActivity(intent);
         }
 
 
-        if (v == studentsrating) {
+        if (v == students) {
             Intent intent = new Intent(this, Studentslist_Activity.class);
-
                 startActivity(intent);
-
-
         }
 
-        if (v == schedule) {
-            Intent intent = new Intent(this, SchedulingActivity.class);
+        if (v == info) {
+            Intent intent = new Intent(this, Info_Activity.class);
 
             startActivity(intent);
 
         }
-
-            if (v == info) {
-                Intent intent = new Intent(this, Info_Activity.class);
-                startActivity(intent);
-            }
 
             if (v == setting) {
                 Intent intent = new Intent(this, SignupTeacher_Activity.class);
