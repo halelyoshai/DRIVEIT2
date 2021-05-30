@@ -6,40 +6,35 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class TeacherProfile_Activity extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private TextView teacherprofile;
-    private Button profilepic;
+    private ImageButton profilepic;
     private TextView teachername;
     private TextView studyarea;
     private TextView school;
     private TextView studentsnum;
     private TextView waitingfortest;
     private TextView availablelessons;
-    private Button studentsrating;
-    private Button schedule;
-    private Button info;
-    private Button setting;
+    private ImageButton students;
+    private ImageButton info;
+    private ImageButton setting;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_profile_);
+
         teacherprofile = findViewById(R.id.txtstudentprofile);
         findViewById(R.id.btnprofilepic);
         teachername = findViewById(R.id.txtteachername);
         studyarea = findViewById(R.id.txtstudyarea);
         school = findViewById(R.id.txtschool);
         studentsnum = findViewById(R.id.txtstudentsnum);
-        waitingfortest = findViewById(R.id.txtwaitingfortest);
-        availablelessons = findViewById(R.id.txtavailablelessons);
-        findViewById(R.id.btnprogress);
-        findViewById(R.id.btnschedule);
-        findViewById(R.id.btninfo);
-        findViewById(R.id.btnsetting);
 
     }
 

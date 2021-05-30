@@ -18,14 +18,13 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     private ImageButton picture;
     private TextView name;
     private TextView teacher;
-    private TextView school;
     private TextView bigtest;
     private TextView smalltest;
     private TextView lessonsnum;
-    private Button info;
-    private Button lessons;
-    private Button tests;
-    private Button teachers;
+    private ImageButton info;
+    private ImageButton lessons;
+    private ImageButton tests;
+    private ImageButton teachers;
 
 
     @Override
@@ -37,21 +36,23 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         picture = findViewById(R.id.btnpicture);
         name = findViewById(R.id.txtname);
         teacher = findViewById(R.id.txtteacher);
-        school = findViewById(R.id.txtschool);
         bigtest = findViewById(R.id.txtbigtest);
         smalltest = findViewById(R.id.txtsmalltest);
-        lessonsnum = findViewById(R.id.txtlessonscounting);
-        info = findViewById(R.id.btninfo);
-        lessons = findViewById(R.id.btnlessons);
-        tests = findViewById(R.id.btntests);
-        teachers = findViewById(R.id.btnteachers);
+        lessonsnum = findViewById(R.id.txtlessonnum);
+        findViewById(R.id.btninfo);
+        info.setOnClickListener(this);
+        findViewById(R.id.btnlessons);
+        lessons.setOnClickListener(this);
+        findViewById(R.id.btntests);
+        tests.setOnClickListener(this);
+        findViewById(R.id.btnteachers);
+        teachers.setOnClickListener(this);
 
 
         studentprofile.setOnClickListener (this);
         picture.setOnClickListener (this);
         name.setOnClickListener(this);
         teacher.setOnClickListener(this);
-        school.setOnClickListener(this);
         bigtest.setOnClickListener(this);
         smalltest.setOnClickListener(this);
         lessonsnum.setOnClickListener(this);
@@ -79,8 +80,8 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
 
         if (v == tests){
-           Intent intent = new Intent ( this, Testslist_activity.class);
-            startActivity(intent);
+          // Intent intent = new Intent ( this, Testslist_activity.class);
+          //  startActivity(intent);
         }
 
         if (v == info){
@@ -104,7 +105,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
              if(requrstCode==RESULT_OK)
              {
                  Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                 studentprofile.setImageBitmap(bitmap);
+              //   studentprofile.setImageBitmap(bitmap);
              }
          }
      }

@@ -123,7 +123,7 @@
             android:layout_marginTop="70dp">
 
             <ImageButton
-                android:id="@+id/btninfo11"
+                android:id="@+id/btninfo"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -134,7 +134,7 @@
 
 
             <ImageButton
-                android:id="@+id/btninfo"
+                android:id="@+id/btnstudents"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

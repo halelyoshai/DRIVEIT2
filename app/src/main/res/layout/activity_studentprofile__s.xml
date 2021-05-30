@@ -117,7 +117,7 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/txtlessonscounting"
+        android:id="@+id/txtlessonnum"
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

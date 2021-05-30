@@ -18,7 +18,6 @@ public class Lessonslist_Activity extends AppCompatActivity implements View.OnCl
     private TextView studentname;
     private Button plus;
     private Button tests;
-    private Button home;
 
 
     @Override
@@ -37,24 +36,24 @@ public class Lessonslist_Activity extends AppCompatActivity implements View.OnCl
 
         tests= findViewById(R.id.btntests);
         tests.setOnClickListener(this);
-        home = findViewById(R.id.btnhome);
-        home.setOnClickListener(this);
+
+        lessonlist.setOnClickListener(this);
+        studentname.setOnClickListener(this);
+
+
 
     }
 
     @Override
     public void onClick(View v) {
         if (v == tests) {
-            Intent intent = new Intent( this, Testslist.Activity.class);
-            startActivity(intent);
+         //   Intent intent = new Intent( this, Testslist.Activity.class);
+           // startActivity(intent);
         }
         if (v == plus) {
-            d.setContentView(R.layout.activity_newlesson);
+            d.setContentView(R.layout.newlesson_dialog);
         }
-        if (v == home) {
-            Intent intent = new Intent( this, StudentsProfile_Activity.class);
-            startActivity(intent);
+
         }
 
     }
-}

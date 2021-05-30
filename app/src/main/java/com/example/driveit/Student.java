@@ -11,7 +11,7 @@ public class Student extends Person
 
     public Student(String name, String id, String phonenum, String mail, String username,
                    String password, int testpnimi, int numlessons, int numtests, Teacher teacher) {
-        super(name, id, phonenum, mail, username, password,testpnimi, numlessons, );
+        //super(name, id, phonenum, mail, username, password,testpnimi, numlessons, );
         this.testpnimi = testpnimi;
         this.numlessons = numlessons;
         this.numtests = numtests;
