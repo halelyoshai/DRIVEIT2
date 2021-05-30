@@ -14,10 +14,11 @@
         android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#B9FAF3F0"
-        android:text="@string/necessaryinfo"
+        android:breakStrategy="high_quality"
+        android:text="Necessary Info"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="48sp"
         android:visibility="visible" />

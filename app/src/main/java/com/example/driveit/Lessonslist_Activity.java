@@ -47,12 +47,13 @@ public class Lessonslist_Activity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         if (v == tests) {
-         //   Intent intent = new Intent( this, Testslist.Activity.class);
-           // startActivity(intent);
+            //Intent intent = new Intent( this, Testslist.Activity.class);
+          //  startActivity(intent);
         }
         if (v == plus) {
             d.setContentView(R.layout.newlesson_dialog);
         }
+
 
         }
 
