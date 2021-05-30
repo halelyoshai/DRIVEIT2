@@ -112,12 +112,12 @@
         android:background="@drawable/circle"
         android:paddingLeft="30dp"
         android:paddingTop="30dp"
-        android:text="טסט פנימי:"
+        android:text=""
         android:textAlignment="textEnd"
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/txtlessonnum"
+        android:id="@+id/txtlessonscounting"
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

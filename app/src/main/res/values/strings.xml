@@ -92,4 +92,8 @@
     <string name="studentname">שם התלמיד</string>
     <string name="availablelessons">שיעור פנויים היום:</string>
     <string name="alwayskeepmoving">always keep moving!</string>
+    <string name="studyarea1">איזור שיעור</string>
+    <string name="choos_your_teacher">choos your teacher</string>
+    <string name="next"><![CDATA[הבא ->]]></string>
+    <string name="choos_your_teacherr">Choos Your Teacher</string>
 </resources>
