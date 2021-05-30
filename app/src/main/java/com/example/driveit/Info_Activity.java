@@ -11,7 +11,7 @@ import android.widget.Button;
 public class Info_Activity extends AppCompatActivity implements View.OnClickListener {
     SharedPreferences sp;
     private Dialog d;
-    private Button quation1, quation2, quation3, quation4, quation5, quation6, quation7, quation8, quation9, quation10;
+    private Button quation1, quation2, quation3, quation4, quation5, quation6, quation7, quation8, quation9;
     private View v;
 
 
@@ -62,11 +62,6 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
         quation9.setOnClickListener(this);
         sp = getSharedPreferences("details1", 0);
 
-
-        quation10 = (Button) findViewById(R.id.btninfo10);
-        quation10.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
-
     }
 
     public void creatAnswerDialog() {
@@ -108,9 +103,5 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
         if (v == quation9) {
             creatAnswerDialog();
         }
-        if (v == quation10) {
-            creatAnswerDialog();
-        }
-         creatAnswerDialog();
             }
         }
