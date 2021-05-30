@@ -9,14 +9,13 @@ public class Student extends Person
     private Teacher teacher;
     private String keyPic;
 
-    public Student(String name, String id, String phonenum, String mail, String studyarea,
-                   String school, String city, String lisensetype, String username,
-                   String password, int testpnimi, int numlessons, int numtests, Teacher t) {
-        super(name, id, phonenum, mail, studyarea, school, city, lisensetype, username, password);
+    public Student(String name, String id, String phonenum, String mail, String username,
+                   String password, int testpnimi, int numlessons, int numtests, Teacher teacher) {
+        super(name, id, phonenum, mail, username, password,testpnimi, numlessons, );
         this.testpnimi = testpnimi;
         this.numlessons = numlessons;
         this.numtests = numtests;
-        teacher = t;
+        teacher = teacher;
     }
 
     public int getTestpnimi() {

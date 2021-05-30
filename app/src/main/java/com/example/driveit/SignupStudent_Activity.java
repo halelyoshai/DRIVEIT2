@@ -22,10 +22,6 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     private EditText fullname;
     private EditText phonenumber;
     private EditText mailadress;
-    private EditText studyarea;
-    private EditText city;
-    private EditText manualorautomatic;
-    private EditText username;
     private EditText password;
     private EditText passwordagain;
     private Button finish;
@@ -40,17 +36,20 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
         fullname = findViewById(R.id.btnfullname);
         phonenumber = findViewById(R.id.btnphonenumber);
         mailadress = findViewById(R.id.btnmailadress);
-        studyarea = findViewById(R.id.btnstudyarea);
-        city = findViewById(R.id.btncity);
-        manualorautomatic = findViewById(R.id.btnmanualorautomatic);
-        username = findViewById(R.id.btnusername);
         password = findViewById(R.id.btnpassword);
         passwordagain = findViewById(R.id.btnpasswordagain);
         finish = findViewById(R.id.btnfinish3);
+        finish.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Students");
-        finish.setOnClickListener(this);
+
+        fullname.setOnClickListener (this);
+        phonenumber.setOnClickListener (this);
+        mailadress.setOnClickListener (this);
+        password.setOnClickListener (this);
+        passwordagain.setOnClickListener (this);
+        finish.setOnClickListener (this);
     }
 
 
@@ -58,7 +57,7 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     public void onClick(View v) {
         if (v == finish) {
             if (password == passwordagain) {
-                student = new Student(fullname, phonenumber, mailadress, studyarea, city, manualorautomatic, username, password, passwordagain, );
+               // student = new Student(fullname, phonenumber, mailadress, password, passwordagain, );
 
                 firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {

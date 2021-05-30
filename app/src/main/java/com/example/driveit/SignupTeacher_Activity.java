@@ -30,7 +30,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     private EditText lessonslength;
     private EditText priceperlesson;
     private EditText password;
-    private EditText passwordagain
+    private EditText passwordagain;
     private Button finish;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -49,31 +49,46 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         lessonslength = findViewById(R.id.btnlessonlength);
         priceperlesson = findViewById(R.id.btnpriceperlesson);
         password = findViewById(R.id.btnpassword);
-        password = findViewById(R.id.btnpasswordagain);
+        passwordagain = findViewById(R.id.btnpasswordagain);
         finish = findViewById(R.id.btnfinish3);
-        firebaseAuth = FirebaseAuth.getInstance();
-        firebaseDatabase= FirebaseDatabase.getInstance();
-        databaseReference= firebaseDatabase.getReference("Teacher");
         finish.setOnClickListener(this);
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Teacher");
+
+        fullname.setOnClickListener (this);
+        phonenumber.setOnClickListener (this);
+        mailadress.setOnClickListener (this);
+        school.setOnClickListener (this);
+        studyarea.setOnClickListener (this);
+        manualorautomatic.setOnClickListener (this);
+        lessonslength.setOnClickListener (this);
+        priceperlesson.setOnClickListener (this);
+        password.setOnClickListener (this);
+        passwordagain.setOnClickListener (this);
+        finish.setOnClickListener (this);
     }
 
 
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            teacher= new Teacher(fullname, phonenumber, mailadress, school, studyarea, manualorautomatic, lessonslength, priceperlesson, );
-            firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
-                    addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(teacher);
-                                Intent intent = new Intent(SignupTeacher_Activity.this, TeacherProfile_Activity.class);
-                                startActivity(intent);
-                            }
-                        }
+            if (password == passwordagain) {
+                // student = new Student(fullname, phonenumber, mailadress, password, passwordagain, );
 
-                    });
+                firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
+                        addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(teacher);
+                                    Intent intent = new Intent(SignupTeacher_Activity.this, StudentsProfile_Activity.class);
+                                    startActivity(intent);
+                                }
+                            }
+
+                        });
+            }
         }
     }
 }

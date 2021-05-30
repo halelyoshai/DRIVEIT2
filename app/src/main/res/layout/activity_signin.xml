@@ -47,7 +47,7 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btnsignin1"
+        android:id="@+id/btnsignin"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"

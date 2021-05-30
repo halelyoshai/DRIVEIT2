@@ -20,7 +20,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     private TextView driveit;
     private EditText username;
     private EditText password;
-    private Button signin1;
+    private Button signin;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -33,8 +33,8 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         username.setOnClickListener(this);
         password = findViewById(R.id.btnpassword);
         password.setOnClickListener(this);
-        signin1 = findViewById(R.id.btncontrol);
-        signin1.setOnClickListener(this);
+        signin = findViewById(R.id.btnsignin);
+        signin.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
 
@@ -42,7 +42,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        if (v == signin1) {
+        if (v == signin) {
             firebaseAuth.signInWithEmailAndPassword(username.getText().toString(),password.getText().toString())
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
