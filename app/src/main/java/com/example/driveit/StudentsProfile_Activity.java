@@ -80,8 +80,8 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
 
         if (v == tests){
-          // Intent intent = new Intent ( this, Testslist_activity.class);
-          //  startActivity(intent);
+           Intent intent = new Intent ( this, Testslist_Activity.class);
+           startActivity(intent);
         }
 
         if (v == info){
