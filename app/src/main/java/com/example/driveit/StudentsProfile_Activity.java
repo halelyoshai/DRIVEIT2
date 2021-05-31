@@ -35,10 +35,13 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
         studentprofile = findViewById(R.id.txtstudentprofile);
         picture = findViewById(R.id.btnpicture);
+        choospeic.setOnClickListener(this);
+        findViewById(R.id.btnchoosepic);
         name = findViewById(R.id.txtname);
         teacher = findViewById(R.id.txtteacher);
         bigtest = findViewById(R.id.txtbigtest);
         enptycircle = findViewById(R.id.txtemptycircle);
+        lessonsnum = findViewById(R.id.txtlessonscounting);
         findViewById(R.id.btninfo);
         info.setOnClickListener(this);
         findViewById(R.id.btnlessons);
@@ -53,10 +56,11 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
         studentprofile.setOnClickListener (this);
         picture.setOnClickListener (this);
+        choospeic.setOnClickListener (this);
         name.setOnClickListener(this);
         teacher.setOnClickListener(this);
         bigtest.setOnClickListener(this);
-        smalltest.setOnClickListener(this);
+        enptycircle.setOnClickListener(this);
         lessonsnum.setOnClickListener(this);
         info.setOnClickListener (this);
         lessons.setOnClickListener(this);
@@ -107,7 +111,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
              if(requrstCode==RESULT_OK)
              {
                  Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-              //   studentprofile.setImageBitmap(bitmap);
+             // choospeic.setImageBitmap(bitmap);
              }
          }
      }
