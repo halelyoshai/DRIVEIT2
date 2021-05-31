@@ -35,6 +35,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
         studentprofile = findViewById(R.id.txtstudentprofile);
         picture = findViewById(R.id.btnpicture);
+        choospeic = findViewById(R.id.btnchoosepic);
         choospeic.setOnClickListener(this);
         findViewById(R.id.btnchoosepic);
         name = findViewById(R.id.txtname);
