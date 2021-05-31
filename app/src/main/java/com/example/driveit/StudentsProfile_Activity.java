@@ -16,11 +16,11 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     private View v;
     private TextView studentprofile;
     private ImageButton picture;
-    private Button choospeic
+    private Button choospeic;
     private TextView name;
     private TextView teacher;
     private TextView bigtest;
-    private TextView smalltest;
+    private TextView enptycircle;
     private TextView lessonsnum;
     private ImageButton info;
     private ImageButton lessons;
@@ -38,8 +38,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         name = findViewById(R.id.txtname);
         teacher = findViewById(R.id.txtteacher);
         bigtest = findViewById(R.id.txtbigtest);
-        smalltest = findViewById(R.id.txtsmalltest);
-        lessonsnum = findViewById(R.id.txtlessonnum);
+        enptycircle = findViewById(R.id.txtemptycircle);
         findViewById(R.id.btninfo);
         info.setOnClickListener(this);
         findViewById(R.id.btnlessons);
