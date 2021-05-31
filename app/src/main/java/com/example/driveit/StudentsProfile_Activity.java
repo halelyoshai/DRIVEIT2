@@ -16,6 +16,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     private View v;
     private TextView studentprofile;
     private ImageButton picture;
+    private Button choospeic
     private TextView name;
     private TextView teacher;
     private TextView bigtest;
@@ -47,6 +48,8 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         tests.setOnClickListener(this);
         findViewById(R.id.btnteachers);
         teachers.setOnClickListener(this);
+        choospeic.setOnClickListener(this);
+        findViewById(R.id.btnchoosepic);
 
 
         studentprofile.setOnClickListener (this);
@@ -67,7 +70,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     }
     @Override
     public void onClick(View v) {
-        if (v == picture){
+        if (v == choospeic){
                 Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent,0);
         }
