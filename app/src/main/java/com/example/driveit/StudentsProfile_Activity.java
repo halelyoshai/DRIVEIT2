@@ -53,8 +53,6 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         teachers.setOnClickListener(this);
         choospeic.setOnClickListener(this);
         findViewById(R.id.btnchoosepic);
-
-
         studentprofile.setOnClickListener (this);
         picture.setOnClickListener (this);
         choospeic.setOnClickListener (this);
