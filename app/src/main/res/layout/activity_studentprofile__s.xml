@@ -43,6 +43,7 @@
 
    />
 
+
 </TableRow>
 
     -<TableRow
@@ -105,7 +106,7 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/txtsmalltest"
+        android:id="@+id/txtemptycircle"
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -140,7 +141,6 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:drawableBottom="@drawable/goblet" />
@@ -149,7 +149,6 @@
             android:id="@+id/btnlessons"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:drawableBottom="@drawable/clock"
             android:layout_marginLeft="2dp"
@@ -159,7 +158,6 @@
             android:id="@+id/btninfo"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
             android:layout_weight="1"
             android:drawableBottom="@drawable/quationsmarksbackgrounds"
             android:layout_marginLeft="2dp"
@@ -170,7 +168,6 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:drawableBottom="@drawable/teacher" />
