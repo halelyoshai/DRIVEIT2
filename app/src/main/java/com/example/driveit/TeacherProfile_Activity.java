@@ -13,6 +13,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
     private View v;
     private TextView teacherprofile;
     private ImageButton profilepic;
+    private Button choosepic;
     private TextView teachername;
     private TextView studyarea;
     private TextView school;
@@ -28,7 +29,9 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         setContentView(R.layout.activity_teacher_profile_);
 
         teacherprofile = findViewById(R.id.txtteacherprofile);
-        findViewById(R.id.btnprofilepic);
+        profilepic= findViewById(R.id.btnprofilepic);
+        choosepic= findViewById(R.id.btnchoosepic);
+        choosepic.setOnClickListener(this);
         teachername = findViewById(R.id.txtteachername);
         studyarea = findViewById(R.id.txtstudyarea);
         school = findViewById(R.id.txtschool);
@@ -43,6 +46,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
 
         teacherprofile.setOnClickListener(this);
         profilepic.setOnClickListener(this);
+        choosepic.setOnClickListener(this);
         teachername.setOnClickListener(this);
         studyarea.setOnClickListener(this);
         school.setOnClickListener(this);
@@ -56,8 +60,8 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(View v) {
-        if (v == profilepic) {
-            // Intent intent = new Intent(this, galary.class);
+        if (v == choosepic) {
+           //Intent intent = new Intent(this, galary.class);
             //  startActivity(intent);
         }
 

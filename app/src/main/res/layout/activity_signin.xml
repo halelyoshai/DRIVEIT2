@@ -30,7 +30,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00101010"
-        android:hint="שם משתמש"
+        android:hint="מייל"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp" />
 
