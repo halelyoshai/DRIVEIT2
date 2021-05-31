@@ -42,7 +42,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         teacher = findViewById(R.id.txtteacher);
         bigtest = findViewById(R.id.txtbigtest);
         enptycircle = findViewById(R.id.txtemptycircle);
-        lessonsnum = findViewById(R.id.txtlessonscounting);
+        lessonsnum = findViewById(R.id.txtlessonsnum);
         findViewById(R.id.btninfo);
         info.setOnClickListener(this);
         findViewById(R.id.btnlessons);
@@ -73,8 +73,8 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     @Override
     public void onClick(View v) {
         if (v == choospeic){
-                Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent,0);
+            Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent,0);
         }
 
 
@@ -85,8 +85,8 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
 
         if (v == tests){
-           Intent intent = new Intent ( this, Testslist_Activity.class);
-           startActivity(intent);
+            Intent intent = new Intent ( this, Testslist_Activity.class);
+            startActivity(intent);
         }
 
         if (v == info){
@@ -101,20 +101,19 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
     }
 
-     @Override
-     protected void onActivityResult(int requrstCode, int resultCode, Intent data){
-       super.onActivityResult(requrstCode, resultCode, data);
+    @Override
+    protected void onActivityResult(int requrstCode, int resultCode, Intent data){
+        super.onActivityResult(requrstCode, resultCode, data);
 
-         if (requrstCode == 0)
-         {
-             if(requrstCode==RESULT_OK)
-             {
-                 Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-             // choospeic.setImageBitmap(bitmap);
-             }
-         }
-     }
+        if (requrstCode == 0)
+        {
+            if(requrstCode==RESULT_OK)
+            {
+                Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+                // choospeic.setImageBitmap(bitmap);
+            }
+        }
+    }
 }
-                       
                         
                     
