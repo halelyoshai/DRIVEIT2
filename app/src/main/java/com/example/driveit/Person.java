@@ -6,6 +6,7 @@ public class Person
         private String phonenum;
         private String mail;
         private String password;
+        private String passwordagain;
         private boolean isteacher;
 
 
@@ -15,6 +16,7 @@ public class Person
                 this.phonenum = phonenum;
                 this.mail = mail;
                 this.password = password;
+                this.password = passwordagain;
                 this.isteacher= isteacher;
 
 
@@ -27,15 +29,6 @@ public class Person
 
         public void setName(String name) {
                 this.name = name;
-        }
-
-
-        public String getPhonenum() {
-                return phonenum;
-        }
-
-        public void setPhonenum(String phonenum) {
-                this.phonenum = phonenum;
         }
 
         public String getMail() {
@@ -60,5 +53,13 @@ public class Person
 
         public void setPassword(String password) {
                 this.password = password;
+        }
+
+        public String getPhonenum() {
+                return phonenum;
+        }
+
+        public void setPhonenum(String phonenum) {
+                this.phonenum = phonenum;
         }
 }

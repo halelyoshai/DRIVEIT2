@@ -75,14 +75,14 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            if (password == passwordagain) {
-                // student = new Student(fullname, phonenumber, mailadress, password, passwordagain, );
+            if (password.getText().toString().trim().equals(passwordagain.getText().toString().trim())) {
 
                 firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    teacher = new Teacher(fullname, phonenumber, mailadress, password, passwordagain, );
                                     databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(teacher);
                                     Intent intent = new Intent(SignupTeacher_Activity.this, StudentsProfile_Activity.class);
                                     startActivity(intent);

@@ -6,12 +6,12 @@ public class Student extends Person
     private int testpnimi;
     private int numlessons;
     private int numtests;
-    private String keyPic;
+    private String personalpic;
     private Teacher teacher;
 
-    public Student(String name, String phonenum, String mail,
+    public Student(String name, String mail,
                    String password) {
-        super(name,  phonenum, mail, password , false);
+        super(name, mail, password, passwordagain , false);
         this.testpnimi = 0;
         this.numlessons = 0;
         this.numtests = 0;

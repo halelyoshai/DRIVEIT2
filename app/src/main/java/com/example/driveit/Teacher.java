@@ -12,25 +12,24 @@ import java.util.Map;
 public class Teacher extends Person
 {
     private ArrayList<Student> students;
-    private int lessonlength;
-    private int Swaitingtest;
-    private int freelessons;
-    private String status;
-    private Map<Date, String> schedule;
+    private String school;
+    private String studyarea;
+    private String lessontipe;
+    private String lessonlength;
+    private int lessonprice;
 
-    public Teacher(String name, String id, String phonenum, String mail, String studyarea, String school, String city, String lisensetype, String username, String password) {
-        super(name, phonenum, mail, password, true);
+    public Teacher(String name, String mail, String password, String passwordagain) {
+        super(name, mail, password, passwordagain, true);
         students=new ArrayList<Student>();
+        this.school = school;
+        this.studyarea= studyarea;
+        this.lessontipe = lessontipe;
         this.lessonlength = lessonlength;
-        this.Swaitingtest = Swaitingtest;
-        this.freelessons = freelessons;
-        this.status = status;
-        schedule= new HashMap<Date, String>();
+        this.lessonprice = lessonprice;
     }
-    public void initSchedule(){
-        Calendar calendar= Calendar.getInstance();
 
-    }
+
+
     public ArrayList<Student> getStudents() {
         return students;
     }
