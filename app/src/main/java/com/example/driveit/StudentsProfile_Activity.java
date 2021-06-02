@@ -46,7 +46,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         picture.setOnClickListener (this);
         info.setOnClickListener (this);
         lessons.setOnClickListener(this);
-        tests.setOnClickListener (this);
+        tests.setOnClickListener(this);
         teachers.setOnClickListener(this);
 
 

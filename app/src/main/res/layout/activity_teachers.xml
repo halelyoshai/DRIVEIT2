@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/driveittrafficlights"
+    android:fillViewport="true"
+android:background="@drawable/driveittrafficlights"
     tools:context=".TeacherProfile_Activity">
 
 
@@ -30,6 +31,8 @@
 
 
         <TableRow>
+
+
 
 
             <TextView
@@ -107,4 +110,4 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 </TableLayout>
-</LinearLayout>
+</ScrollView>

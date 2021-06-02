@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 public class Lessonslist_Activity extends AppCompatActivity implements View.OnClickListener {
     SharedPreferences sp;
-    private View v;
     private Dialog d;
     private TextView lessonlist;
     private TextView studentname;

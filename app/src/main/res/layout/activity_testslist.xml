@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/driveittrafficlights"
     android:orientation="vertical"
-    tools:context=".Testslist_Activity">
+    tools:context="Testslist_Activity">
 
 
     <TextView
