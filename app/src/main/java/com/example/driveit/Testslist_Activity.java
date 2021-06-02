@@ -25,7 +25,7 @@ public class Testslist_Activity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_lessonslist);
 
         d = new Dialog(this);
-        testslist= findViewById(R.id.txtlessons);
+        testslist= findViewById(R.id.btntests);
         studentname=findViewById(R.id.txtstudentname);
 
         d.setContentView(R.layout.answerone_dialog);
