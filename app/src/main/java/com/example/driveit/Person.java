@@ -16,7 +16,7 @@ public class Person
                 this.phonenum = phonenum;
                 this.mail = mail;
                 this.password = password;
-                this.password = passwordagain;
+                this.passwordagain = passwordagain;
                 this.isteacher= isteacher;
 
 
@@ -55,11 +55,11 @@ public class Person
                 this.password = password;
         }
 
-        public String getPhonenum() {
-                return phonenum;
+        public String getPasswordagain() {
+                return passwordagain;
         }
 
-        public void setPhonenum(String phonenum) {
-                this.phonenum = phonenum;
+        public void setPasswordagain(String passwordagain) {
+                this.passwordagain = passwordagain;
         }
 }

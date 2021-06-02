@@ -8,9 +8,10 @@ public class Student extends Person
     private int numtests;
     private String personalpic;
     private Teacher teacher;
+    private String passwordagain;
 
     public Student(String name, String mail,
-                   String password) {
+                   String password, String passwordagain) {
         super(name, mail, password, passwordagain , false);
         this.testpnimi = 0;
         this.numlessons = 0;
@@ -42,11 +43,11 @@ public class Student extends Person
         this.numtests = numtests;
     }
 
-    public Teacher getT() {
+    public Teacher getTeacher() {
         return teacher;
     }
 
-    public void setT(Teacher t) {
-        teacher = t;
+    public void setTeacher(Teacher teacher) {
+        //teacher = t;
     }
 }
