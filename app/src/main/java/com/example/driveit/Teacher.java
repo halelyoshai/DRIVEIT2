@@ -38,35 +38,14 @@ public class Teacher extends Person
         this.students = students;
     }
 
-    public int getLessonlength() {
+    public String getLessonlength() {
         return lessonlength;
     }
 
-    public void setLessonlength(int lessonlength) {
+    public void setLessonlength(String lessonlength) {
         this.lessonlength = lessonlength;
     }
 
-    public int getSwaitingtest() {
-        return Swaitingtest;
+
     }
 
-    public void setSwaitingtest(int swaitingtest) {
-        Swaitingtest = swaitingtest;
-    }
-
-    public int getFreelessons() {
-        return freelessons;
-    }
-
-    public void setFreelessons(int freelessons) {
-        this.freelessons = freelessons;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-}

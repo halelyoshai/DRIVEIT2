@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -58,17 +59,17 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
 
-        fullname.setOnClickListener (this);
-        phonenumber.setOnClickListener (this);
-        mailadress.setOnClickListener (this);
-        school.setOnClickListener (this);
-        studyarea.setOnClickListener (this);
-        manualorautomatic.setOnClickListener (this);
-        lessonslength.setOnClickListener (this);
-        priceperlesson.setOnClickListener (this);
-        password.setOnClickListener (this);
-        passwordagain.setOnClickListener (this);
-        finish.setOnClickListener (this);
+        fullname.setOnClickListener(this);
+        phonenumber.setOnClickListener(this);
+        mailadress.setOnClickListener(this);
+        school.setOnClickListener(this);
+        studyarea.setOnClickListener(this);
+        manualorautomatic.setOnClickListener(this);
+        lessonslength.setOnClickListener(this);
+        priceperlesson.setOnClickListener(this);
+        password.setOnClickListener(this);
+        passwordagain.setOnClickListener(this);
+        finish.setOnClickListener(this);
     }
 
 
@@ -82,14 +83,26 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    teacher = new Teacher(fullname, phonenumber, mailadress, password, passwordagain, );
+                                    teacher = new Teacher(fullname.getText().toString(), phonenumber.getText().toString(), mailadress.getText().toString(),
+                                            password.getText().toString());
                                     databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(teacher);
-                                    Intent intent = new Intent(SignupTeacher_Activity.this, StudentsProfile_Activity.class);
+                                    Intent intent = new Intent(SignupTeacher_Activity.this, TeacherProfile_Activity.class);
                                     startActivity(intent);
+
                                 }
+
                             }
 
                         });
+
+
+            }
+            else
+            {
+                Toast.makeText(this, "הסיסמאות אינן זהות", Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
+                return;
             }
         }
     }

@@ -46,21 +46,19 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         if(firebaseAuth.getCurrentUser()!=null)
         {
             databaseReference.addValueEventListener(new ValueEventListener() {
-                                                        @Override
-                                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                            for (DataSnapshot d : snapshot.getChildren()) {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot d : snapshot.getChildren()) {
+                        if (d.getValue(Person.class).getMail().equals("123@gmail.com")) {
+                        }
+                    }
+                }
 
-                                                                if (d.getValue(Person.class).getMail().equals("123@gmail.com")) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-                                                                }
-                                                            }
-                                                        }
-
-                                                        @Override
-                                                        public void onCancelled(@NonNull DatabaseError error) {
-
-                                                        }
-                                                    });
+                }
+            });
             databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
