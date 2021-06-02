@@ -60,7 +60,7 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v == quation1) {
-           d.show();
+            creatAnswerDialog(R.layout.answerone_dialog);
         }
 
         if (v == quation2) {

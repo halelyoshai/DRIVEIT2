@@ -83,6 +83,8 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     public void passwordlength (){
         if (password.getText().toString().length()<6){
                 Toast.makeText(this,"הסיסמה קצרה מדי",Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
                 return; }
         else {
             Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
