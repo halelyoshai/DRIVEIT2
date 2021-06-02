@@ -45,7 +45,7 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
 
         quation9 = (Button) findViewById(R.id.btninfo9);
         quation9.setOnClickListener(this);
-
+        sp=getSharedPreferences("details1",0);
     }
 
     public void creatAnswerDialog(int layout) {
@@ -60,7 +60,7 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v == quation1) {
-            creatAnswerDialog(R.layout.answerone_dialog);
+           d.show();
         }
 
         if (v == quation2) {
