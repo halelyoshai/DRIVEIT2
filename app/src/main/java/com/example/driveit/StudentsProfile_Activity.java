@@ -13,19 +13,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class StudentsProfile_Activity extends AppCompatActivity implements View.OnClickListener {
-    private View v;
     private TextView studentprofile;
     private ImageButton picture;
-    private Button choospeic;
     private TextView name;
     private TextView teacher;
     private TextView bigtest;
     private TextView enptycircle;
     private TextView lessonsnum;
-    private ImageButton info;
-    private ImageButton lessons;
-    private ImageButton tests;
-    private ImageButton teachers;
+    private Button info;
+    private Button lessons;
+    private Button tests;
+    private Button teachers;
 
 
     @Override
@@ -35,32 +33,17 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
         studentprofile = findViewById(R.id.txtstudentprofile);
         picture = findViewById(R.id.btnpicture);
-        choospeic = findViewById(R.id.btnchoosepic);
-        choospeic.setOnClickListener(this);
-        findViewById(R.id.btnchoosepic);
         name = findViewById(R.id.txtname);
         teacher = findViewById(R.id.txtteacher);
         bigtest = findViewById(R.id.txtbigtest);
         enptycircle = findViewById(R.id.txtemptycircle);
         lessonsnum = findViewById(R.id.txtlessonsnum);
-        findViewById(R.id.btninfo);
-        info.setOnClickListener(this);
-        findViewById(R.id.btnlessons);
-        lessons.setOnClickListener(this);
-        findViewById(R.id.btntests);
-        tests.setOnClickListener(this);
-        findViewById(R.id.btnteachers);
-        teachers.setOnClickListener(this);
-        choospeic.setOnClickListener(this);
-        findViewById(R.id.btnchoosepic);
-        studentprofile.setOnClickListener (this);
+        info= findViewById(R.id.btninfo);
+        lessons= findViewById(R.id.btnlessons);
+        tests= findViewById(R.id.btntests);
+        teachers=findViewById(R.id.btnteachers);
+
         picture.setOnClickListener (this);
-        choospeic.setOnClickListener (this);
-        name.setOnClickListener(this);
-        teacher.setOnClickListener(this);
-        bigtest.setOnClickListener(this);
-        enptycircle.setOnClickListener(this);
-        lessonsnum.setOnClickListener(this);
         info.setOnClickListener (this);
         lessons.setOnClickListener(this);
         tests.setOnClickListener (this);
@@ -72,7 +55,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     }
     @Override
     public void onClick(View v) {
-        if (v == choospeic){
+        if (v == picture){
             Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(intent,0);
         }
@@ -105,12 +88,12 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     protected void onActivityResult(int requrstCode, int resultCode, Intent data){
         super.onActivityResult(requrstCode, resultCode, data);
 
-        if (requrstCode == 0)
+        if (resultCode == 0)
         {
             if(requrstCode==RESULT_OK)
             {
                 Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                // choospeic.setImageBitmap(bitmap);
+                picture.setImageBitmap(bitmap);
             }
         }
     }

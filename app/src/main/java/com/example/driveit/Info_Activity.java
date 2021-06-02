@@ -9,10 +9,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class Info_Activity extends AppCompatActivity implements View.OnClickListener {
-    SharedPreferences sp;
+    private SharedPreferences sp;
     private Dialog d;
     private Button quation1, quation2, quation3, quation4, quation5, quation6, quation7, quation8, quation9;
-    private View v;
 
 
     @Override
@@ -20,51 +19,38 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        d = new Dialog(this);
-
-        d.setContentView(R.layout.answerone_dialog);
         quation1 = (Button) findViewById(R.id.btninfo1);
         quation1.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
-        d.setContentView(R.layout.answertwo_dialog);
         quation2 = (Button) findViewById(R.id.btninfo2);
         quation2.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
-
 
         quation3 = (Button) findViewById(R.id.btninfo3);
         quation3.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
-
 
         quation4 = (Button) findViewById(R.id.btninfo4);
         quation4.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
         quation5 = (Button) findViewById(R.id.btninfo5);
         quation5.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
         quation6 = (Button) findViewById(R.id.btninfo6);
         quation6.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
         quation7 = (Button) findViewById(R.id.btninfo7);
         quation7.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
         quation8 = (Button) findViewById(R.id.btninfo8);
         quation8.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
         quation9 = (Button) findViewById(R.id.btninfo9);
         quation9.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
     }
 
-    public void creatAnswerDialog() {
+    public void creatAnswerDialog(int layout) {
+        d= new Dialog(this);
+        d.setContentView(layout);
         d.getWindow().setLayout(150, 150);
         d.setTitle("Answer");
         d.setCancelable(true);
@@ -74,34 +60,34 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v == quation1) {
-            d.setContentView(R.layout.answerone_dialog);
+            creatAnswerDialog(R.layout.answerone_dialog);
         }
 
         if (v == quation2) {
-            d.setContentView(R.layout.answertwo_dialog);
+            creatAnswerDialog(R.layout.answertwo_dialog);
         }
         if (v == quation3) {
-            d.setContentView(R.layout.answerthree_dialog);
+            creatAnswerDialog(R.layout.answerthree_dialog);
         }
         if (v == quation4) {
-            d.setContentView(R.layout.answerfour_dialog);
+            creatAnswerDialog(R.layout.answerfour_dialog);
         }
 
         if (v == quation5) {
-            d.setContentView(R.layout.answerfive_dialog);
+            creatAnswerDialog(R.layout.answerfive_dialog);
         }
 
        if (v == quation6) {
-            creatAnswerDialog();
+           creatAnswerDialog(R.layout.answersix_dialog);
         }
         if (v == quation7) {
-            creatAnswerDialog();
+            creatAnswerDialog(R.layout.answerseven_dialog);
         }
         if (v == quation8) {
-            creatAnswerDialog();
+            creatAnswerDialog(R.layout.answereight_dialog);
         }
         if (v == quation9) {
-            creatAnswerDialog();
+            creatAnswerDialog(R.layout.answernine_dialog);
         }
             }
         }

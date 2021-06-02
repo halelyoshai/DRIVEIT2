@@ -42,13 +42,6 @@
                 android:backgroundTint="#FFFFFF"
                 />
 
-            <Button
-                android:id="@+id/btnchoosepic"
-                android:layout_width="50dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:text="pic"
-                />
 
         </TableRow>
 

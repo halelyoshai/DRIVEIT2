@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,37 +34,35 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        fullname = findViewById(R.id.btnfullname);
+        setContentView(R.layout.activity_signup_student_);
+
+        fullname = findViewById(R.id.btnname);
         phonenumber = findViewById(R.id.btnphonenumber);
         mailadress = findViewById(R.id.btnmailadress);
         password = findViewById(R.id.btnpassword);
         passwordagain = findViewById(R.id.btnpasswordagain);
-        finish = findViewById(R.id.btnfinish3);
-        finish.setOnClickListener(this);
+        finish = findViewById(R.id.btnfinish2);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Students");
+        databaseReference = firebaseDatabase.getReference("Users");
 
-        fullname.setOnClickListener (this);
-        phonenumber.setOnClickListener (this);
-        mailadress.setOnClickListener (this);
-        password.setOnClickListener (this);
-        passwordagain.setOnClickListener (this);
-        finish.setOnClickListener (this);
+        finish.setOnClickListener(this);
+
     }
 
 
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            if (password == passwordagain) {
-                //student = new Student(fullname, phonenumber, mailadress, password, passwordagain, );
+            if (password.getText().toString().trim().equals(passwordagain.getText().toString().trim()) ) {
 
-                firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
+                firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString().trim(), password.getText().toString().trim()).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    student = new Student(fullname.getText().toString(),
+                                            mailadress.getText().toString(), phonenumber.getText().toString(), password.getText().toString());
                                     databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(student);
                                     Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
                                     startActivity(intent);
@@ -71,6 +70,12 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
                             }
 
                         });
+            }
+            else {
+                Toast.makeText(this,"הסיסמאות אינן זהות",Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
+                return;
             }
         }
     }

@@ -40,6 +40,8 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signupteacher);
+
         fullname = findViewById(R.id.btnfullname);
         phonenumber = findViewById(R.id.btnphonenumber);
         mailadress = findViewById(R.id.btnmailadress);
@@ -54,7 +56,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         finish.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Teacher");
+        databaseReference = firebaseDatabase.getReference("Users");
 
         fullname.setOnClickListener (this);
         phonenumber.setOnClickListener (this);

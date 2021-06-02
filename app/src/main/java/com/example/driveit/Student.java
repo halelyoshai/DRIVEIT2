@@ -6,16 +6,16 @@ public class Student extends Person
     private int testpnimi;
     private int numlessons;
     private int numtests;
-    private Teacher teacher;
     private String keyPic;
+    private Teacher teacher;
 
-    public Student(String name, String id, String phonenum, String mail, String username,
-                   String password, int testpnimi, int numlessons, int numtests, Teacher teacher) {
-        //super(name, id, phonenum, mail, username, password,testpnimi, numlessons, );
-        this.testpnimi = testpnimi;
-        this.numlessons = numlessons;
-        this.numtests = numtests;
-        teacher = teacher;
+    public Student(String name, String phonenum, String mail,
+                   String password) {
+        super(name,  phonenum, mail, password , false);
+        this.testpnimi = 0;
+        this.numlessons = 0;
+        this.numtests = 0;
+
     }
 
     public int getTestpnimi() {
