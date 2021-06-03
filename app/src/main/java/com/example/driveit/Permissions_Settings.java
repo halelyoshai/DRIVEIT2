@@ -20,6 +20,6 @@ public class Permissions_Settings {
             //return sp.getBoolean(context.getString(R.string.permissions_settin));
 
         }
-       return setting;
+        return setting;
     }
 }
