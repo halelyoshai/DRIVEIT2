@@ -27,17 +27,14 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentslist__t);
 
-        d.setContentView(R.layout.answerone_dialog);
+        d.setContentView(R.layout.newstudent_dialog);
         plus = (Button) findViewById(R.id.btnplus);
-        plus.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
         studentnum = findViewById(R.id.txtstudentsnumber);
         namestudent = findViewById(R.id.txtstudentname);
 
-        studentnum.setOnClickListener (this);
         plus.setOnClickListener (this);
-        namestudent.setOnClickListener (this);
+
 
 
 

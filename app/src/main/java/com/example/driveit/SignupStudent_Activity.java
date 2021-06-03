@@ -30,7 +30,6 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private Student student;
-    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,7 +45,6 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         finish.setOnClickListener(this);
 
@@ -89,6 +87,16 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
                 passwordagain.setText("");
                 return;
             }
+        }
+        if ((fullname.getText().toString().trim().length()==0)||(phonenumber.getText().toString().trim().length()!=10)||
+                (mailadress.getText().toString().trim().length()==0))
+        {
+            Toast.makeText(this, "כל השדות חייבים להיות מלאים", Toast.LENGTH_SHORT).show();
+            return;
+
+        } else {
+            Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
+            startActivity(intent);
         }
 
     }
