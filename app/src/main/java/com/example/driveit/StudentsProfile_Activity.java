@@ -24,6 +24,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     private Button lessons;
     private Button tests;
     private Button teachers;
+    private String permmisions_gallery;
 
 
     @Override

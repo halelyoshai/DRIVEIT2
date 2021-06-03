@@ -95,4 +95,5 @@
     <string name="choos_your_teacher">choos your teacher</string>
     <string name="next"><![CDATA[הבא ->]]></string>
     <string name="choos_your_teacherr">Choos Your Teacher</string>
+    <string name="permissions_setting">permissions_gallery</string>
 </resources>
