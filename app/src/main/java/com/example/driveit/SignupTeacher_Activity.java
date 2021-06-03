@@ -7,8 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +23,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SignupTeacher_Activity extends AppCompatActivity implements View.OnClickListener {
     private View v;
     private EditText fullname;
@@ -27,7 +33,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     private EditText mailadress;
     private EditText school;
     private EditText studyarea;
-    private EditText manualorautomatic;
+    private Spinner manualorautomatic;
     private EditText lessonslength;
     private EditText priceperlesson;
     private EditText password;
@@ -37,6 +43,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private Teacher teacher;
+    List<String> typelesson;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,7 +55,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         mailadress = findViewById(R.id.btnmailadress);
         studyarea = findViewById(R.id.btnstudyarea);
         school = findViewById(R.id.btnschool);
-        manualorautomatic = findViewById(R.id.btnmanualorautomatic);
+        manualorautomatic = (Spinner) findViewById(R.id.btnmanualorautomatic);
         lessonslength = findViewById(R.id.btnlessonlength);
         priceperlesson = findViewById(R.id.btnpriceperlesson);
         password = findViewById(R.id.btnpassword);
@@ -64,12 +71,20 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         mailadress.setOnClickListener(this);
         school.setOnClickListener(this);
         studyarea.setOnClickListener(this);
-        manualorautomatic.setOnClickListener(this);
         lessonslength.setOnClickListener(this);
         priceperlesson.setOnClickListener(this);
         password.setOnClickListener(this);
         passwordagain.setOnClickListener(this);
         finish.setOnClickListener(this);
+
+        typelesson = new ArrayList<String>();
+        typelesson.add("manual");
+        typelesson.add("automatic");
+        typelesson.add("both");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, typelesson);
+        manualorautomatic.setAdapter(adapter);
+
     }
 
 
@@ -96,9 +111,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
                         });
 
 
-            }
-            else
-            {
+            } else {
                 Toast.makeText(this, "הסיסמאות אינן זהות", Toast.LENGTH_SHORT).show();
                 password.setText("");
                 passwordagain.setText("");
@@ -106,4 +119,11 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
             }
         }
     }
+
+    public void onitemselected(AdapterView<?> parent, View view, int posltion, long id) {
+        String item = parent.getItemAtPosition(posltion).toString();
+        Toast.makeText(parent.getContext(), "selected" + item, Toast.LENGTH_LONG).show();
+    }
+
+
 }

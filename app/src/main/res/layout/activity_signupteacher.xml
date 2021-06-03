@@ -17,7 +17,7 @@
         android:layout_gravity="center"
          android:layout_marginTop="90dp"
         android:backgroundTint="#00CDDC39"
-        android:hint="שם:"
+        android:hint="שם"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
@@ -76,14 +76,16 @@
         android:textSize="18sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
+>
 
-    <EditText
+    <Spinner
         android:id="@+id/btnmanualorautomatic"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="37dp"
         android:layout_gravity="center"
         android:backgroundTint="#00CDDC39"
-        android:hint="@string/manualorautomatic1"
+        android:hint="סוג רשיון"
+        android:prompt="@layout/support_simple_spinner_dropdown_item"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"

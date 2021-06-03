@@ -9,6 +9,7 @@
     android:orientation="vertical"
     tools:context=".Lessonslist_Activity">
 
+
     <TextView
         android:id="@+id/txtlessons"
         android:layout_width="wrap_content"
@@ -82,6 +83,9 @@
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
 
+
+
 </LinearLayout>
+
 
 
