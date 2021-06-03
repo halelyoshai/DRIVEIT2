@@ -30,7 +30,8 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private Student student;
- 
+    private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,16 +46,17 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         finish.setOnClickListener(this);
 
-    }
 
+    }
 
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            if (password.getText().toString().trim().equals(passwordagain.getText().toString().trim()) ) {
+            if (password.getText().toString().trim().equals(passwordagain.getText().toString().trim())) {
 
                 firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString().trim(), password.getText().toString().trim()).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -70,28 +72,24 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
                             }
 
                         });
-            }
-            else {
-                Toast.makeText(this,"הסיסמאות אינן זהות",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "הסיסמאות אינן זהות", Toast.LENGTH_SHORT).show();
                 password.setText("");
                 passwordagain.setText("");
                 return;
             }
         }
-    {
-            if (password.getText().toString().length()>=6) {
+        {
+            if (password.getText().toString().length() >= 6) {
                 Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
                 startActivity(intent);
-            }
-            else {
-                Toast.makeText(this,"הסיסמה קצרה מדי",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "הסיסמה קצרה מדי", Toast.LENGTH_SHORT).show();
                 password.setText("");
                 passwordagain.setText("");
                 return;
             }
-
-    }
-
+        }
 
     }
 }
