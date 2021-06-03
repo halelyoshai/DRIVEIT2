@@ -15,11 +15,4 @@ public class Permissions_Settings {
         editor = sp.edit();
     }
 
-    public Boolean Check_PermissionsSettings(String setting) {
-        if (setting.equals("Gallery")) {
-            //return sp.getBoolean(context.getString(R.string.permissions_settin));
-
-        }
-       return setting;
-    }
 }
