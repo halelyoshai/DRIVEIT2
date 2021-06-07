@@ -34,8 +34,8 @@ public class Teacher extends Person
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+    public void setStudents(Student student) {
+        this.students.add(student);
     }
 
     public String getLessonlength() {

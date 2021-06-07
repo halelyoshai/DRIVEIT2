@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/txtstudentsrating"
+        android:id="@+id/txttestlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -23,7 +23,7 @@
         android:visibility="visible" />
 
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/stusentname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -35,7 +35,7 @@
         android:visibility="visible" />
 
     <TextView
-        android:id="@+id/btnprogress"
+        android:id="@+id/txttest"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="168dp"
         android:layout_height="80dp"

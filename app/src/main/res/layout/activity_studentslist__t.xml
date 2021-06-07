@@ -53,7 +53,7 @@
 
 
     <Button
-        android:id="@+id/btnstudentname1"
+        android:id="@+id/btnstudentname"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="150dp"
         android:layout_height="match_parent"

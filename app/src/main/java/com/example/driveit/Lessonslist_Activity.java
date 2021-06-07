@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Lessonslist_Activity extends AppCompatActivity implements View.OnClickListener {
-    SharedPreferences sp;
     private Dialog d;
     private TextView lessonlist;
     private TextView studentname;
@@ -31,7 +30,6 @@ public class Lessonslist_Activity extends AppCompatActivity implements View.OnCl
         d.setContentView(R.layout.answerone_dialog);
         plus = (Button) findViewById(R.id.btnplus);
         plus.setOnClickListener(this);
-        sp = getSharedPreferences("details1", 0);
 
         tests= findViewById(R.id.btntests);
         tests.setOnClickListener(this);

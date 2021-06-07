@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class Info_Activity extends AppCompatActivity implements View.OnClickListener {
     private SharedPreferences sp;
@@ -51,7 +52,7 @@ public class Info_Activity extends AppCompatActivity implements View.OnClickList
     public void creatAnswerDialog(int layout) {
         d= new Dialog(this);
         d.setContentView(layout);
-        d.getWindow().setLayout(150, 150);
+        d.getWindow().setLayout(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         d.setTitle("Answer");
         d.setCancelable(true);
         d.show();
