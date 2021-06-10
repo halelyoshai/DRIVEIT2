@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DRIVEIT">
-        <activity android:name=".MainActivity3"></activity>
+        <activity android:name=".activity_Editlesson"></activity>
+        <activity android:name=".MainActivity3" />
         <activity android:name=".TeachersActivity" />
         <activity android:name=".TeacherProfile_Activity" />
         <activity android:name=".SignupStudent_Activity" />
@@ -21,8 +22,6 @@
         <activity android:name=".StudentsProfile_Activity" />
         <activity android:name=".SigninActivity" />
         <activity android:name=".MainActivity">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -84,7 +84,7 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
                                                 @Override
                                                 public void onClick(View v) {
                                                     Intent intent=new Intent(Studentslist_Activity.this,
-                                                            Lessonslist_Activity.class);
+                                                            Lessonlist_Activity.class);
                                                     intent.putExtra("StudentMail", student.getMail());
                                                     startActivity(intent);
                                                 }

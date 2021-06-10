@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity_Editlesson">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lessonnum1"
+        android:hint="מספר שיעור:"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="115dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lessondate"
+        android:hint="תאריך שיעור:"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="20dp"/>
+
+   <Button
+       android:layout_width="200dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/btnsave"
+       android:text="הוסף"
+       android:textSize="20sp"
+       android:layout_gravity="center"
+       android:layout_marginTop="40dp"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btncancel"
+        android:text="בטל"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+
+</LinearLayout>

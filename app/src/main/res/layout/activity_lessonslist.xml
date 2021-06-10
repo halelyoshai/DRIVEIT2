@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/carsbackground"
     android:orientation="vertical"
-    tools:context=".Lessonslist_Activity">
-
+    tools:context=".Lessonlist_Activity">
 
     <TextView
         android:id="@+id/txtlessons"
@@ -23,6 +22,7 @@
         android:visibility="visible" />
 
 
+
     <TextView
         android:id="@+id/txtstudentname"
         android:layout_width="wrap_content"
@@ -35,6 +35,11 @@
         android:textSize="20sp"
         android:visibility="visible" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Lv"
+        />
 
     <TextView
         android:id="@+id/txtprogress"

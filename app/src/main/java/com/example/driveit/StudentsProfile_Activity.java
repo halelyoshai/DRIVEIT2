@@ -87,7 +87,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
 
         if (v == lessons ) {
-            Intent intent = new Intent( this, Lessonslist_Activity.class);
+            Intent intent = new Intent( this, Lessonlist_Activity.class);
             startActivity(intent);
         }
 
