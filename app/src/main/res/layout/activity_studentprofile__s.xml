@@ -46,7 +46,7 @@
         </TableRow>
 
         -<TableRow
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="50dp">
 
 
         <TextView
@@ -92,48 +92,13 @@
     android:layout_height="115dp"
     android:layout_marginTop="20dp">
 
-    <TextView
-        android:id="@+id/txtbigtest"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/circle"
-        android:paddingLeft="30dp"
-        android:paddingTop="30dp"
-        android:text="טסט חיצוני:"
-        android:textAlignment="textEnd"
-        android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/txtemptycircle"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/circle"
-        android:paddingLeft="30dp"
-        android:paddingTop="30dp"
-        android:text=""
-        android:textAlignment="textEnd"
-        android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/txtlessonsnum"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/circle"
-        android:paddingLeft="30dp"
-        android:paddingTop="20dp"
-        android:text="שיעור מספר:"
-        android:textAlignment="textEnd"
-        android:textColorHighlight="#090909"
-        android:textColorHint="@color/black"
-        android:textSize="40sp" />
 </TableRow>
 
 
     <TableRow android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="70dp">
 
         <Button
             android:id="@+id/btntests"
