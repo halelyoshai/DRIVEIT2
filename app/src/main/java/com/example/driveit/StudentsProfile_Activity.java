@@ -33,7 +33,6 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
     private Button info;
     private Button lessons;
     private Button tests;
-    private Button teachers;
     private String permmisions_gallery;
 
 
@@ -46,20 +45,16 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         picture = findViewById(R.id.btnpicture);
         name = findViewById(R.id.txtname);
         teacher = findViewById(R.id.txtteacher);
-        bigtest = findViewById(R.id.txtbigtest);
-        enptycircle = findViewById(R.id.txtemptycircle);
-        lessonsnum = findViewById(R.id.txtlessonsnum);
         info = findViewById(R.id.btninfo);
         lessons = findViewById(R.id.btnlessons);
         tests = findViewById(R.id.btntests);
-        teachers = findViewById(R.id.btnteachers);
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
 
         picture.setOnClickListener(this);
         info.setOnClickListener(this);
         lessons.setOnClickListener(this);
         tests.setOnClickListener(this);
-        teachers.setOnClickListener(this);
+
 
 
         this.databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -101,10 +96,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
             Intent intent = new Intent ( this, Info_Activity.class);
             startActivity(intent);
         }
-        if (v == teachers){
-            Intent intent = new Intent (this, TeachersActivity.class);
-            startActivityForResult(intent,0);
-        }
+
 
 
     }

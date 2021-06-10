@@ -11,14 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
-import java.util.PropertyResourceBundle;
 
-public class LessonsAdapter extends ArrayAdapter<lesson> {
+public class LessonsAdapter extends ArrayAdapter<Lesson> {
 
     Context context;
-    List<lesson> lessons;
+    List<Lesson> lessons;
 
-    public LessonsAdapter(@NonNull Context context, int resource, int textViewResorceId, @NonNull List<lesson> objects) {
+    public LessonsAdapter(@NonNull Context context, int resource, int textViewResorceId, @NonNull List<Lesson> objects) {
         super(context, resource, textViewResorceId, objects);
 
         this.context = context;
@@ -28,7 +27,7 @@ public class LessonsAdapter extends ArrayAdapter<lesson> {
     @NonNull
     @Override
     public View getView(int possision, @Nullable View convertView, @NonNull ViewGroup parent) {
-        lesson lesson = getItem(possision);
+        Lesson lesson = getItem(possision);
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.costume_layout, parent, false);

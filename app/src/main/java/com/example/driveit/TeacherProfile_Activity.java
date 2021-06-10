@@ -1,5 +1,6 @@
 package com.example.driveit;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +11,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class TeacherProfile_Activity extends AppCompatActivity implements View.OnClickListener {
     private View v;
@@ -22,6 +31,8 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
     private ImageButton students;
     private ImageButton info;
     private ImageButton setting;
+    private DatabaseReference databaseReference;
+
 
 
     @Override
@@ -30,60 +41,73 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         setContentView(R.layout.activity_teacher_profile_);
 
         teacherprofile = findViewById(R.id.txtteacherprofile);
-        profilepic= findViewById(R.id.btnprofilepic);
+        profilepic = findViewById(R.id.btnprofilepic);
         teachername = findViewById(R.id.txtteachername);
         studyarea = findViewById(R.id.txtstudyarea);
         school = findViewById(R.id.txtschool);
         studentsnum = findViewById(R.id.txtstudentsnum);
-        students= findViewById(R.id.btnstudents);
-        info= findViewById(R.id.btninfo);
-        setting= findViewById(R.id.btnsetting);
-
+        students = findViewById(R.id.btnstudents);
+        info = findViewById(R.id.btninfo);
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
 
         profilepic.setOnClickListener(this);
         students.setOnClickListener(this);
         info.setOnClickListener(this);
         setting.setOnClickListener(this);
 
-    }
 
-    @Override
-    public void onClick(View v) {
-        if (v == profilepic){
-            Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(intent,0);
-        }
+        this.databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    String username = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("name").getValue(String.class);
+                    teachername.setText(username);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(TeacherProfile_Activity.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
+            }
 
 
-        if (v == students) {
-            Intent intent = new Intent(this, Studentslist_Activity.class);
+        });
+
+
+        @Override
+        public void onClick (View v){
+            if (v == profilepic) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, 0);
+            }
+
+
+            if (v == students) {
+                Intent intent = new Intent(this, Studentslist_Activity.class);
                 startActivity(intent);
-        }
+            }
 
-        if (v == info) {
-            Intent intent = new Intent(this, Info_Activity.class);
+            if (v == info) {
+                Intent intent = new Intent(this, Info_Activity.class);
 
-            startActivity(intent);
-
-        }
-
-            if (v == setting) {
-                Intent intent = new Intent(this, SignupTeacher_Activity.class);
                 startActivity(intent);
+
             }
 
         }
 
 
-    protected void onActivityResult(int requrstCode, int resultCode, Intent data) {
-        super.onActivityResult(requrstCode, resultCode, data);
+        protected void onActivityResult ( int requrstCode, int resultCode, Intent data)
+        {
+            super.onActivityResult(requrstCode, resultCode, data);
 
-        if (resultCode == 0) {
-            if (requrstCode == RESULT_OK) {
-                Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                profilepic.setImageBitmap(bitmap);
-            }
+            if (resultCode == 0) {
+                if (requrstCode == RESULT_OK) {
+                    Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+                    profilepic.setImageBitmap(bitmap);
+                }
 
             }
         }
     }
+}

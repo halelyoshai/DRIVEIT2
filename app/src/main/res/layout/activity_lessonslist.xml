@@ -36,10 +36,9 @@
         android:visibility="visible" />
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/Lv"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/txtprogress"
@@ -87,8 +86,6 @@
         android:textSize="20sp"
         app:iconTint="#0B0A0A"
         app:strokeColor="#131313" />
-
-
 
 </LinearLayout>
 

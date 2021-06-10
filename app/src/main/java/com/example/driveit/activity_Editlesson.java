@@ -9,12 +9,17 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class activity_Editlesson extends AppCompatActivity  implements View.OnClickListener{
 
 
     private EditText lessonnum, lessondate;
     private Button save, cancel;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,9 @@ public class activity_Editlesson extends AppCompatActivity  implements View.OnCl
 
         save.setOnClickListener (this);
         cancel.setOnClickListener(this);
+        firebaseDatabase= FirebaseDatabase.getInstance();
+        databaseReference= firebaseDatabase.getReference("Users");
+
 
         Intent intent= getIntent();
 
@@ -38,6 +46,7 @@ public class activity_Editlesson extends AppCompatActivity  implements View.OnCl
             lessonnum.setText(numlesson);
             lessondate.setText(datelesson);
 
+
         }
 
     }
@@ -47,6 +56,9 @@ public class activity_Editlesson extends AppCompatActivity  implements View.OnCl
                 Intent intent= new Intent();
                 intent.putExtra("lessonnum", lessonnum.getText().toString());
                 intent.putExtra("lessondate", lessondate.getText().toString());
+
+                Lesson lesson= new Lesson(lessonnum.getText().toString(), lessondate.getText().toString());
+                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("lessons").setValue(lesson);
                 setResult(RESULT_OK, intent);
                 finish();
             }

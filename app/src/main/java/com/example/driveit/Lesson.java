@@ -1,11 +1,11 @@
 package com.example.driveit;
 
-public class lesson {
+public class Lesson {
 
     private String countlesson;
     private String date;
 
-    public lesson(String lessonnum, String date){
+    public Lesson(String lessonnum, String date){
         this.countlesson=lessonnum;
         this.date=date;
     }

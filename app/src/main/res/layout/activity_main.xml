@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/driveittrafficlights"
+    android:background="@drawable/road"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="160dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/drive_it"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -28,6 +28,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#00CDDC39"
         android:text="@string/signin"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -53,7 +54,6 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
         android:backgroundTint="#000C0C0C"
         android:text="@string/sign_up_T"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"

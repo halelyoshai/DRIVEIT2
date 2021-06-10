@@ -1,5 +1,7 @@
 package com.example.driveit;
 
+import java.util.ArrayList;
+
 public class Student extends Person
 {
 
@@ -9,6 +11,9 @@ public class Student extends Person
     private String personalpic;
     private Teacher teacher;
     private String passwordagain;
+    private ArrayList<Lesson> lessons;
+    private String listoflessons;
+
 
     public Student(String name, String mail,
                    String password, String passwordagain) {
@@ -16,6 +21,8 @@ public class Student extends Person
         this.testpnimi = 0;
         this.numlessons = 0;
         this.numtests = 0;
+        this.lessons= new ArrayList<>();
+
 
     }
 
@@ -48,6 +55,9 @@ public class Student extends Person
     }
 
     public void setTeacher(Teacher teacher) {
-        //teacher = t;
+       // teacher = t;
     }
+    public void setLessonslist(){
+
+}
 }

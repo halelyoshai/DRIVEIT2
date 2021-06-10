@@ -142,20 +142,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/yellow"
+                android:background="@drawable/stusents"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 />
 
-            <ImageButton
-                android:id="@+id/btnsetting"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/gear"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"/>
         </TableRow>
 
 

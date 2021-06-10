@@ -97,9 +97,11 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
         } else {
             Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
             startActivity(intent);
+
+        }
         }
 
     }
-}
+
 
 

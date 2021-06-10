@@ -117,6 +117,26 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
                 passwordagain.setText("");
                 return;
             }
+            if (password.getText().toString().length() >= 6) {
+                Intent intent = new Intent(SignupTeacher_Activity.this, StudentsProfile_Activity.class);
+                startActivity(intent);
+
+            } else {
+                Toast.makeText(this, "הסיסמה קצרה מדי", Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
+                return;
+            }
+            if ((fullname.getText().toString().trim().length()!=0)||(phonenumber.getText().toString().trim().length()==10)||
+                    (mailadress.getText().toString().trim().length()!=0))
+            {
+                Intent intent = new Intent(SignupTeacher_Activity.this, StudentsProfile_Activity.class);
+                startActivity(intent);
+
+            } else {
+                Toast.makeText(this, "כל השדות חייבים להיות מלאים", Toast.LENGTH_SHORT).show();
+                return;
+            }
         }
     }
 
