@@ -57,108 +57,10 @@
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:layout_width="150dp"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_gravity="right"
         android:backgroundTint="#00CDDC39"
         android:text="@string/studentname"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15sp"
-        app:strokeColor="#131313" />
-
-
-</TableRow>
-
-    -<TableRow
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp">
-
-
-    <Button
-        android:id="@+id/btnstudentname2"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:backgroundTint="#00CDDC39"
-        android:text="שם התלמיד"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15sp"
-        app:strokeColor="#131313" />
-
-
-</TableRow>
-    -<TableRow
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp">
-
-
-    <Button
-        android:id="@+id/btnstudentname3"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:backgroundTint="#00CDDC39"
-        android:text="שם התלמיד"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15sp"
-        app:strokeColor="#131313" />
-
-
-</TableRow>
-    -<TableRow
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp">
-
-
-    <Button
-        android:id="@+id/btnstudentname4"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:backgroundTint="#00CDDC39"
-        android:text="שם התלמיד"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15sp"
-        app:strokeColor="#131313" />
-
-
-</TableRow>
-    -<TableRow
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp">
-
-
-
-    <Button
-        android:id="@+id/btnstudentname5"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:backgroundTint="#00CDDC39"
-        android:text="שם התלמיד"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15sp"
-        app:strokeColor="#131313" />
-
-
-</TableRow>
-
-    -<TableRow
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp">
-
-
-
-    <Button
-        android:id="@+id/btnstudentname6"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:backgroundTint="#00CDDC39"
-        android:text="שם התלמיד"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="15sp"
         app:strokeColor="#131313" />
