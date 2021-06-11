@@ -3,33 +3,31 @@ package com.example.driveit;
 public class Person
 {
         private String name;
-        private String phonenum;
+        private String phoneNumber;
         private String mail;
         private String password;
-        private String passwordagain;
-        private boolean isteacher;
+        private boolean isTeacher;
 
 
         public Person(){ }
-        public Person(String name, String phonenum, String mail, String password, boolean isteacher) {
+        public Person(String name, String phoneNumber, String mail, String password, boolean isTeacher) {
                 this.name = name;
-                this.phonenum = phonenum;
+                this.phoneNumber = phoneNumber;
                 this.mail = mail;
                 this.password = password;
-                this.passwordagain = passwordagain;
-                this.isteacher= isteacher;
-
-
+                this.isTeacher = isTeacher;
         }
 
 
-        public String getName() {
-                return name;
-        }
+        public String getName() { return name; }
 
         public void setName(String name) {
                 this.name = name;
         }
+
+        public String getPhoneNumber() { return phoneNumber; }
+
+        public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
 
         public String getMail() {
                 return mail;
@@ -37,14 +35,6 @@ public class Person
 
         public void setMail(String mail) {
                 this.mail = mail;
-        }
-
-        public boolean isIsteacher() {
-                return isteacher;
-        }
-
-        public void setIsteacher(boolean isteacher) {
-                this.isteacher = isteacher;
         }
 
         public String getPassword() {
@@ -55,11 +45,7 @@ public class Person
                 this.password = password;
         }
 
-        public String getPasswordagain() {
-                return passwordagain;
-        }
+        public boolean getIsTeacher() { return isTeacher; }
 
-        public void setPasswordagain(String passwordagain) {
-                this.passwordagain = passwordagain;
-        }
+        public void setIsTeacher(boolean teacher) { isTeacher = teacher; }
 }

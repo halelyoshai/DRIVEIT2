@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -43,57 +44,54 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         database= FirebaseDatabase.getInstance();
         databaseReference= database.getReference("Users");
 
-        if(firebaseAuth.getCurrentUser()!=null)
-        {
-            databaseReference.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    for (DataSnapshot d : snapshot.getChildren()) {
-                        if (d.getValue(Person.class).getMail().equals("123@gmail.com")) {
-                        }
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-            databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if(snapshot.getValue(Person.class).isIsteacher()){
-                        Intent intent= new Intent(SigninActivity.this, TeacherProfile_Activity.class);
-                        startActivity(intent);
-                    }
-                    else {
-                        Intent intent= new Intent(SigninActivity.this, StudentsProfile_Activity.class);
-                        startActivity(intent);
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-        }
-
     }
 
     @Override
     public void onClick(View v) {
         if (v == signin) {
-            firebaseAuth.signInWithEmailAndPassword(username.getText().toString(),password.getText().toString())
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
-                        Intent intent = new Intent( SigninActivity.this, StudentsProfile_Activity.class);
-                        startActivity(intent);
-                    }
-                }
-            });
+            if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty())
+            {
+                Toast.makeText(this, "כל השדות חייבים להיות מלאים", Toast.LENGTH_SHORT).show();
+
+            }
+            else
+            {
+                firebaseAuth.signInWithEmailAndPassword(username.getText().toString(),password.getText().toString())
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()){
+                                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            if (snapshot.exists()) {
+                                                boolean isTeacher = snapshot.child(firebaseAuth.getCurrentUser().getUid()).child("isTeacher").getValue(Boolean.class);
+                                                if(isTeacher) {
+                                                    Intent intent = new Intent( SigninActivity.this, TeacherProfile_Activity.class);
+                                                    startActivity(intent);
+                                                }
+                                                else {
+                                                    Intent intent = new Intent( SigninActivity.this, StudentsProfile_Activity.class);
+                                                    startActivity(intent);
+                                                }
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+                                            Toast.makeText(SigninActivity.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                }
+                                else
+                                {
+                                    Toast.makeText(SigninActivity.this, "האימייל או הסיסמה לא נכונים.", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+
+            }
 
         }
 

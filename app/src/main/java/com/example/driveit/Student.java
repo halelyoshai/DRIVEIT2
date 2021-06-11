@@ -1,63 +1,53 @@
 package com.example.driveit;
 
-import java.util.ArrayList;
 
 public class Student extends Person
 {
 
-    private int testpnimi;
-    private int numlessons;
-    private int numtests;
-    private String personalpic;
-    private Teacher teacher;
-    private String passwordagain;
-    private ArrayList<Lesson> lessons;
-    private String listoflessons;
+    private String testpnimi;
+    private String numLessons;
+    private String numtests;
+    private String teacherName;
 
 
-    public Student(String name, String mail,
-                   String password, String passwordagain) {
-        super(name, mail, password, passwordagain , false);
-        this.testpnimi = 0;
-        this.numlessons = 0;
-        this.numtests = 0;
-        this.lessons= new ArrayList<>();
-
-
+    public Student(String name, String phoneNumber, String mail, String password) {
+        super(name, phoneNumber, mail, password , false);
+        this.testpnimi = "0";
+        this.numLessons = "0";
+        this.numtests = "0";
+        this.teacherName = "עדיין לא ידוע";
     }
 
-    public int getTestpnimi() {
+    public Student() {
+    }
+
+    public String getTestpnimi() {
         return testpnimi;
     }
 
-    public void setTestpnimi(int testpnimi) {
+    public void setTestpnimi(String testpnimi) {
         this.testpnimi = testpnimi;
     }
 
-    public int getNumlessons() {
-        return numlessons;
+    public String getNumLessons() {
+        return numLessons;
     }
 
-    public void setNumlessons(int numlessons) {
-        this.numlessons = numlessons;
+    public void setNumLessons(String numLessons) {
+        this.numLessons = numLessons;
     }
 
-    public int getNumtests() {
+    public String getNumtests() {
         return numtests;
     }
 
-    public void setNumtests(int numtests) {
+    public void setNumtests(String numtests) {
         this.numtests = numtests;
     }
 
-    public Teacher getTeacher() {
-        return teacher;
-    }
+    public void setLessonslist(){ }
 
-    public void setTeacher(Teacher teacher) {
-       // teacher = t;
-    }
-    public void setLessonslist(){
+    public String getTeacherName() { return teacherName; }
 
-}
+    public void setTeacherName(String teacherName) { this.teacherName = teacherName; }
 }

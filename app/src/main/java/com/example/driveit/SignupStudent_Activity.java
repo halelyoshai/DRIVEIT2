@@ -54,54 +54,45 @@ public class SignupStudent_Activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (v == finish) {
-            if (password.getText().toString().trim().equals(passwordagain.getText().toString().trim())) {
 
-                firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString().trim(), password.getText().toString().trim()).
+            if ((fullname.getText().toString().isEmpty()) || (phonenumber.getText().toString().isEmpty()) || (password.getText().toString().isEmpty()) || (mailadress.getText().toString().isEmpty())) {
+                Toast.makeText(this, "כל השדות חייבים להיות מלאים", Toast.LENGTH_SHORT).show();
+            }
+            else if(phonenumber.getText().toString().trim().length() < 7) {
+                Toast.makeText(this, "מספר הטלפון צריך להיות ארוך מ7 תווים.", Toast.LENGTH_SHORT).show();
+
+            }
+            else if (!password.getText().toString().trim().equals(passwordagain.getText().toString().trim())) {
+                Toast.makeText(this, "הסיסמאות אינן זהות", Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
+            } else if (password.getText().toString().length() < 6) {
+                Toast.makeText(this, "הסיסמה קצרה מדי", Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
+            } else {
+                firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    student = new Student(fullname.getText().toString(),
-                                            mailadress.getText().toString(), phonenumber.getText().toString(), password.getText().toString());
+                                    student = new Student(fullname.getText().toString(), phonenumber.getText().toString(), mailadress.getText().toString(), password.getText().toString());
                                     databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(student);
                                     Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
                                     startActivity(intent);
                                 }
+
+                                else
+                                {
+                                    Toast.makeText(SignupStudent_Activity.this, "האימייל כבר קיים במערכת או לא תקין.", Toast.LENGTH_SHORT).show();
+                                }
                             }
 
                         });
-            } else {
-                Toast.makeText(this, "הסיסמאות אינן זהות", Toast.LENGTH_SHORT).show();
-                password.setText("");
-                passwordagain.setText("");
-                return;
             }
-        }
-        {
-            if (password.getText().toString().length() >= 6) {
-                Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
-                startActivity(intent);
-            } else {
-                Toast.makeText(this, "הסיסמה קצרה מדי", Toast.LENGTH_SHORT).show();
-                password.setText("");
-                passwordagain.setText("");
-                return;
-            }
-        }
-        if ((fullname.getText().toString().trim().length()==0)||(phonenumber.getText().toString().trim().length()!=10)||
-                (mailadress.getText().toString().trim().length()==0))
-        {
-            Toast.makeText(this, "כל השדות חייבים להיות מלאים", Toast.LENGTH_SHORT).show();
-            return;
-
-        } else {
-            Intent intent = new Intent(SignupStudent_Activity.this, StudentsProfile_Activity.class);
-            startActivity(intent);
-
-        }
         }
 
     }
-
+}
 
 

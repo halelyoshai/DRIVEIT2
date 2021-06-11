@@ -1,73 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/driveittrafficlights"
-        android:orientation="vertical"
-        tools:context=".Studentslist_Activity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/driveittrafficlights"
+    tools:context=".Studentslist_Activity">
 
 
     <TableLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center">
-
-
-        <TextView
-            android:id="@+id/txtstudentslist"
+        <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="@string/studentsrightnow"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="38sp"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/btnplus"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="#318E24AA"
-            android:backgroundTint="#00CDDC39"
-            android:text="+"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="30sp"
-            app:iconTint="#0B0A0A"
-            app:strokeColor="#131313" />
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
 
 
-    </TableRow>
+            <TextView
+                android:id="@+id/txtstudentslist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="@string/studentsrightnow"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="38sp"
+                android:visibility="visible" />
 
-    <TableRow
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp">
+            <Button
+                android:id="@+id/btnplus"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#318E24AA"
+                android:backgroundTint="#00CDDC39"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp"
+                app:iconTint="#0B0A0A"
+                app:strokeColor="#131313" />
+
+
+        </TableRow>
 
 
 
-    <Button
-        android:id="@+id/btnstudentname"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="right"
-        android:backgroundTint="#00CDDC39"
-        android:text="@string/studentname"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15sp"
-        app:strokeColor="#131313" />
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/btnstudentname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#00CDDC39"
+
+                android:textSize="20sp"
+                app:strokeColor="#131313" />
 
 
-</TableRow>
 
 
-</TableLayout>
+
+    </TableLayout>
 </LinearLayout>

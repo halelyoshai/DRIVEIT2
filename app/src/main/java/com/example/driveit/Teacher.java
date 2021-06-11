@@ -1,51 +1,52 @@
 package com.example.driveit;
 
 
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Teacher extends Person
 {
-    private ArrayList<Student> students;
     private String school;
-    private String studyarea;
-    private String lessontipe;
-    private String lessonlength;
-    private int lessonprice;
+    private String studyArea;
+    private String lessonType;
+    private String lessonLength;
+    private String lessonPrice;
+    private String numOfStudents;
 
-    public Teacher(String name, String mail, String password, String passwordagain) {
-        super(name, mail, password, passwordagain, true);
-        students=new ArrayList<Student>();
+    public Teacher(String name, String phoneNumber, String mail, String school, String studyArea, String lessonType, String lessonLength, String lessonPrice, String password) {
+        super(name, phoneNumber, mail, password, true);
         this.school = school;
-        this.studyarea= studyarea;
-        this.lessontipe = lessontipe;
-        this.lessonlength = lessonlength;
-        this.lessonprice = lessonprice;
+        this.studyArea = studyArea;
+        this.lessonType = lessonType;
+        this.lessonLength = lessonLength;
+        this.lessonPrice = lessonPrice;
+        this.numOfStudents = "0";
     }
 
 
-
-    public ArrayList<Student> getStudents() {
-        return students;
+    public String getLessonLength() {
+        return lessonLength;
     }
 
-    public void setStudents(Student student) {
-        this.students.add(student);
+    public void setLessonLength(String lessonLength) {
+        this.lessonLength = lessonLength;
     }
 
-    public String getLessonlength() {
-        return lessonlength;
-    }
+    public String getSchool() { return school; }
 
-    public void setLessonlength(String lessonlength) {
-        this.lessonlength = lessonlength;
-    }
+    public void setSchool(String school) { this.school = school; }
 
+    public String getStudyArea() { return studyArea; }
 
-    }
+    public void setStudyArea(String studyArea) { this.studyArea = studyArea; }
+
+    public String getLessonType() { return lessonType; }
+
+    public void setLessonType(String lessonType) { this.lessonType = lessonType; }
+
+    public String getLessonPrice() { return lessonPrice; }
+
+    public void setLessonPrice(String lessonPrice) { this.lessonPrice = lessonPrice; }
+
+    public String getNumOfStudents() { return numOfStudents; }
+
+    public void setNumOfStudents(String numOfStudents) { this.numOfStudents = numOfStudents; }
+}
 

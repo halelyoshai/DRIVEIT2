@@ -30,7 +30,6 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
     private TextView studentsnum;
     private ImageButton students;
     private ImageButton info;
-    private ImageButton setting;
     private DatabaseReference databaseReference;
 
 
@@ -53,7 +52,6 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         profilepic.setOnClickListener(this);
         students.setOnClickListener(this);
         info.setOnClickListener(this);
-        setting.setOnClickListener(this);
 
 
         this.databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -62,6 +60,12 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
                 if (snapshot.exists()) {
                     String username = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("name").getValue(String.class);
                     teachername.setText(username);
+                    String numberOfStudents = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("numOfStudents").getValue(String.class);
+                    studentsnum.setText(numberOfStudents);
+                    String studyArea = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("studyArea").getValue(String.class);
+                    studyarea.setText(studyArea);
+                    String schoolName = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("school").getValue(String.class);
+                    school.setText(schoolName);
                 }
             }
 
@@ -72,42 +76,40 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
 
 
         });
-
-
-        @Override
-        public void onClick (View v){
-            if (v == profilepic) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
-            }
-
-
-            if (v == students) {
-                Intent intent = new Intent(this, Studentslist_Activity.class);
-                startActivity(intent);
-            }
-
-            if (v == info) {
-                Intent intent = new Intent(this, Info_Activity.class);
-
-                startActivity(intent);
-
-            }
-
+    }
+    @Override
+    public void onClick (View v){
+        if (v == profilepic) {
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent, 0);
         }
 
 
-        protected void onActivityResult ( int requrstCode, int resultCode, Intent data)
-        {
-            super.onActivityResult(requrstCode, resultCode, data);
+        if (v == students) {
+            Intent intent = new Intent(this, Studentslist_Activity.class);
+            startActivity(intent);
+        }
 
-            if (resultCode == 0) {
-                if (requrstCode == RESULT_OK) {
-                    Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                    profilepic.setImageBitmap(bitmap);
-                }
+        if (v == info) {
+            Intent intent = new Intent(this, Info_Activity.class);
 
+            startActivity(intent);
+
+        }
+
+    }
+
+
+    protected void onActivityResult ( int requrstCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requrstCode, resultCode, data);
+
+        if (resultCode == 0) {
+            if (requrstCode == RESULT_OK) {
+                Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+                profilepic.setImageBitmap(bitmap);
             }
+
         }
     }
 }

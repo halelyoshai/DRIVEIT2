@@ -63,6 +63,8 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
                 if (snapshot.exists()) {
                     String username = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("name").getValue(String.class);
                     name.setText(username);
+                    String teacherName = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("teacherName").getValue(String.class);
+                    teacher.setText(teacherName);
                 }
             }
             @Override
@@ -82,7 +84,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
 
 
         if (v == lessons ) {
-            Intent intent = new Intent( this, Lessonlist_Activity.class);
+            Intent intent = new Intent( StudentsProfile_Activity.this, Lessonlist_Activity.class);
             startActivity(intent);
         }
 

@@ -20,8 +20,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +30,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
     private EditText phonenumber;
     private EditText mailadress;
     private EditText school;
-    private EditText studyarea;
+    private EditText studyArea;
     private Spinner manualorautomatic;
     private EditText lessonslength;
     private EditText priceperlesson;
@@ -53,7 +51,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         fullname = findViewById(R.id.btnfullname);
         phonenumber = findViewById(R.id.btnphonenumber);
         mailadress = findViewById(R.id.btnmailadress);
-        studyarea = findViewById(R.id.btnstudyarea);
+        studyArea = findViewById(R.id.studyArea);
         school = findViewById(R.id.btnschool);
         manualorautomatic = (Spinner) findViewById(R.id.btnmanualorautomatic);
         lessonslength = findViewById(R.id.btnlessonlength);
@@ -70,7 +68,7 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
         phonenumber.setOnClickListener(this);
         mailadress.setOnClickListener(this);
         school.setOnClickListener(this);
-        studyarea.setOnClickListener(this);
+        studyArea.setOnClickListener(this);
         lessonslength.setOnClickListener(this);
         priceperlesson.setOnClickListener(this);
         password.setOnClickListener(this);
@@ -90,52 +88,45 @@ public class SignupTeacher_Activity extends AppCompatActivity implements View.On
 
     @Override
     public void onClick(View v) {
-        if (v == finish) {
-            if (password.getText().toString().trim().equals(passwordagain.getText().toString().trim())) {
-
+        if (v == finish)
+        {
+            if ((fullname.getText().toString().isEmpty())||(phonenumber.getText().toString().trim().length() < 8)||
+                    (mailadress.getText().toString().isEmpty())) {
+                Toast.makeText(this, "כל השדות חייבים להיות מלאים", Toast.LENGTH_SHORT).show();
+            }
+            if (!password.getText().toString().trim().equals(passwordagain.getText().toString().trim()))
+            {
+                Toast.makeText(this, "הסיסמאות אינן זהות", Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
+            }
+            else if (password.getText().toString().length() < 6) {
+                Toast.makeText(this, "הסיסמה קצרה מדי", Toast.LENGTH_SHORT).show();
+                password.setText("");
+                passwordagain.setText("");
+            }
+            else
+            {
                 firebaseAuth.createUserWithEmailAndPassword(mailadress.getText().toString(), password.getText().toString()).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    teacher = new Teacher(fullname.getText().toString(), phonenumber.getText().toString(), mailadress.getText().toString(),
-                                            password.getText().toString());
+                                    teacher = new Teacher(fullname.getText().toString(), phonenumber.getText().toString(), mailadress.getText().toString(), school.getText().toString(), studyArea.getText().toString(), manualorautomatic.getSelectedItem().toString(), lessonslength.getText().toString(), priceperlesson.getText().toString(), password.getText().toString());
                                     databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(teacher);
                                     Intent intent = new Intent(SignupTeacher_Activity.this, TeacherProfile_Activity.class);
                                     startActivity(intent);
+
+                                }
+                                else
+                                {
+                                    Toast.makeText(SignupTeacher_Activity.this, "האימייל כבר קיים במערכת או לא תקין.", Toast.LENGTH_SHORT).show();
 
                                 }
 
                             }
 
                         });
-
-
-            } else {
-                Toast.makeText(this, "הסיסמאות אינן זהות", Toast.LENGTH_SHORT).show();
-                password.setText("");
-                passwordagain.setText("");
-                return;
-            }
-            if (password.getText().toString().length() >= 6) {
-                Intent intent = new Intent(SignupTeacher_Activity.this, StudentsProfile_Activity.class);
-                startActivity(intent);
-
-            } else {
-                Toast.makeText(this, "הסיסמה קצרה מדי", Toast.LENGTH_SHORT).show();
-                password.setText("");
-                passwordagain.setText("");
-                return;
-            }
-            if ((fullname.getText().toString().trim().length()!=0)||(phonenumber.getText().toString().trim().length()==10)||
-                    (mailadress.getText().toString().trim().length()!=0))
-            {
-                Intent intent = new Intent(SignupTeacher_Activity.this, StudentsProfile_Activity.class);
-                startActivity(intent);
-
-            } else {
-                Toast.makeText(this, "כל השדות חייבים להיות מלאים", Toast.LENGTH_SHORT).show();
-                return;
             }
         }
     }

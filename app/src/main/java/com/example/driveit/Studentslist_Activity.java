@@ -2,6 +2,7 @@ package com.example.driveit;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -15,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,13 +29,17 @@ import com.google.firebase.database.ValueEventListener;
 public class Studentslist_Activity extends AppCompatActivity implements View.OnClickListener {
     private Dialog d;
     private EditText studentname, mail;
-    private Button plus, add, firststudent;
+    private Button plus, add;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private FirebaseUser firebaseUser;
     private Teacher teacher;
     private Student student;
-
+    private RecyclerView firststudent;
+    private void tt()
+    {
+        Toast.makeText(this, "found student", Toast.LENGTH_SHORT).show();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +51,13 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference= firebaseDatabase.getReference("Users");
         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
-
+        student = new Student();
+        String[] ar ={"noa","yafa","halel"};
+        CustomAdapter adp = new CustomAdapter(ar);
+        firststudent.setAdapter(adp);
 
     }
+
     @Override
     public void onClick(View v) {
         if (v== plus){
@@ -61,43 +71,38 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
             d.show();
 
             add.setOnClickListener(new View.OnClickListener() {
+
                 @Override
+
                 public void onClick(View v) {
-                    databaseReference.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
+
+                    databaseReference.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            teacher= snapshot.getValue(Teacher.class);
-                            databaseReference.addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                                        student=  dataSnapshot.getValue(Student.class);
-                                        if(student.getName().equals(studentname.getText().toString())
-                                                &&student.getMail().equals(mail.getText().toString())){
-                                            student.setTeacher(teacher);
-                                            teacher.setStudents(student);
-                                            databaseReference.setValue(teacher);
-                                            databaseReference.setValue(student);
-
-                                            firststudent.setText(student.getName());
-                                            firststudent.setOnClickListener(new View.OnClickListener() {
-                                                @Override
-                                                public void onClick(View v) {
-                                                    Intent intent=new Intent(Studentslist_Activity.this,
-                                                            Lessonlist_Activity.class);
-                                                    intent.putExtra("StudentMail", student.getMail());
-                                                    startActivity(intent);
-                                                }
-                                            });
-                                        }
+                            String teacherName = snapshot.child(firebaseUser.getUid()).child("name").getValue(String.class);
+                            String numOfStudents = snapshot.child(firebaseUser.getUid()).child("numOfStudents").getValue(String.class);
+                            for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                                boolean isTeacher = dataSnapshot.child("isTeacher").getValue(Boolean.class);
+                                if(isTeacher) {
+                                    continue;
+                                }
+                                String techer = dataSnapshot.child("teacherName").getValue(String.class);
+                                if(!techer.equals("עדיין לא ידוע")) {
+                                    continue;
+                                }
+                                else {
+                                    student.setName(dataSnapshot.child("name").getValue(String.class));
+                                    student.setMail(dataSnapshot.child("mail").getValue(String.class));
+                                    if(student.getName().equals(studentname.getText().toString())){ //&& student.getMail().equals(mail.getText().toString())){
+                                        databaseReference.child(dataSnapshot.getKey()).child("teacherName").setValue(teacherName);
+                                        databaseReference.child(firebaseUser.getUid()).child("numOfStudents").setValue(String.valueOf(Integer.parseInt(numOfStudents) + 1));
+                                       Intent intent=new Intent(Studentslist_Activity.this, TeacherProfile_Activity.class);
+                                       startActivity(intent);
+                                       tt();
+                                        break;
                                     }
                                 }
-
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError error) {
-
-                                }
-                            });
+                            }
                         }
 
                         @Override
@@ -106,12 +111,13 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
                         }
                     });
 
+
                 }
             });
         }
 
-            }
-        }
+    }
+}
 
 
 

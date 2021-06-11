@@ -49,7 +49,7 @@
 
 
                 <TextView
-                    android:id="@+id/txtteachername"
+                    android:id="@+id/txtstudentsnum"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                     app:strokeColor="#131313" />
 
                 <TextView
-                    android:id="@+id/txtstudentsnum"
+                    android:id="@+id/txtteachername"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
