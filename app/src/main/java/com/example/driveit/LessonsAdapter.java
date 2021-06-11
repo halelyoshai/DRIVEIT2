@@ -1,6 +1,7 @@
 package com.example.driveit;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +36,11 @@ public class LessonsAdapter extends ArrayAdapter<Lesson> {
 
         TextView countlesson = convertView.findViewById(R.id.countlesson);
         TextView date = convertView.findViewById(R.id.date);
+        Log.d("getview", lesson.getCountlesson());
 
         countlesson.setText(lesson.getCountlesson());
         date.setText(lesson.getdate());
+
 
         return convertView;
     }

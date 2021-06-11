@@ -37,30 +37,16 @@ public class activity_Editlesson extends AppCompatActivity  implements View.OnCl
         databaseReference= firebaseDatabase.getReference("Users");
 
 
-        Intent intent= getIntent();
-
-        if(intent.getExtras()!=null) {
-            String numlesson= intent.getExtras().getString("numlesson");
-            String datelesson= intent.getExtras().getString("datelesson");
-
-            lessonnum.setText(numlesson);
-            lessondate.setText(datelesson);
-
-
-        }
-
     }
     public void onClick(View v){
         if(v==save){
             if (lessonnum.getText().toString().length()>0 && lessondate.getText().toString().length()>0) {
-                Intent intent= new Intent();
-                intent.putExtra("lessonnum", lessonnum.getText().toString());
-                intent.putExtra("lessondate", lessondate.getText().toString());
+                Intent intent= new Intent(this, Lessonlist_Activity.class);
 
                 Lesson lesson= new Lesson(lessonnum.getText().toString(), lessondate.getText().toString());
-                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("lessons").setValue(lesson);
-                setResult(RESULT_OK, intent);
-                finish();
+                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("lessons").child(System.currentTimeMillis()+"").setValue(lesson);
+              startActivity(intent);
+              finish();
             }
             else
                 Snackbar.make(findViewById(android.R.id.content),"מלא את כל השדות", Snackbar.LENGTH_SHORT).show();

@@ -4,6 +4,9 @@ public class Lesson {
 
     private String countlesson;
     private String date;
+    public Lesson (){
+
+    }
 
     public Lesson(String lessonnum, String date){
         this.countlesson=lessonnum;

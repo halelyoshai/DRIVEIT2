@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -24,10 +27,11 @@ import java.util.ArrayList;
 public class Lessonlist_Activity extends AppCompatActivity implements AdapterView.OnItemClickListener,
         AdapterView.OnItemLongClickListener {
 
-    ArrayList<Lesson> lessons;
-    ListView lv;
-    LessonsAdapter lessonsAdapter;
-    Lesson lessonSelected;
+    private ArrayList<Lesson> lessons;
+    private ListView lv;
+    private LessonsAdapter lessonsAdapter;
+    private Lesson lessonSelected;
+    private TextView studentname;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     static int REQUEST_CODE_ADD_LESSON = 1000;
@@ -38,16 +42,26 @@ public class Lessonlist_Activity extends AppCompatActivity implements AdapterVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lessonslist);
+        studentname= findViewById(R.id.txtstudentname);
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference= firebaseDatabase.getReference("Users");
         lessons = new ArrayList<Lesson>();
-        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("lessons").addValueEventListener(new ValueEventListener() {
+        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot d:snapshot.getChildren()){
+                studentname.setText("student name: "+snapshot.getValue(Student.class).getName());
+
+
+                for (DataSnapshot d:snapshot.child("lessons").getChildren()){
                     lessons.add(d.getValue(Lesson.class));
+                    Log.d("onDataChange",d.getValue(Lesson.class).getdate());
                 }
+                lessonsAdapter = new LessonsAdapter(Lessonlist_Activity.this, 0, 0, lessons);
+
+                lv = findViewById(R.id.Lv);
+                lv.setAdapter(lessonsAdapter);
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -55,14 +69,8 @@ public class Lessonlist_Activity extends AppCompatActivity implements AdapterVie
             }
         });
 
-
-        lessonsAdapter = new LessonsAdapter(this, 0, 0, lessons);
-
-        lv = findViewById(R.id.Lv);
-        lv.setAdapter(lessonsAdapter);
-
-        lv.setOnItemClickListener(this);
-        lv.setOnItemLongClickListener(this);
+       // lv.setOnItemClickListener(this);
+        // lv.setOnItemLongClickListener(this);
     }
 
     public void onItemclick(AdapterView<?> parent, View view, int position, long id) {
@@ -94,15 +102,25 @@ public class Lessonlist_Activity extends AppCompatActivity implements AdapterVie
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+       getMenuInflater().inflate(R.menu.menu_main, menu);
+       return true;
+    }
 
-    public boolean onOptionItemselected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
         int id = item.getItemId();
 
         if (id == R.id.action_add) {
             Intent intent = new Intent(this, activity_Editlesson.class);
-            startActivityForResult(intent, REQUEST_CODE_ADD_LESSON);
+            startActivity(intent);
         }
+        if (id == R.id.tests) {
+            Intent intent = new Intent(this, Testslist_Activity.class);
+            startActivity(intent);
+        }
+
         return true;
     }
 
@@ -125,14 +143,7 @@ public class Lessonlist_Activity extends AppCompatActivity implements AdapterVie
         return false;
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        super.onOptionsItemSelected(item);
-        int id = item.getItemId();
 
-        if (id == R.id.action_add) {
-            Toast.makeText(this, "you selected add", Toast.LENGTH_SHORT).show();
-        }
-        return true;
     }
-}
+
 

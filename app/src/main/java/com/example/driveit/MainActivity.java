@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signin = findViewById(R.id.btnsignin);
         signups = findViewById(R.id.btnsignups);
         signup = findViewById(R.id.btnsignup);
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
 
         firebaseAuth = FirebaseAuth.getInstance();
         signin.setOnClickListener(this);
@@ -53,20 +54,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View v) {
         if (v == signin) {
-            Intent intent = new Intent(this, SigninActivity.class);
-            startActivity(intent);
-        }
-        if (v == signups) {
-            Intent intent = new Intent(this, SignupStudent_Activity.class);
-            startActivity(intent);
-        }
-        if (v == signup) {
-            Intent intent = new Intent(this, SignupTeacher_Activity.class);
-            startActivity(intent);
+            if (firebaseAuth.getCurrentUser() != null) {
+                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
+                            boolean isTeacher = snapshot.child("isTeacher").getValue(Boolean.class);
+                            if (isTeacher) {
+                                Intent intent = new Intent(MainActivity.this, TeacherProfile_Activity.class);
+                                startActivity(intent);
+                            } else {
+                                Intent intent = new Intent(MainActivity.this, StudentsProfile_Activity.class);
+                                startActivity(intent);
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+
+                });
+            } else {
+                Intent intent = new Intent(this, SigninActivity.class);
+                startActivity(intent);
+            }
         }
 
+            if (v == signups) {
+                Intent intent = new Intent(this, SignupStudent_Activity.class);
+                startActivity(intent);
+            }
+            if (v == signup) {
+                Intent intent = new Intent(this, SignupTeacher_Activity.class);
+                startActivity(intent);
+            }
+
+        }
     }
-}
+
 
 
 
