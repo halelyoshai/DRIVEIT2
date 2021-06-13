@@ -23,7 +23,7 @@
                 android:layout_width="415dp"
                 android:textSize="50sp"
                 android:layout_gravity="center"
-                android:text="פרופיל מורה"
+                android:text="פרופיל מורה"ץ
                 />
 
         </TableRow>
