@@ -4,23 +4,25 @@
     android:layout_height="400dp"
     android:background="@drawable/infobackgroundd">
 
-    <EditText
+    <TextView
         android:id="@+id/lessonnumber"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:text="איך מוציאים טופס ירוק?"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="#0E0E0E"/>
 
 
-    <EditText
+    <TextView
         android:id="@+id/Answer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:text="את הטופס הירוק שהוא טופס שכל אדם שמתחיל ללמוד נהיגה צריך להוציא ובלעדיו לא ניתן לגשת לתיאוריה, ניתן להוציא במגוון חנויות אופטיקה ברחבי הארץ. על מנת למצוא את הסניף הקרוב אליכם הקישו במנוע החיפוש הוצאת טופס ירוק ואת שם עיר מגורכם. הוצת הטופס עולה כ50 שקלים והיא כוללת בדיקת ראייה במקום ולקיחת תמונת פספורט שתשמש אתכם גם ברישיון הנהיגה."
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#0E0E0E"/>
 
 </LinearLayout>

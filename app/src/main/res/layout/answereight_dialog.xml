@@ -4,17 +4,18 @@
     android:layout_height="350dp"
     android:background="@drawable/infobackgroundd">
 
-    <EditText
+    <TextView
         android:id="@+id/lessonnumber"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:text="איך להתמודד עם לחץ לפני טסט?"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textColor="#0E0E0E"/>
 
 
-    <EditText
+    <TextView
         android:id="@+id/Answer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -22,7 +23,8 @@
         android:layout_marginTop="15dp"
         android:text="הלחץ לפני הטסט הוא טבעי לגמרי, אנחנו ממליצים לדבר עם מורה הנהיגה ולבקש ממנו טיפים ולהודות בפניו שאנו לחוצים זה תמיד משחרר. בנוסף, כדי לשחזר בראש מסלולי טסט שתרגלנו ובעיקר לעבוד על הביטחון העצמי. לזכור שרבים עשו זאת לפנינו ויעשו זאת גם אחרינו, שהטסטר בסך הכל רוצה שנעבור. לשדר ביטחון זה הדבר הכי חשוב בהצלחה!
         מחזיקים לך אצבעות:)"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#0E0E0E"/>
 
 </LinearLayout>
 

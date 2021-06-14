@@ -7,31 +7,24 @@
     >
 
     <TextView
+        android:id="@+id/namestudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/countlesson"
-        android:textSize="30sp"
-        android:text="countlesson"
-        android:layout_marginTop="5dp"
         android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="שם תלמיד"
         android:textColor="#0C0C0C"
-
-        />
+        android:textSize="30sp" />
 
     <TextView
+        android:id="@+id/mailstudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/date"
-        android:textSize="30sp"
-        android:text="date"
         android:layout_gravity="center"
-        android:textColor="#0C0C0C" />
-
-
+        android:text="מייל תלמיד"
+        android:textColor="#0C0C0C"
+        android:textSize="30sp" />
 
 </LinearLayout>
-
-
-
 
 

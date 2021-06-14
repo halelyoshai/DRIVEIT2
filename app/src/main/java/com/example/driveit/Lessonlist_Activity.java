@@ -68,9 +68,6 @@ public class Lessonlist_Activity extends AppCompatActivity implements AdapterVie
 
             }
         });
-
-       // lv.setOnItemClickListener(this);
-        // lv.setOnItemLongClickListener(this);
     }
 
     public void onItemclick(AdapterView<?> parent, View view, int position, long id) {

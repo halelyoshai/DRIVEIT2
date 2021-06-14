@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/carsbackground"
     android:orientation="vertical"
-    tools:context=".Lessonlist_Activity">
+    tools:context=".Studentslist_Activity">
 
     <TextView
         android:id="@+id/txtlessons"
@@ -13,25 +13,38 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="רשימת שיעורים"
+        android:text="רשימת תלמידים"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="40sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="40sp"
+        android:visibility="visible" />
+
+    <RecyclerView
+        android:id="@+id/btnstudentname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="רשימת תלמידים"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="40sp"
         android:visibility="visible" />
 
 
 
-    <TextView
-        android:id="@+id/txtstudentname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        android:visibility="visible" />
 
     <ListView
-        android:id="@+id/Lv"
+        android:id="@+id/Lv_s"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

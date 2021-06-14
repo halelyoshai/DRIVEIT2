@@ -4,29 +4,21 @@ package com.example.driveit;
 public class Student extends Person
 {
 
-    private String testpnimi;
     private String numLessons;
     private String numtests;
     private String teacherName;
+    private String key;
+    private String imageUri;
 
 
     public Student(String name, String phoneNumber, String mail, String password) {
         super(name, phoneNumber, mail, password , false);
-        this.testpnimi = "0";
         this.numLessons = "0";
         this.numtests = "0";
         this.teacherName = "עדיין לא ידוע";
     }
 
     public Student() {
-    }
-
-    public String getTestpnimi() {
-        return testpnimi;
-    }
-
-    public void setTestpnimi(String testpnimi) {
-        this.testpnimi = testpnimi;
     }
 
     public String getNumLessons() {
@@ -50,4 +42,20 @@ public class Student extends Person
     public String getTeacherName() { return teacherName; }
 
     public void setTeacherName(String teacherName) { this.teacherName = teacherName; }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
+    }
 }

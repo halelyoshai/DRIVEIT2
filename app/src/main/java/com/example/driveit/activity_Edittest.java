@@ -13,10 +13,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class activity_Editlesson extends AppCompatActivity  implements View.OnClickListener{
+public class activity_Edittest extends AppCompatActivity  implements View.OnClickListener{
 
 
-    private EditText lessonnum, lessondate;
+    private EditText testnum, testdate;
     private Button save, cancel;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
@@ -24,10 +24,10 @@ public class activity_Editlesson extends AppCompatActivity  implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__editlesson);
+        setContentView(R.layout.activity__edittest);
 
-        lessonnum= findViewById(R.id.lessonnum1);
-        lessondate= findViewById(R.id.lessondate);
+        testnum= findViewById(R.id.testnum);
+        testdate= findViewById(R.id.testdate);
         save= findViewById(R.id.btnsave);
         cancel= findViewById(R.id.btncancel);
 
@@ -40,14 +40,14 @@ public class activity_Editlesson extends AppCompatActivity  implements View.OnCl
     }
     public void onClick(View v){
         if(v==save){
-            if (lessonnum.getText().toString().length()>0 && lessondate.getText().toString().length()>0) {
-                Intent intent= new Intent(this, Lessonlist_Activity.class);
+            if (testnum.getText().toString().length()>0 && testdate.getText().toString().length()>0) {
+                Intent intent= new Intent(this, Testslist_Activity.class);
 
-                Lesson lesson= new Lesson(lessonnum.getText().toString(), lessondate.getText().toString());
-                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                        .child("lessons").child(System.currentTimeMillis()+"").setValue(lesson);
-              startActivity(intent);
-              finish();
+                Test test= new Test(testnum.getText().toString(), testnum.getText().toString());
+                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("tests")
+                        .child(System.currentTimeMillis()+"").setValue(test);
+                startActivity(intent);
+                finish();
             }
             else
                 Snackbar.make(findViewById(android.R.id.content),"מלא את כל השדות", Snackbar.LENGTH_SHORT).show();

@@ -23,23 +23,36 @@
                 android:layout_width="415dp"
                 android:textSize="50sp"
                 android:layout_gravity="center"
-                android:text="פרופיל מורה"ץ
+                android:text="פרופיל מורה"
                 />
 
         </TableRow>
 
             <TableRow android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <TableRow
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
 
-                <ImageButton
-                    android:id="@+id/btnprofilepic"
-                    android:layout_width="50dp"
-                    android:layout_height="150dp"
-                    android:layout_gravity="center"
+                <ImageView
+                    android:id="@+id/imageviewprofileT"
+                    android:layout_width="500dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:background="@drawable/driveit_one"
                     android:backgroundTint="#FFFFFF"
-                    android:textStyle="bold" />
+                    />
+
+                <Button
+                    android:id="@+id/btnprofilepic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00BCD4"
+                    android:text="הוסף תמונה"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF">
+
+                </Button>
 
             </TableRow>
 
@@ -139,13 +152,12 @@
             <ImageButton
                 android:id="@+id/btnstudents"
                 android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/stusents"
+                android:layout_height="243dp"
                 android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="2dp"
-                />
+                android:layout_weight="1"
+                android:background="@mipmap/stusents" />
 
         </TableRow>
 

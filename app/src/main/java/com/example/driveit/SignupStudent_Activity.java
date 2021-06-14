@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupStudent_Activity extends AppCompatActivity implements View.OnClickListener {
-    private View v;
+
     private EditText fullname;
     private EditText phonenumber;
     private EditText mailadress;

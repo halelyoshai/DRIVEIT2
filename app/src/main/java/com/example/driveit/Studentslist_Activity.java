@@ -43,11 +43,10 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studentslist__t);
-
+        setContentView(R.layout.activity_studentslist);
         firststudent=findViewById(R.id.btnstudentname);
-        plus = (Button) findViewById(R.id.btnplus);
-        plus.setOnClickListener (this);
+        plus=findViewById(R.id.plus);
+        plus.setOnClickListener(this);
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference= firebaseDatabase.getReference("Users");
         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
@@ -79,26 +78,37 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
                     databaseReference.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            String teacherName = snapshot.child(firebaseUser.getUid()).child("name").getValue(String.class);
-                            String numOfStudents = snapshot.child(firebaseUser.getUid()).child("numOfStudents").getValue(String.class);
                             for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                                 boolean isTeacher = dataSnapshot.child("isTeacher").getValue(Boolean.class);
                                 if(isTeacher) {
                                     continue;
                                 }
-                                String techer = dataSnapshot.child("teacherName").getValue(String.class);
-                                if(!techer.equals("עדיין לא ידוע")) {
-                                    continue;
-                                }
+
                                 else {
-                                    student.setName(dataSnapshot.child("name").getValue(String.class));
-                                    student.setMail(dataSnapshot.child("mail").getValue(String.class));
-                                    if(student.getName().equals(studentname.getText().toString())){ //&& student.getMail().equals(mail.getText().toString())){
-                                        databaseReference.child(dataSnapshot.getKey()).child("teacherName").setValue(teacherName);
-                                        databaseReference.child(firebaseUser.getUid()).child("numOfStudents").setValue(String.valueOf(Integer.parseInt(numOfStudents) + 1));
-                                       Intent intent=new Intent(Studentslist_Activity.this, TeacherProfile_Activity.class);
-                                       startActivity(intent);
-                                       tt();
+                                    // student.setName(dataSnapshot.child("name").getValue(String.class));
+                                    //  student.setMail(dataSnapshot.child("mail").getValue(String.class));
+                                    if(dataSnapshot.getValue(Student.class).getName().equals(studentname.getText().toString()) &&
+                                            dataSnapshot.getValue(Student.class).getMail().equals(mail.getText().toString()) ){ //&& student.getMail().equals(mail.getText().toString())){
+                                        student = dataSnapshot.getValue(Student.class);
+                                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("studentsList").child(System.currentTimeMillis()+""
+                                        ).setValue(student);
+
+                                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                teacher = snapshot.getValue(Teacher.class);
+                                                student.setTeacherName(teacher.getName());
+                                                databaseReference.setValue(student);
+
+                                                Intent intent=new Intent(Studentslist_Activity.this, TeacherProfile_Activity.class);
+                                                startActivity(intent);
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                            }
+                                        });
                                         break;
                                     }
                                 }
@@ -118,6 +128,3 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
 
     }
 }
-
-
-

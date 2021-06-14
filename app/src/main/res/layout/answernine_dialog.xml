@@ -4,23 +4,25 @@
     android:layout_height="430dp"
     android:background="@drawable/infobackgroundd">
 
-    <EditText
+    <TextView
         android:id="@+id/lessonnumber"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:text="דברים שחשוב לדעת לפני שמתחילים:"
-        android:textSize="23sp" />
+        android:textSize="23sp"
+        android:textColor="#0E0E0E"/>
 
 
-    <EditText
+    <TextView
         android:id="@+id/Answer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:text="דברים שחשוב לדעת לפני שמתחילים: תהליך הוצאת הרישיון כולל המון עליו ומורדות, יהיו שיעורים טובים יותר ופחות וצריך תמיד לזכור שכל עוד יש התקדמות אנחנו בדרך הנכונה! שדרו ביטחון והיו נינוחים, דברו עם מורה הנהיגה, חייכו וצרו אווירה טובה זה תמיד עוזר ונותן הרגשה טובה. חשוב לא להתמהמה ולגשת כמה שיותר מהר למבחן התיאורטי- בלעדיו לא תוכלו לגשת לטסט ואף לטסט הפנימי. לא לתת ללחצים מבחוץ להשפיע עליכם- כל אחד מוציא רישיון בזמנו וגם תורכם יגיע ומהר משחשבתם!"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#0E0E0E"/>
 
 </LinearLayout>

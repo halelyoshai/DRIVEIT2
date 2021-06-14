@@ -9,6 +9,8 @@ public class Teacher extends Person
     private String lessonLength;
     private String lessonPrice;
     private String numOfStudents;
+    private String key;
+    private String imageUri;
 
     public Teacher(String name, String phoneNumber, String mail, String school, String studyArea, String lessonType, String lessonLength, String lessonPrice, String password) {
         super(name, phoneNumber, mail, password, true);
@@ -48,5 +50,21 @@ public class Teacher extends Person
     public String getNumOfStudents() { return numOfStudents; }
 
     public void setNumOfStudents(String numOfStudents) { this.numOfStudents = numOfStudents; }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
+    }
 }
 

@@ -5,23 +5,25 @@
     android:layout_height="300dp"
     android:background="@drawable/infobackgroundd">
 
-    <EditText
+    <TextView
         android:id="@+id/lessonnumber"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:text="תוך כמה זמן אפשר לגשת לטסט?"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textColor="#0E0E0E"/>
 
 
-    <EditText
+    <TextView
         android:id="@+id/Answer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="ניתן לגשת לטסט רק לאחר שביצעת את מספר השיעורים המינימלי- כ28 שיעורים, יש בידך טופס ירוק עם תוצאת עבר במבחן התיאורטי וביצעת את הטסט הפנימי בבית הספר לנהיגה בו למדת. תהליך הוצאת הרישיון יכול לקחת בין חודשיים וחצי עד 10 חודשים וכמובן יותר הכל תלוי במורה ובתלמיד. "
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#0E0E0E"/>
 
 </LinearLayout>

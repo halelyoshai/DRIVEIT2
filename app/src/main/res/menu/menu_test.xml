@@ -4,8 +4,16 @@
 
 
     <item
-        android:id="@+id/action_addS"
+        android:id="@+id/action_addtest"
         android:title="הוסף"
+        android:orderInCategory="200"
+        app:showAsAction="always">
+    </item>
+
+
+    <item
+        android:id="@+id/action_home"
+        android:title="בית"
         android:orderInCategory="200"
         app:showAsAction="always">
     </item>
