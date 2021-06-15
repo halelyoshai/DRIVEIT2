@@ -39,6 +39,7 @@ import java.io.ByteArrayOutputStream;
 public class StudentsProfile_Activity extends AppCompatActivity implements View.OnClickListener {
     private DatabaseReference databaseReference;
     private StorageReference storageReference;
+    private Button logout;
     private TextView studentprofile;
     private ImageView picture;
     private TextView name;
@@ -63,6 +64,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentprofile__s);
 
+        logout= findViewById(R.id.btnlogout);
         studentprofile = findViewById(R.id.txtstudentprofile);
         picture = findViewById(R.id.imageviewprofile);
         show = findViewById(R.id.btnpicture);
@@ -74,6 +76,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         storageReference = FirebaseStorage.getInstance().getReference("ProfilePic");
 
+        logout.setOnClickListener(this);
         show.setOnClickListener(this);
         info.setOnClickListener(this);
         lessons.setOnClickListener(this);
@@ -119,6 +122,11 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
             }
                 Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent,0);
+        }
+
+        if (v == logout){
+            Intent intent = new Intent ( this, MainActivity.class);
+            startActivity(intent);
         }
 
 

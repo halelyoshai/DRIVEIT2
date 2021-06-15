@@ -8,7 +8,7 @@
     tools:context=".Studentslist_Activity">
 
     <TextView
-        android:id="@+id/txtlessons"
+        android:id="@+id/txtstudentlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

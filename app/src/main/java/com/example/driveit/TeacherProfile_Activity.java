@@ -39,6 +39,7 @@ import java.io.ByteArrayOutputStream;
 public class TeacherProfile_Activity extends AppCompatActivity implements View.OnClickListener {
     private DatabaseReference databaseReference;
     private StorageReference storageReference;
+    private Button logout;
     private TextView teacherprofile;
     private ImageView picture;
     private TextView name;
@@ -64,6 +65,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_profile_);
 
+        logout= findViewById(R.id.btnlogout1);
         teacherprofile = findViewById(R.id.txtteacherprofile);
         picture = findViewById(R.id.imageviewprofileT);
         show = findViewById(R.id.btnprofilepic);
@@ -76,6 +78,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         storageReference = FirebaseStorage.getInstance().getReference("ProfilePic");
 
+        logout.setOnClickListener(this);
         show.setOnClickListener(this);
         info.setOnClickListener(this);
         students.setOnClickListener(this);
@@ -127,6 +130,11 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         }
 
 
+        if (v == logout){
+            Intent intent = new Intent ( this, MainActivity.class);
+            startActivity(intent);
+        }
+
         if (v == students){
             Intent intent = new Intent ( this, Studentslist_Activity.class);
             startActivity(intent);
@@ -163,7 +171,6 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
             }
         });
     }
-
     public String getFileExtension(Uri uri){
         String cr = getContentResolver().getType(uri);
         MimeTypeMap mtm = MimeTypeMap.getSingleton();
