@@ -42,6 +42,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#00101010"
+        android:inputType="textPassword"
         android:hint="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp" />

@@ -29,18 +29,18 @@
         android:layout_marginTop="20dp"/>
 
     <Button
+        android:id="@+id/btnsave1"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/btnsave"
-        android:text="הוסף"
-        android:textSize="20sp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        android:text="הוסף"
+        android:textSize="20sp" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/btncancel"
+        android:id="@+id/btncancel1"
         android:text="בטל"
         android:textSize="20sp"
         android:layout_gravity="center"

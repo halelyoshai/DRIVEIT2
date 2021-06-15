@@ -28,7 +28,7 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
     private TextView studentlist;
     private Dialog d;
     private EditText studentname, mail;
-    private Button plus, add, firststudent;
+    private Button plus, add;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private FirebaseUser firebaseUser;
@@ -41,7 +41,6 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_studentslist);
 
         studentlist=findViewById(R.id.txtstudentlist);
-        firststudent=findViewById(R.id.btnstudentname);
         plus = (Button) findViewById(R.id.plus);
         plus.setOnClickListener (this);
         firebaseDatabase= FirebaseDatabase.getInstance();
@@ -66,6 +65,7 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
             add.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     databaseReference.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -76,6 +76,7 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
                                 if(isTeacher) {
                                     continue;
                                 }
+
                                 else {
                                     student.setName(dataSnapshot.child("name").getValue(String.class));
                                     student.setMail(dataSnapshot.child("mail").getValue(String.class));

@@ -56,6 +56,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
     private String key,imageString;
     private Uri uri;
     private Bitmap bitmap;
+    private FirebaseAuth firebaseAuth;
 
 
 
@@ -75,6 +76,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         school = findViewById(R.id.txtschool);
         info = findViewById(R.id.btninfo);
         students = findViewById(R.id.btnstudents);
+        firebaseAuth= FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         storageReference = FirebaseStorage.getInstance().getReference("ProfilePic");
 
@@ -132,6 +134,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
 
 
         if (v == logout){
+            firebaseAuth.signOut();
             Intent intent = new Intent ( this, MainActivity.class);
             startActivity(intent);
         }

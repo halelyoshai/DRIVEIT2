@@ -96,6 +96,8 @@ public class Lessonlist_Activity extends AppCompatActivity implements AdapterVie
                 Snackbar.make(findViewById(android.R.id.content), "הפרטים נשמרו", Snackbar.LENGTH_SHORT).show();
             } else if (resultcode == RESULT_CANCELED)
                 Snackbar.make(findViewById(android.R.id.content), "הפרטים לא נשמרו", Snackbar.LENGTH_SHORT).show();
+            Intent intent= new Intent(this, activity_Editlesson.class);
+            startActivity(intent);
         }
     }
 
