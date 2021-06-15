@@ -22,6 +22,9 @@ public class Teacher extends Person
         this.numOfStudents = "0";
     }
 
+    public Teacher() {
+    }
+
 
     public String getLessonLength() {
         return lessonLength;

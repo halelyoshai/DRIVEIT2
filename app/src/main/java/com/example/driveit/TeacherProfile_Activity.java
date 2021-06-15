@@ -97,6 +97,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
                     studyarea.setText(studyArea);
                     String schoolName = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("school").getValue(String.class);
                     school.setText(schoolName);
+                    teacher = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getValue(Teacher.class);
                     showPic();
 
                 }
@@ -212,4 +213,3 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
 
 
 }
-
