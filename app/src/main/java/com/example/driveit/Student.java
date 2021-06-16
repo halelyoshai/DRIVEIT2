@@ -16,6 +16,8 @@ public class Student extends Person
         this.numLessons = "0";
         this.numtests = "0";
         this.teacherName = "עדיין לא ידוע";
+        key="";
+        imageUri="";
     }
 
     public Student() {

@@ -1,6 +1,11 @@
 package com.example.driveit;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Teacher extends Person
 {
     private String school;
@@ -11,6 +16,7 @@ public class Teacher extends Person
     private String numOfStudents;
     private String key;
     private String imageUri;
+    private Map<String, Student> listOfStudents;
 
     public Teacher(String name, String phoneNumber, String mail, String school, String studyArea, String lessonType, String lessonLength, String lessonPrice, String password) {
         super(name, phoneNumber, mail, password, true);
@@ -20,6 +26,9 @@ public class Teacher extends Person
         this.lessonLength = lessonLength;
         this.lessonPrice = lessonPrice;
         this.numOfStudents = "0";
+        listOfStudents= new HashMap<String, Student>();
+        key="";
+        imageUri="";
     }
 
     public Teacher() {
@@ -68,6 +77,14 @@ public class Teacher extends Person
 
     public void setImageUri(String imageUri) {
         this.imageUri = imageUri;
+    }
+
+    public Map<String, Student> getListOfStudents() {
+        return listOfStudents;
+    }
+
+    public void setListOfStudents(Map<String, Student> listOfStudents) {
+        this.listOfStudents = listOfStudents;
     }
 }
 

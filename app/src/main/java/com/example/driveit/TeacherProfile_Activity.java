@@ -79,6 +79,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         firebaseAuth= FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         storageReference = FirebaseStorage.getInstance().getReference("ProfilePic");
+        teacher= new Teacher();
 
         logout.setOnClickListener(this);
         show.setOnClickListener(this);
@@ -87,22 +88,22 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
 
 
 
-        this.databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+       databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
+
                     String username = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("name").getValue(String.class);
                     name.setText(username);
                     String numberOfStudents = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("numOfStudents").getValue(String.class);
-                    studentsnum.setText(numberOfStudents);
+                    int temp= Integer.valueOf(numberOfStudents);
+                    studentsnum.setText(String.valueOf(temp));
                     String studyArea = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("studyArea").getValue(String.class);
                     studyarea.setText(studyArea);
                     String schoolName = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("school").getValue(String.class);
                     school.setText(schoolName);
-                    teacher = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getValue(Teacher.class);
                     showPic();
 
-                }
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -142,6 +143,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         if (v == students){
             Intent intent = new Intent ( this, Studentslist_Activity.class);
             startActivity(intent);
+            finish();
         }
 
         if (v == info){
@@ -159,7 +161,7 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
         databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.getValue(Teacher.class).getKey() != null) {
+                if (!snapshot.getValue(Teacher.class).getKey().equals("")) {
                     storageReference.child(snapshot.getValue(Teacher.class).getKey()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
@@ -201,10 +203,22 @@ public class TeacherProfile_Activity extends AppCompatActivity implements View.O
                             @Override
                             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                                 imageString = taskSnapshot.getUploadSessionUri().toString();
-                                teacher.setImageUri(imageString);
-                                teacher.setKey(key);
-                                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(teacher);
-                                Glide.with(TeacherProfile_Activity.this).load(uri).into(picture);
+                                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        teacher=snapshot.getValue(Teacher.class);
+                                        teacher.setImageUri(imageString);
+                                        teacher.setKey(key);
+                                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(teacher);
+                                        Glide.with(TeacherProfile_Activity.this).load(uri).into(picture);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
+
                             }
                         });
 

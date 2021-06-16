@@ -75,36 +75,68 @@
                 </Button>
 
             </TableRow>
-
             <TableRow
                 android:layout_marginTop="50dp">
 
 
-
                 <TextView
-                    android:id="@+id/txtstudentsnum"
+                    android:id="@+id/txtteachername"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginLeft="70dp"
                     android:background="#00FFFFFF"
                     android:backgroundTint="#00CDDC39"
-                    android:text="מספר תלמידים:"
+                    android:text="שם:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textSize="20sp"
                     app:strokeColor="#131313" />
 
                 <TextView
-                    android:id="@+id/txtteachername"
+                    android:id="@+id/txtteachernameview"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="-290dp"
+                    android:layout_marginLeft="-320dp"
                     android:background="#00FFFFFF"
                     android:backgroundTint="#00CDDC39"
                     android:text="שם:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="20sp"
+                    app:strokeColor="#131313" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+
+
+
+                <TextView
+                    android:id="@+id/txtstudyarea"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="70dp"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#00CDDC39"
+                    android:text="מלמד באיזור:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="20sp"
+                    app:strokeColor="#131313" />
+
+                <TextView
+                    android:id="@+id/txtstudyareaview"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="-320dp"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#00CDDC39"
+                    android:text="מלמד באיזור:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textSize="20sp"
                     app:strokeColor="#131313" />
@@ -120,7 +152,7 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginLeft="70dp"
                     android:background="#00FFFFFF"
                     android:backgroundTint="#00CDDC39"
                     android:text="בית ספר:"
@@ -129,19 +161,52 @@
                     app:strokeColor="#131313" />
 
                 <TextView
-                    android:id="@+id/txtstudyarea"
+                    android:id="@+id/txtchoolview"
                     style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="-290dp"
+                    android:layout_marginLeft="-320dp"
                     android:background="#00FFFFFF"
                     android:backgroundTint="#00CDDC39"
-                    android:text="מלמד באיזור:"
+                    android:text="בית ספר:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textSize="20sp"
                     app:strokeColor="#131313" />
             </TableRow>
+            <TableRow
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/txtstudentsnum"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="50dp"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#00CDDC39"
+                    android:text=" מספר תלמידים:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="20sp"
+                    app:strokeColor="#131313" />
+
+                <TextView
+                    android:id="@+id/txtstudentnumview"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="-320dp"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#00CDDC39"
+                    android:text="מספר תלמידים:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="20sp"
+                    app:strokeColor="#131313" />
+            </TableRow>
+
 
         </TableLayout>
         -<TableLayout
@@ -149,9 +214,6 @@
         android:layout_width="match_parent">
 
 
-        <TableRow android:layout_height="50dp"
-            android:layout_marginTop="70dp">
-        </TableRow>
 
         <TableRow android:layout_height="wrap_content"
             android:layout_marginTop="20dp">

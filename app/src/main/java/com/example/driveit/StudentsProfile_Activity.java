@@ -89,7 +89,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
+
                     String username = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("name").getValue(String.class);
                     name.setText(username);
                     String teacherName = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("teacherName").getValue(String.class);
@@ -97,7 +97,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
                     student = snapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getValue(Student.class);
                     showPic();
                 }
-            }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(StudentsProfile_Activity.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
@@ -159,7 +159,7 @@ public class StudentsProfile_Activity extends AppCompatActivity implements View.
         databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.getValue(Student.class).getKey() != null) {
+                if (!snapshot.getValue(Student.class).getKey().equals("")) {
                     storageReference.child(snapshot.getValue(Student.class).getKey()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
