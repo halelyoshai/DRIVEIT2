@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -26,9 +27,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class Studentslist_Activity extends AppCompatActivity implements View.OnClickListener {
+    private ArrayList<Student> students;
     private TextView studentlist;
     private Dialog d;
+    private ListView lv_s;
     private EditText studentname, mail;
     private Button plus, add;
     private FirebaseDatabase firebaseDatabase;
@@ -48,21 +53,6 @@ public class Studentslist_Activity extends AppCompatActivity implements View.OnC
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference= firebaseDatabase.getReference("Users");
         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
-
-        @Override
-        public void onDataChange(@NonNull DataSnapshot snapshot) {
-            studentname.setText("student name: "+snapshot.getValue(Student.class).getName());
-
-
-            for (DataSnapshot d:snapshot.child("tests").getChildren()){
-                tests.add(d.getValue(Test.class));
-                Log.d("onDataChange",d.getValue(Test.class).getdate());
-            }
-            testsAdapter = new TestsAdapter(Testslist_Activity.this, 0, 0, tests);
-
-            lv_t = findViewById(R.id.Lv_t);
-            lv_t.setAdapter(testsAdapter);
-        }
 
 
 
